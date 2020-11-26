@@ -64,7 +64,7 @@ let layout (ctx: SiteContents) active bodyCnt =
                    Sizes "32x32"
                    Href "/images/favicon.ico" ]
             link [ Rel "stylesheet"
-                   Href "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" ]
+                   Href "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" ]
             link [ Rel "stylesheet"
                    Href "https://fonts.googleapis.com/css?family=Open+Sans" ]
             link [ Rel "stylesheet"
@@ -89,9 +89,33 @@ let layout (ctx: SiteContents) active bodyCnt =
                         ]
                     ]
                     div [ Id "navbarMenu"; Class "navbar-menu" ] menuEntries
+                    div [ Class "navbar-end" ] [
+                        div [ Class "navbar-item" ] [
+                            a [] [ i [ Class "fab fa-github" ] [] ]
+                            a [] [ i [ Class "fab fa-gitter" ] [] ]
+                            a [] [ i [ Class "fab fa-slack" ] [] ]
+                        ]
+                    ]
                 ]
             ]
             yield! bodyCnt
+
+            footer [ Class "footer" ] [
+                div [ Class "columns footer-container" ] [
+                    div [ Class "column is-8 footer-img" ] [
+                        image [] [
+                            img [ Src "/images/logo-title-fabulous.png" ]
+                        ]
+                    ]
+                    div [ Class "column footer-follow-container" ] [
+                        h3 [] [ string "Follow us" ]
+                        div [] [
+                            a [] [ i [ Class "fab fa-github" ] [] ]
+                            a [] [ i [ Class "fab fa-twitter" ] [] ]
+                        ]
+                    ]
+                ]
+            ]
         ]
     ]
 
