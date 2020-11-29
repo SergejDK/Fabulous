@@ -9,3 +9,18 @@
   justify-content: center;
   flex-direction: column;
 }
+
+.container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  padding: 1rem 1.5rem 1rem !important;
+}
+
+footer img {
+  height: 3rem;
+}
