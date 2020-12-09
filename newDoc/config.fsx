@@ -12,6 +12,15 @@ let postPredicate (projectRoot: string, page: string) =
     else
         false
 
+let landingContainerImgLeftPredicate (projectRoot: string, page: string) =
+    let fileName = Path.Combine(projectRoot, page)
+    let ext = Path.GetExtension page
+    if ext = ".md" then
+        let ctn = File.ReadAllText fileName
+        ctn.Contains("layout: landingcontainer-imgleft")
+    else
+        false
+
 let staticPredicate (projectRoot: string, page: string) =
     let ext = Path.GetExtension page
     if page.Contains "_public"
