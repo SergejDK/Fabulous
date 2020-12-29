@@ -1,26 +1,105 @@
-.hero-body {
+html {
+  font-size: 20px;
+}
+
+.command {
+  background-color: #f5f5f5;
+  color: #4a4a4a;
+  padding: 1.5rem 1.25rem;
+}
+.command input {
+  font-family: "Roboto Mono", monospace;
+  display: block;
+  min-width: 100%;
+  border: 0;
+  background: transparent;
+  font-size: inherit;
+  color: inherit;
+}
+
+.title:not(:last-child),
+.subtitle:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+div + .subtitle,
+p + .subtitle {
+  margin-top: 1.5rem;
+}
+
+.navbar.overlay-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.17);
+}
+
+.page-banner {
   background-size: cover;
   background-position: center center;
   background-image: url("https://fsbolero.io/img/banner.jpg");
 }
 
-.footer-follow-container {
+.navbar-item,
+.navbar-link {
+  color: white;
+}
+
+.platforms-column {
   display: flex;
-  justify-content: center;
   flex-direction: column;
 }
 
-.container {
-  justify-content: center;
+.platforms {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1.5rem;
   align-items: center;
+  justify-content: center;
+  column-gap: 1.5rem;
+}
+.platforms .platform {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-footer {
-  padding: 1rem 1.5rem 1rem !important;
+/* HIDE RADIO */
+[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
-footer img {
-  height: 3rem;
+/* IMAGE STYLES */
+[type="radio"] + img {
+  cursor: pointer;
+  width: 100px;
+  margin-bottom: 1rem;
+}
+
+/* CHECKED STYLES */
+[type="radio"]:not(:checked) + img {
+  opacity: 0.25;
+}
+
+.sample {
+  width: 500px;
+}
+
+@media screen and (max-width: 1023px) {
+  .is-reversed-tablet {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+/*# sourceMappingURL=tmprN27sk.tmp.map */
+
+.footer-logo img {
+  height: 4.8em;
 }

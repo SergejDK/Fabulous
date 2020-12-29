@@ -44,13 +44,17 @@ let layout (ctx: SiteContents) active bodyCnt =
 
     let menuEntries =
         pages
-        |> Seq.map (fun p ->
-            let cls =
-                if p.title = active then "navbar-item is-active" else "navbar-item"
+        |> Seq.map
+            (fun p ->
+                let cls =
+                    if p.title = active then
+                        "navbar-item is-active"
+                    else
+                        "navbar-item"
 
-            a [ Class cls; Href p.link ] [
-                !!p.title
-            ])
+                a [ Class cls; Href p.link ] [
+                    !!p.title
+                ])
         |> Seq.toList
 
     html [] [
@@ -74,7 +78,7 @@ let layout (ctx: SiteContents) active bodyCnt =
                    Href "/style/style.css" ]
         ]
         body [] [
-            nav [ Class "navbar" ] [
+            nav [ Class "navbar overlay-bar" ] [
                 div [ Class "container" ] [
                     div [ Class "navbar-brand" ] [
                         a [ Class "navbar-item"; Href "/" ] [
@@ -88,12 +92,47 @@ let layout (ctx: SiteContents) active bodyCnt =
                             span [] []
                         ]
                     ]
-                    div [ Id "navbarMenu"; Class "navbar-menu" ] menuEntries
+                    div [ Class "navbar-start" ] [
+                        div [ Class "navbar-item has-dropdown is-hoverable" ] [
+                            a [ Class "navbar-link is-arrowless"
+                                Href "/docs" ] [
+                                string "Docs"
+                            ]
+                            div [ Class "navbar-dropdown" ] [
+                                a [ Class "navbar-link"
+                                    Href "/docs/Fabulous" ] [
+                                    string "Fabulous"
+                                ]
+                                a [ Class "navbar-link"
+                                    Href "/docs/Fabulous.XamarinForms" ] [
+                                    string "Fabulous for XamarinForms"
+                                ]
+                            ]
+                        ]
+                        a [ Class "navbar-item"
+                            Href "/showcase" ] [
+                            string "Showcase"
+                        ]
+                        a [ Class "navbar-item"
+                            Href "https://github.com/jimbobbennett/awesome-fabulous" ] [
+                            string "Community"
+                        ]
+                    ]
                     div [ Class "navbar-end" ] [
-                        div [ Class "navbar-item" ] [
-                            a [] [ i [ Class "fab fa-github" ] [] ]
-                            a [] [ i [ Class "fab fa-gitter" ] [] ]
-                            a [] [ i [ Class "fab fa-slack" ] [] ]
+                        a [ Class "navbar-item"
+                            HtmlProperties.Title "Fabulous on GitHub"
+                            Href "https://github.com/fsprojects/Fabulous" ] [
+                            i [ Class "fab fa-github" ] []
+                        ]
+                        a [ Class "navbar-item"
+                            HtmlProperties.Title "Discuss and ask questions on Gitter"
+                            Href "https://gitter.im/fsprojects/Fabulous" ] [
+                            i [ Class "fab fa-gitter" ] []
+                        ]
+                        a [ Class "navbar-item"
+                            HtmlProperties.Title "Discuss and ask questions on the F# Slack #mobiledev channel"
+                            Href "https://fsharp.slack.com/messages/mobiledev/" ] [
+                            i [ Class "fab fa-slack" ] []
                         ]
                     ]
                 ]
@@ -101,17 +140,27 @@ let layout (ctx: SiteContents) active bodyCnt =
             yield! bodyCnt
 
             footer [ Class "footer" ] [
-                div [ Class "columns footer-container" ] [
-                    div [ Class "column is-8 footer-img" ] [
-                        image [] [
-                            img [ Src "/images/logo-title-fabulous.png" ]
+                div [ Class "container" ] [
+                    div [ Class "level" ] [
+                        div [ Class "level-left" ] [
+                            div [ Class "level-item" ] [
+                                div [ Class "footer-logo" ] [
+                                    img [ Src "/images/logo-title-fabulous.png" ]
+                                ]
+                            ]
                         ]
-                    ]
-                    div [ Class "column footer-follow-container" ] [
-                        h3 [] [ string "Follow us" ]
-                        div [] [
-                            a [] [ i [ Class "fab fa-github" ] [] ]
-                            a [] [ i [ Class "fab fa-twitter" ] [] ]
+                        div [ Class "level-right" ] [
+                            div [ Class "level-item" ] [
+                                div [ Class "footer-column" ] [
+                                    div [ Class "footer-header" ] [
+                                        h3 [] [ string "Follow Us" ]
+                                        div [] [
+                                            a [] [ i [ Class "fab fa-github" ] [] ]
+                                            a [] [ i [ Class "fab fa-twitter" ] [] ]
+                                        ]
+                                    ]
+                                ]
+                            ]
                         ]
                     ]
                 ]
@@ -127,7 +176,11 @@ let render (ctx: SiteContents) cnt =
 
     cnt
     |> HtmlElement.ToString
-    |> fun n -> if disableLiveRefresh then n else injectWebsocketCode n
+    |> fun n ->
+        if disableLiveRefresh then
+            n
+        else
+            injectWebsocketCode n
 
 let published (post: Postloader.Post) =
     post.published
@@ -149,7 +202,10 @@ let postLayout (useSummary: bool) (post: Postloader.Post) =
                 ]
             ]
             div [ Class "content article-body" ] [
-                !!(if useSummary then post.summary else post.content)
+                !!(if useSummary then
+                       post.summary
+                   else
+                       post.content)
             ]
         ]
     ]
