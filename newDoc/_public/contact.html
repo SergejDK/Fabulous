@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans"/>
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css"/>
     <link rel="stylesheet" type="text/css" href="/style/style.css"/>
+    <script src="/js/sampleJsFile.js"></script>
   </head>
   <body>
     <nav class="navbar overlay-bar">
@@ -34,43 +35,45 @@
           <a class="navbar-item" href="/">
             <img src="/images/logo-title-fabulous.png" alt="Fabulous Logo"/>
           </a>
-          <span class="navbar-burger burger" data-target="navbarMenu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
         </div>
-        <div class="navbar-start">
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link is-arrowless" href="/docs">
-              Docs
-            </a>
-            <div class="navbar-dropdown">
-              <a class="navbar-link" href="/docs/Fabulous">
-                Fabulous
+        <div class="navbar-menu is-open" id="navbarMenu">
+          <div class="navbar-start ">
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link is-arrowless" href="/docs">
+                Docs
               </a>
-              <a class="navbar-link" href="/docs/Fabulous.XamarinForms">
-                Fabulous for XamarinForms
-              </a>
+              <div class="navbar-dropdown is-boxed">
+                <a class="navbar-link is-arrowless" href="/docs/Fabulous">
+                  Fabulous
+                </a>
+                <a class="navbar-link is-arrowless" href="/docs/Fabulous.XamarinForms">
+                  Fabulous for XamarinForms
+                </a>
+              </div>
             </div>
+            <a class="navbar-item" href="/showcase">
+              Showcase
+            </a>
+            <a class="navbar-item" href="https://github.com/jimbobbennett/awesome-fabulous">
+              Community
+            </a>
           </div>
-          <a class="navbar-item" href="/showcase">
-            Showcase
-          </a>
-          <a class="navbar-item" href="https://github.com/jimbobbennett/awesome-fabulous">
-            Community
-          </a>
-        </div>
-        <div class="navbar-end">
-          <a class="navbar-item" title="Fabulous on GitHub" href="https://github.com/fsprojects/Fabulous">
-            <i class="fab fa-github"></i>
-          </a>
-          <a class="navbar-item" title="Discuss and ask questions on Gitter" href="https://gitter.im/fsprojects/Fabulous">
-            <i class="fab fa-gitter"></i>
-          </a>
-          <a class="navbar-item" title="Discuss and ask questions on the F# Slack #mobiledev channel" href="https://fsharp.slack.com/messages/mobiledev/">
-            <i class="fab fa-slack"></i>
-          </a>
+          <div class="navbar-end">
+            <a class="navbar-item" title="Fabulous on GitHub" href="https://github.com/fsprojects/Fabulous">
+              <i class="fab fa-github"></i>
+            </a>
+            <a class="navbar-item" title="Discuss and ask questions on Gitter" href="https://gitter.im/fsprojects/Fabulous">
+              <i class="fab fa-gitter"></i>
+            </a>
+            <a class="navbar-item" title="Discuss and ask questions on the F# Slack #mobiledev channel" href="https://fsharp.slack.com/messages/mobiledev/">
+              <i class="fab fa-slack"></i>
+            </a>
+          </div>
         </div>
       </div>
     </nav>

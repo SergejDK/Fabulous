@@ -103,3 +103,22 @@ p + .subtitle {
 .footer-logo img {
   height: 4.8em;
 }
+
+.navbar-menu.is-open.is-active {
+  background-color: #4a4a4a;
+}
+
+.navbar-burger {
+  color: white;
+}
+
+.navbar-burger:hover {
+  color: white;
+}
+
+.navbar-item.has-dropdown.is-hoverable:hover .navbar-link {
+  color: #4a4a4a;
+}
+.navbar-item.has-dropdown.is-hoverable:hover .navbar-link:hover {
+  color: blue;
+}

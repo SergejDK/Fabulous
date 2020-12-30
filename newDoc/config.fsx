@@ -6,6 +6,7 @@ open System.IO
 let postPredicate (projectRoot: string, page: string) =
     let fileName = Path.Combine(projectRoot, page)
     let ext = Path.GetExtension page
+
     if ext = ".md" then
         let ctn = File.ReadAllText fileName
         ctn.Contains("layout: post")
@@ -15,6 +16,7 @@ let postPredicate (projectRoot: string, page: string) =
 let landingContainerImgLeftPredicate (projectRoot: string, page: string) =
     let fileName = Path.Combine(projectRoot, page)
     let ext = Path.GetExtension page
+
     if ext = ".md" then
         let ctn = File.ReadAllText fileName
         ctn.Contains("layout: landingcontainer-imgleft")
@@ -23,19 +25,19 @@ let landingContainerImgLeftPredicate (projectRoot: string, page: string) =
 
 let staticPredicate (projectRoot: string, page: string) =
     let ext = Path.GetExtension page
-    if page.Contains "_public"
-       || page.Contains "_bin"
-       || page.Contains "_lib"
-       || page.Contains "_data"
-       || page.Contains "_settings"
-       || page.Contains "_config.yml"
-       || page.Contains ".sass-cache"
-       || page.Contains ".git"
-       || page.Contains ".ionide"
-       || ext = ".fsx" then
-        false
-    else
-        true
+
+    not (
+        page.Contains "_public"
+        || page.Contains "_bin"
+        || page.Contains "_lib"
+        || page.Contains "_data"
+        || page.Contains "_settings"
+        || page.Contains "_config.yml"
+        || page.Contains ".sass-cache"
+        || page.Contains ".git"
+        || page.Contains ".ionide"
+        || ext = ".fsx"
+    )
 
 let config =
     { Generators =

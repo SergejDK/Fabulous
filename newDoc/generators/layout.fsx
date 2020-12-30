@@ -76,6 +76,7 @@ let layout (ctx: SiteContents) active bodyCnt =
             link [ Rel "stylesheet"
                    Type "text/css"
                    Href "/style/style.css" ]
+            script [ Src "/js/sampleJsFile.js" ] []
         ]
         body [] [
             nav [ Class "navbar overlay-bar" ] [
@@ -85,54 +86,60 @@ let layout (ctx: SiteContents) active bodyCnt =
                             img [ Src "/images/logo-title-fabulous.png"
                                   Alt "Fabulous Logo" ]
                         ]
-                        span [ Class "navbar-burger burger"
-                               Custom("data-target", "navbarMenu") ] [
-                            span [] []
-                            span [] []
-                            span [] []
+                        a [ Role "button"
+                            Class "navbar-burger"
+                            Custom("aria-label", "menu")
+                            Custom("aria-expanded", "false")
+                            Custom("data-target", "navbarMenu") ] [
+                            span [ Custom("aria-hidden", "true") ] []
+                            span [ Custom("aria-hidden", "true") ] []
+                            span [ Custom("aria-hidden", "true") ] []
                         ]
                     ]
-                    div [ Class "navbar-start" ] [
-                        div [ Class "navbar-item has-dropdown is-hoverable" ] [
-                            a [ Class "navbar-link is-arrowless"
-                                Href "/docs" ] [
-                                string "Docs"
-                            ]
-                            div [ Class "navbar-dropdown" ] [
-                                a [ Class "navbar-link"
-                                    Href "/docs/Fabulous" ] [
-                                    string "Fabulous"
+                    div [ Class "navbar-menu is-open"
+                          Id "navbarMenu" ] [
+                        div [ Class "navbar-start " ] [
+                            div [ Class "navbar-item has-dropdown is-hoverable" ] [
+                                a [ Class "navbar-link is-arrowless"
+                                    Href "/docs" ] [
+                                    string "Docs"
                                 ]
-                                a [ Class "navbar-link"
-                                    Href "/docs/Fabulous.XamarinForms" ] [
-                                    string "Fabulous for XamarinForms"
+                                div [ Class "navbar-dropdown is-boxed" ] [
+                                    a [ Class "navbar-link is-arrowless"
+                                        Href "/docs/Fabulous" ] [
+                                        string "Fabulous"
+                                    ]
+                                    a [ Class "navbar-link is-arrowless"
+                                        Href "/docs/Fabulous.XamarinForms" ] [
+                                        string "Fabulous for XamarinForms"
+                                    ]
                                 ]
                             ]
+                            a [ Class "navbar-item"
+                                Href "/showcase" ] [
+                                string "Showcase"
+                            ]
+                            a [ Class "navbar-item"
+                                Href "https://github.com/jimbobbennett/awesome-fabulous" ] [
+                                string "Community"
+                            ]
                         ]
-                        a [ Class "navbar-item"
-                            Href "/showcase" ] [
-                            string "Showcase"
-                        ]
-                        a [ Class "navbar-item"
-                            Href "https://github.com/jimbobbennett/awesome-fabulous" ] [
-                            string "Community"
-                        ]
-                    ]
-                    div [ Class "navbar-end" ] [
-                        a [ Class "navbar-item"
-                            HtmlProperties.Title "Fabulous on GitHub"
-                            Href "https://github.com/fsprojects/Fabulous" ] [
-                            i [ Class "fab fa-github" ] []
-                        ]
-                        a [ Class "navbar-item"
-                            HtmlProperties.Title "Discuss and ask questions on Gitter"
-                            Href "https://gitter.im/fsprojects/Fabulous" ] [
-                            i [ Class "fab fa-gitter" ] []
-                        ]
-                        a [ Class "navbar-item"
-                            HtmlProperties.Title "Discuss and ask questions on the F# Slack #mobiledev channel"
-                            Href "https://fsharp.slack.com/messages/mobiledev/" ] [
-                            i [ Class "fab fa-slack" ] []
+                        div [ Class "navbar-end" ] [
+                            a [ Class "navbar-item"
+                                HtmlProperties.Title "Fabulous on GitHub"
+                                Href "https://github.com/fsprojects/Fabulous" ] [
+                                i [ Class "fab fa-github" ] []
+                            ]
+                            a [ Class "navbar-item"
+                                HtmlProperties.Title "Discuss and ask questions on Gitter"
+                                Href "https://gitter.im/fsprojects/Fabulous" ] [
+                                i [ Class "fab fa-gitter" ] []
+                            ]
+                            a [ Class "navbar-item"
+                                HtmlProperties.Title "Discuss and ask questions on the F# Slack #mobiledev channel"
+                                Href "https://fsharp.slack.com/messages/mobiledev/" ] [
+                                i [ Class "fab fa-slack" ] []
+                            ]
                         ]
                     ]
                 ]
