@@ -101,7 +101,7 @@ let layout (ctx: SiteContents) active bodyCnt =
                         div [ Class "navbar-start " ] [
                             div [ Class "navbar-item has-dropdown is-hoverable" ] [
                                 a [ Class "navbar-link is-arrowless"
-                                    Href "/docs" ] [
+                                    Href "/docs.html" ] [
                                     string "Docs"
                                 ]
                                 div [ Class "navbar-dropdown is-boxed" ] [

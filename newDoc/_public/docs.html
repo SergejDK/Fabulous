@@ -1,0 +1,344 @@
+<html>
+  <head>
+
+        <script type="text/javascript">
+          var wsUri = "ws://localhost:8080/websocket";
+      function init()
+      {
+        websocket = new WebSocket(wsUri);
+        websocket.onclose = function(evt) { onClose(evt) };
+      }
+      function onClose(evt)
+      {
+        console.log('closing');
+        websocket.close();
+        document.location.reload();
+      }
+      window.addEventListener("load", init, false);
+      </script>
+            <meta charSet="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>
+      Fabulous
+    </title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans"/>
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/style/style.css"/>
+    <script src="/js/sampleJsFile.js"></script>
+  </head>
+  <body>
+    <nav class="navbar overlay-bar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+            <img src="/images/logo-title-fabulous.png" alt="Fabulous Logo"/>
+          </a>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="navbar-menu is-open" id="navbarMenu">
+          <div class="navbar-start ">
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link is-arrowless" href="/docs.html">
+                Docs
+              </a>
+              <div class="navbar-dropdown is-boxed">
+                <a class="navbar-link is-arrowless" href="/docs/Fabulous">
+                  Fabulous
+                </a>
+                <a class="navbar-link is-arrowless" href="/docs/Fabulous.XamarinForms">
+                  Fabulous for XamarinForms
+                </a>
+              </div>
+            </div>
+            <a class="navbar-item" href="/showcase">
+              Showcase
+            </a>
+            <a class="navbar-item" href="https://github.com/jimbobbennett/awesome-fabulous">
+              Community
+            </a>
+          </div>
+          <div class="navbar-end">
+            <a class="navbar-item" title="Fabulous on GitHub" href="https://github.com/fsprojects/Fabulous">
+              <i class="fab fa-github"></i>
+            </a>
+            <a class="navbar-item" title="Discuss and ask questions on Gitter" href="https://gitter.im/fsprojects/Fabulous">
+              <i class="fab fa-gitter"></i>
+            </a>
+            <a class="navbar-item" title="Discuss and ask questions on the F# Slack #mobiledev channel" href="https://fsharp.slack.com/messages/mobiledev/">
+              <i class="fab fa-slack"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="hero is-dark page-banner">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-1 is-spaced">
+          Fabulous
+        </h1>
+        <h2 class="subtitle is-2">
+          Documentation
+        </h2>
+      </div>
+    </section>
+    <aside class="menu">
+      <p class="menu-label accordion">
+        Fabulous
+      </p>
+      <ul class="menu-list accordion-panel">
+        <li>
+          <a>
+            Coming soon
+          </a>
+        </li>
+      </ul>
+      <p class="menu-label accordion">
+        Fabulous.XamarinForms
+      </p>
+      <ul class="menu-list accordion-panel">
+        <li>
+          <a>
+            Overview
+          </a>
+        </li>
+        <li>
+          <a>
+            Getting Started
+          </a>
+        </li>
+        <li>
+          <p class="menu-label accordion">
+            Views
+          </p>
+          <ul class="menu-list accordion-panel">
+            <li>
+              <a>
+                Basic Elements
+              </a>
+            </li>
+            <li>
+              <a>
+                Pages
+              </a>
+            </li>
+            <li>
+              <a>
+                Layouts
+              </a>
+            </li>
+            <li>
+              <a>
+                Lists and Tables
+              </a>
+            </li>
+            <li>
+              <a>
+                Gestures
+              </a>
+            </li>
+            <li>
+              <a>
+                Pop-ups
+              </a>
+            </li>
+            <li>
+              <a>
+                ViewRefs
+              </a>
+            </li>
+            <li>
+              <a>
+                Animations
+              </a>
+            </li>
+            <li>
+              <a>
+                Performance hints
+              </a>
+            </li>
+            <li>
+              <a>
+                Multi-page applications and Navigation
+              </a>
+            </li>
+            <li>
+              <a>
+                Styling
+              </a>
+            </li>
+            <li>
+              <a>
+                Effects
+              </a>
+            </li>
+            <li>
+              <a>
+                Extensions
+              </a>
+            </li>
+            <li>
+              <a>
+                Extensions: FFImageLoading (image caching)
+              </a>
+            </li>
+            <li>
+              <a>
+                Extensions: Maps (platform maps)
+              </a>
+            </li>
+            <li>
+              <a>
+                Extensions: SkiaSharp (drawing 2D graphics)
+              </a>
+            </li>
+            <li>
+              <a>
+                Extensions: OxyPlot (charting)
+              </a>
+            </li>
+            <li>
+              <a>
+                Extensions: VideoManager (audio and video)
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a>
+            Models
+          </a>
+        </li>
+        <li>
+          <a>
+            Update and Messages
+          </a>
+        </li>
+        <li>
+          <a>
+            Traces and Crashes
+          </a>
+        </li>
+        <li>
+          <a>
+            Unit Testing
+          </a>
+        </li>
+        <li>
+          <a>
+            Tools
+          </a>
+        </li>
+        <li>
+          <a>
+            Pitfalls and F# 5.0 support
+          </a>
+        </li>
+        <li>
+          <a>
+            Migration guide from v0.57 to v0.60
+          </a>
+        </li>
+        <li>
+          <a>
+            Further Resources
+          </a>
+        </li>
+        <li>
+          <a>
+            They use Fabulous
+          </a>
+        </li>
+      </ul>
+    </aside>
+    <main>
+      <div class="container">
+        <section class="articles">
+          <div class="column is-8 is-offset-2">
+            <div class="card article">
+              <div class="card-content">
+                <div class="media-content has-text-centered">
+                  <p class="title article-title">
+                    <a href="/posts/post2.html">
+                      Some other post title
+                    </a>
+                  </p>
+                  <p class="subtitle is-6 article-subtitle">
+                    <a href="#">
+                      @k_cieslak
+                    </a>
+                    on 2020-02-20
+                  </p>
+                </div>
+                <div class="content article-body">
+                  <h1>Something else</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisi diam, vehicula quis blandit id, suscipit sed libero. Proin at diam dolor. In hac habitasse platea dictumst. Donec quis dui vitae quam eleifend dignissim non sed libero. In hac habitasse platea dictumst. In ullamcorper mollis risus, a vulputate quam accumsan at. Donec sed felis sodales, blandit orci id, vulputate orci.</p>
+
+                </div>
+              </div>
+            </div>
+            <div class="card article">
+              <div class="card-content">
+                <div class="media-content has-text-centered">
+                  <p class="title article-title">
+                    <a href="/posts/post.html">
+                      Some nice post title
+                    </a>
+                  </p>
+                  <p class="subtitle is-6 article-subtitle">
+                    <a href="#">
+                      @k_cieslak
+                    </a>
+                    on 2020-02-19
+                  </p>
+                </div>
+                <div class="content article-body">
+                  <h1>Introduction</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisi diam, vehicula quis blandit id, suscipit sed libero. Proin at diam dolor. In hac habitasse platea dictumst. Donec quis dui vitae quam eleifend dignissim non sed libero. In hac habitasse platea dictumst. In ullamcorper mollis risus, a vulputate quam accumsan at. Donec sed felis sodales, blandit orci id, vulputate orci.</p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="level">
+          <div class="level-left">
+            <div class="level-item">
+              <div class="footer-logo">
+                <img src="/images/logo-title-fabulous.png"/>
+              </div>
+            </div>
+          </div>
+          <div class="level-right">
+            <div class="level-item">
+              <div class="footer-column">
+                <div class="footer-header">
+                  <h3>
+                    Follow Us
+                  </h3>
+                  <div>
+                    <a>
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a>
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
