@@ -1,8 +1,5 @@
-{% include_relative _header.md %}
-
-{% include_relative contents.md %}
-
-Models
+-----
+title: Models
 --------
 
 ### Messages and Validation

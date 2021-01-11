@@ -1,9 +1,5 @@
-{% include_relative _header.md %}
-
-{% include_relative contents.md %}
-
-
-fabulous-cli
+-----
+title: fabulous-cli
 -----
 
 With the `fabulous-cli` you can run LiveUpdate. 

@@ -3,14 +3,13 @@
 #load "../loaders/postloader.fsx"
 #load "../loaders/pageloader.fsx"
 #load "../loaders/globalloader.fsx"
+#load "../loaders/docloader.fsx"
 #endif
 
 open Html
 
 #r "../_lib/Fornax.Core.dll"
 #load "layout.fsx"
-
-open Html
 
 
 let generate' (ctx: SiteContents) (page: string) =
@@ -23,6 +22,29 @@ let generate' (ctx: SiteContents) (page: string) =
         |> Seq.sortByDescending Layout.published
         |> Seq.toList
         |> List.map (Layout.postLayout true)
+
+    let docData =
+        ctx.TryGetValues<Docloader.DocData>()
+        |> Option.defaultValue Seq.empty
+
+    let simpleDocMenuLayout (doc: Docloader.SimpleDoc) = li [] [ a [] [ string doc.name ] ]
+
+    let docMenuLayout (doc: Docloader.DocData) =
+        let listItems =
+            doc.docFiles |> List.map simpleDocMenuLayout
+
+        div [] [
+            p [ Class "menu-list accordion" ] [
+                string doc.name
+            ]
+            ul [ Class "menu-list accordion-panel" ] listItems
+        ]
+
+    let menuLayout =
+        let entries =
+            docData |> Seq.map docMenuLayout |> Seq.toList
+
+        aside [ Class "menu" ] entries
 
     Layout.layout
         ctx
@@ -40,103 +62,7 @@ let generate' (ctx: SiteContents) (page: string) =
               ]
           ]
 
-          aside [ Class "menu" ] [
-              p [ Class "menu-label accordion" ] [
-                  string "Fabulous"
-              ]
-              ul [ Class "menu-list accordion-panel" ] [
-                  li [] [ a [] [ string "Coming soon" ] ]
-              ]
-              p [ Class "menu-label accordion" ] [
-                  string "Fabulous.XamarinForms"
-              ]
-              ul [ Class "menu-list accordion-panel" ] [
-                  li [] [ a [] [ string "Overview" ] ]
-                  li [] [
-                      a [] [ string "Getting Started" ]
-                  ]
-                  li [] [
-                      p [ Class "menu-label accordion" ] [
-                          string "Views"
-                      ]
-                      ul [ Class "menu-list accordion-panel" ] [
-                          li [] [
-                              a [] [ string "Basic Elements" ]
-                          ]
-                          li [] [ a [] [ string "Pages" ] ]
-                          li [] [ a [] [ string "Layouts" ] ]
-                          li [] [
-                              a [] [ string "Lists and Tables" ]
-                          ]
-                          li [] [ a [] [ string "Gestures" ] ]
-                          li [] [ a [] [ string "Pop-ups" ] ]
-                          li [] [ a [] [ string "ViewRefs" ] ]
-                          li [] [ a [] [ string "Animations" ] ]
-                          li [] [
-                              a [] [ string "Performance hints" ]
-                          ]
-                          li [] [
-                              a [] [
-                                  string "Multi-page applications and Navigation"
-                              ]
-                          ]
-                          li [] [ a [] [ string "Styling" ] ]
-                          li [] [ a [] [ string "Effects" ] ]
-                          li [] [ a [] [ string "Extensions" ] ]
-                          li [] [
-                              a [] [
-                                  string "Extensions: FFImageLoading (image caching)"
-                              ]
-                          ]
-                          li [] [
-                              a [] [
-                                  string "Extensions: Maps (platform maps)"
-                              ]
-                          ]
-                          li [] [
-                              a [] [
-                                  string "Extensions: SkiaSharp (drawing 2D graphics)"
-                              ]
-                          ]
-                          li [] [
-                              a [] [
-                                  string "Extensions: OxyPlot (charting)"
-                              ]
-                          ]
-                          li [] [
-                              a [] [
-                                  string "Extensions: VideoManager (audio and video)"
-                              ]
-                          ]
-                      ]
-                  ]
-                  li [] [ a [] [ string "Models" ] ]
-                  li [] [
-                      a [] [ string "Update and Messages" ]
-                  ]
-                  li [] [
-                      a [] [ string "Traces and Crashes" ]
-                  ]
-                  li [] [ a [] [ string "Unit Testing" ] ]
-                  li [] [ a [] [ string "Tools" ] ]
-                  li [] [
-                      a [] [
-                          string "Pitfalls and F# 5.0 support"
-                      ]
-                  ]
-                  li [] [
-                      a [] [
-                          string "Migration guide from v0.57 to v0.60"
-                      ]
-                  ]
-                  li [] [
-                      a [] [ string "Further Resources" ]
-                  ]
-                  li [] [
-                      a [] [ string "They use Fabulous" ]
-                  ]
-              ]
-          ]
+          menuLayout
 
           main [] [
               div [ Class "container" ] [

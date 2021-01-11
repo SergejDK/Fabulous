@@ -1,6 +1,6 @@
-{% include_relative _header.md %}
-
-{% include_relative contents.md %}
+-----
+title: Pitfalls
+-----
 
 ## Pitfalls and F# 5.0 support
 

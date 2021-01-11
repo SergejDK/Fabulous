@@ -3,9 +3,11 @@
 #load "../loaders/postloader.fsx"
 #load "../loaders/pageloader.fsx"
 #load "../loaders/globalloader.fsx"
+#load "../loaders/docfolderloader.fsx"
 #endif
 
 open Html
+
 
 let injectWebsocketCode (webpage: string) =
     let websocketScript = """
@@ -42,20 +44,22 @@ let layout (ctx: SiteContents) active bodyCnt =
         |> Option.map (fun si -> si.title)
         |> Option.defaultValue ""
 
-    let menuEntries =
-        pages
-        |> Seq.map
-            (fun p ->
-                let cls =
-                    if p.title = active then
-                        "navbar-item is-active"
-                    else
-                        "navbar-item"
+    let docPages =
+        ctx.TryGetValues<string>()
+        |> Option.defaultValue Seq.empty
 
-                a [ Class cls; Href p.link ] [
-                    !!p.title
+    let docs =
+        docPages
+        |> Seq.map
+            (fun v ->
+                let dHref = sprintf "/docs.html#%s" v
+
+                a [ Class "navbar-link is-arrowless"
+                    Href dHref ] [
+                    string v
                 ])
         |> Seq.toList
+
 
     html [] [
         head [] [
@@ -104,16 +108,7 @@ let layout (ctx: SiteContents) active bodyCnt =
                                     Href "/docs.html" ] [
                                     string "Docs"
                                 ]
-                                div [ Class "navbar-dropdown is-boxed" ] [
-                                    a [ Class "navbar-link is-arrowless"
-                                        Href "/docs/Fabulous" ] [
-                                        string "Fabulous"
-                                    ]
-                                    a [ Class "navbar-link is-arrowless"
-                                        Href "/docs/Fabulous.XamarinForms" ] [
-                                        string "Fabulous for XamarinForms"
-                                    ]
-                                ]
+                                div [ Class "navbar-dropdown is-boxed" ] docs
                             ]
                             a [ Class "navbar-item"
                                 Href "/showcase" ] [

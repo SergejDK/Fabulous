@@ -1,8 +1,5 @@
-{% include_relative _header.md %}
-
-{% include_relative contents.md %}
-
-Testing
+-----
+title: Testing
 ------
 
 The Model-View-Update architecture used by Fabulous makes it simple to unit test every part of your application.  

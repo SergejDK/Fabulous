@@ -1,8 +1,5 @@
-{% include_relative _header.md %}
-
-{% include_relative contents.md %}
-
-The Init and Update Functions
+------
+title: The Init and Update Functions
 ------
 
 The init function returns an initial model, and the update function processes a message and returns a new model:

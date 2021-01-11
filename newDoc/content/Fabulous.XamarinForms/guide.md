@@ -1,7 +1,3 @@
-{% include_relative _header.md %}
-
-{% include_relative contents.md %}
-
 This guide augments the primary [Xamarin.Forms documentation](https://docs.microsoft.com/xamarin/xamarin-forms/) with information
 specific to the Fabulous programming model.
 

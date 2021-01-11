@@ -13,16 +13,6 @@ let postPredicate (projectRoot: string, page: string) =
     else
         false
 
-let landingContainerImgLeftPredicate (projectRoot: string, page: string) =
-    let fileName = Path.Combine(projectRoot, page)
-    let ext = Path.GetExtension page
-
-    if ext = ".md" then
-        let ctn = File.ReadAllText fileName
-        ctn.Contains("layout: landingcontainer-imgleft")
-    else
-        false
-
 let staticPredicate (projectRoot: string, page: string) =
     let ext = Path.GetExtension page
 
@@ -56,12 +46,6 @@ let config =
             { Script = "index.fsx"
               Trigger = Once
               OutputFile = NewFileName "index.html" }
-            { Script = "about.fsx"
-              Trigger = Once
-              OutputFile = NewFileName "about.html" }
-            { Script = "contact.fsx"
-              Trigger = Once
-              OutputFile = NewFileName "contact.html" }
             { Script = "docs.fsx"
               Trigger = Once
               OutputFile = NewFileName "docs.html" } ] }
