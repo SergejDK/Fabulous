@@ -1,0 +1,324 @@
+<html>
+  <head>
+
+        <script type="text/javascript">
+          var wsUri = "ws://localhost:8080/websocket";
+      function init()
+      {
+        websocket = new WebSocket(wsUri);
+        websocket.onclose = function(evt) { onClose(evt) };
+      }
+      function onClose(evt)
+      {
+        console.log('closing');
+        websocket.close();
+        document.location.reload();
+      }
+      window.addEventListener("load", init, false);
+      </script>
+            <meta charSet="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>
+      Fabulous
+    </title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans"/>
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/style/style.css"/>
+    <script src="/js/sampleJsFile.js"></script>
+  </head>
+  <body>
+    <nav class="navbar overlay-bar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+            <img src="/images/logo-title-fabulous.png" alt="Fabulous Logo"/>
+          </a>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="navbar-menu is-open" id="navbarMenu">
+          <div class="navbar-start ">
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link is-arrowless" href="/docs.html">
+                Docs
+              </a>
+              <div class="navbar-dropdown is-boxed">
+                <a class="navbar-link is-arrowless" href="/docs.html#Fabulous.StaticView">
+                  Fabulous.StaticView
+                </a>
+                <a class="navbar-link is-arrowless" href="/docs.html#Fabulous.XamarinForms">
+                  Fabulous.XamarinForms
+                </a>
+                <a class="navbar-link is-arrowless" href="/docs.html#Fabulous.CodeGen">
+                  Fabulous.CodeGen
+                </a>
+                <a class="navbar-link is-arrowless" href="/docs.html#Fabulous">
+                  Fabulous
+                </a>
+              </div>
+            </div>
+            <a class="navbar-item" href="/showcase">
+              Showcase
+            </a>
+            <a class="navbar-item" href="https://github.com/jimbobbennett/awesome-fabulous">
+              Community
+            </a>
+          </div>
+          <div class="navbar-end">
+            <a class="navbar-item" title="Fabulous on GitHub" href="https://github.com/fsprojects/Fabulous">
+              <i class="fab fa-github"></i>
+            </a>
+            <a class="navbar-item" title="Discuss and ask questions on Gitter" href="https://gitter.im/fsprojects/Fabulous">
+              <i class="fab fa-gitter"></i>
+            </a>
+            <a class="navbar-item" title="Discuss and ask questions on the F# Slack #mobiledev channel" href="https://fsharp.slack.com/messages/mobiledev/">
+              <i class="fab fa-slack"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="hero is-dark page-banner">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-1 is-spaced">
+          Fabulous
+        </h1>
+        <h2 class="subtitle is-2">
+          Mobile & Desktop Development with F# and MVU
+        </h2>
+      </div>
+    </section>
+    <section class="hero is-dark">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-spaced">
+          Get started easily
+        </h1>
+        <div class="container">
+          <div class="columns is-desktop is-8 is-variable is-reveresed-table">
+            <div class="column home-splash has-text-centered platforms-column">
+              <p class="subtitle">
+                Choose your preferred UI Framework
+              </p>
+              <div class="platforms">
+                <label class="platform">
+                  <input name="backend" id="XamarinForms" value="Xamarin.Forms" type="radio"/>
+                  <img src="https://cdn.worldvectorlogo.com/logos/xamarin.svg"/>
+                  Xamarin.Forms
+                </label>
+              </div>
+              <div>
+                <p>
+                  Don't see your favorite framework ?
+                </p>
+                <a>
+                  Learn how to add support for Fabulous
+                </a>
+              </div>
+            </div>
+            <div class="column has-text-left-desktop has-text-centered">
+              <p class="subtitle">
+                Install the project template
+              </p>
+              <div class="command">
+                <input readOnly="true" value="dotnet new -i Fabulous.XamarinForms.Templates"/>
+              </div>
+              <p class="subtitle">
+                Create a project
+              </p>
+              <div class="command">
+                <input readOnly="true" value="dotnet new fabulous-xf-app --name MyApp"/>
+              </div>
+              <p class="subtitle is-7">
+                * Creates Android and iOS projects by default. <br/> WPF, UWP, GTK and macOS are also available as flags.
+              </p>
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <a class="button is-medium">
+                      Learn more...
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="hero is-white">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-desktop is-vcentered-tablet is-variable is-8">
+            <div class="column has-text-right-desktop has-text-centered">
+              <h1 class="title is-spaced">
+                Safe and simple logic with MVU
+              </h1>
+              <p class="subtitle">
+                Structure applications with clear separation of concerns between logic and display with the popular Model-View-Update architecture.
+              </p>
+              <div class="level">
+                <div></div>
+                <div class="level-right">
+                  <div class="level-item">
+                    <a class="button is-medium">
+                      Learn more...
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column home-splash has-text-centered is-narrow">
+              <div class="card">
+                <div class="card-content">
+                  <image>
+                    <img src="images/update-sample.png" class="sample"/>
+                  </image>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero is-dark">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-desktop is-vcentered-tablet is-variable is-8">
+            <div class="column home-splash has-text-centered is-narrow">
+              <div class="card">
+                <div class="card-content">
+                  <img src="images/view-sample.png" class="sample"/>
+                </div>
+              </div>
+              <a>
+                Prefer XAML? Learn more about static views
+              </a>
+            </div>
+            <div class="column has-text-left-desktop has-text-centered">
+              <h1 class="title is-spaced">
+                Declarative F# views
+              </h1>
+              <p class="subtitle">
+                Declare your UI without worrying about what happens next. Fabulous will ask for a new view each time the state changes but will only apply the delta to the actual UI.
+              </p>
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <a class="button is-medium">
+                      Learn more...
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero is-white">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-desktop is-vcentered-tablet is-variable is-8">
+            <div class="column has-text-right-desktop has-text-centered">
+              <h1 class="title is-spaced">
+                Fully unit-testable, including the UI
+              </h1>
+              <p class="subtitle">
+                Take advantage of functional programming to ensure your app behaves like you expect. MVU encourages putting side-effects outside of the main loop, perfect for unit testing.
+              </p>
+              <div class="level">
+                <div></div>
+                <div class="level-right">
+                  <div class="level-item">
+                    <a class="button is-medium">
+                      Learn more...
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column home-splash has-text-centered is-narrow">
+              <div class="card">
+                <div class="card-content">
+                  <image>
+                    <img src="images/unittest-sample.png" class="sample"/>
+                  </image>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero is-dark">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-desktop is-vcentered-tablet is-variable is-8">
+            <div class="column home-splash has-text-centered is-narrow">
+              <div class="card">
+                <div class="card-content">
+                  <img src="images/live-update.png" class="sample"/>
+                </div>
+              </div>
+            </div>
+            <div class="column has-text-left-desktop has-text-centered">
+              <h1 class="title is-spaced">
+                Save time with LiveUpdate
+              </h1>
+              <p class="subtitle">
+                You don't need to restart the app anymore to see your changes. LiveUpdate will recompile your code when saving and automatically reload the app while it's running.
+              </p>
+              <div class="level">
+                <div class="level-right">
+                  <div class="level-item">
+                    <a class="button is-medium">
+                      Learn more...
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div></div>
+    <footer class="footer">
+      <div class="container">
+        <div class="level">
+          <div class="level-left">
+            <div class="level-item">
+              <div class="footer-logo">
+                <img src="/images/logo-title-fabulous.png"/>
+              </div>
+            </div>
+          </div>
+          <div class="level-right">
+            <div class="level-item">
+              <div class="footer-column">
+                <div class="footer-header">
+                  <h3>
+                    Follow Us
+                  </h3>
+                  <div>
+                    <a>
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a>
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

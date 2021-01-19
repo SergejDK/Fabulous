@@ -1,0 +1,175 @@
+html {
+  font-size: 20px;
+}
+
+.command {
+  background-color: #f5f5f5;
+  color: #4a4a4a;
+  padding: 1.5rem 1.25rem;
+}
+.command input {
+  font-family: "Roboto Mono", monospace;
+  display: block;
+  min-width: 100%;
+  border: 0;
+  background: transparent;
+  font-size: inherit;
+  color: inherit;
+}
+
+.title:not(:last-child),
+.subtitle:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+div + .subtitle,
+p + .subtitle {
+  margin-top: 1.5rem;
+}
+
+.navbar.overlay-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.17);
+}
+
+.page-banner {
+  background-size: cover;
+  background-position: center center;
+  background-image: url("https://fsbolero.io/img/banner.jpg");
+}
+
+.navbar-item,
+.navbar-link {
+  color: white;
+}
+
+.platforms-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.platforms {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1.5rem;
+}
+.platforms .platform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* HIDE RADIO */
+[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* IMAGE STYLES */
+[type="radio"] + img {
+  cursor: pointer;
+  width: 100px;
+  margin-bottom: 1rem;
+}
+
+/* CHECKED STYLES */
+[type="radio"]:not(:checked) + img {
+  opacity: 0.25;
+}
+
+.sample {
+  width: 500px;
+}
+
+@media screen and (max-width: 1023px) {
+  .is-reversed-tablet {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+/*# sourceMappingURL=tmprN27sk.tmp.map */
+
+.footer-logo img {
+  height: 4.8em;
+}
+
+.navbar-menu.is-open.is-active {
+  background-color: #4a4a4a;
+}
+
+.navbar-burger {
+  color: white;
+}
+
+.navbar-burger:hover {
+  color: white;
+}
+
+.navbar-item.has-dropdown.is-hoverable:hover .navbar-link {
+  color: #4a4a4a;
+}
+.navbar-item.has-dropdown.is-hoverable:hover .navbar-link:hover {
+  color: blue;
+}
+
+.footer {
+  padding: 3rem 1.5rem 0rem;
+}
+
+aside {
+  width: 30%;
+  padding-left: 15px;
+  margin-left: 15px;
+  float: left;
+  font-style: italic;
+  background-color: lightgray;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion-panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+main {
+  width: 63%;
+  float: right;
+}
+
+footer {
+  clear: both;
+}
+
+.hide-content {
+  display: none;
+}
