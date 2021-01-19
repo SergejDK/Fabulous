@@ -13,16 +13,6 @@ open Html
 
 
 let generate' (ctx: SiteContents) (page: string) =
-    let posts =
-        ctx.TryGetValues<Postloader.Post>()
-        |> Option.defaultValue Seq.empty
-
-    let psts =
-        posts
-        |> Seq.sortByDescending Layout.published
-        |> Seq.toList
-        |> List.map (Layout.postLayout true)
-
     let docData =
         ctx.TryGetValues<Docloader.DocData>()
         |> Option.defaultValue Seq.empty
@@ -46,6 +36,33 @@ let generate' (ctx: SiteContents) (page: string) =
 
         aside [ Class "menu" ] entries
 
+    let mainContentForEachMarkdown name content =
+        div [ Class "column is-8 is-offset-2 hide-content"
+              Id name ] [
+            string content
+        ]
+
+    let genContent (doc: Docloader.DocData) =
+        let index =
+            mainContentForEachMarkdown doc.name doc.index.content
+
+        let items =
+            doc.docFiles
+            |> List.map (fun v -> mainContentForEachMarkdown v.name v.content)
+
+        [ index ] @ items
+
+
+    let genMainContent =
+        let mainContent =
+            docData |> Seq.map genContent |> Seq.fold ((@)) []
+
+        main [] [
+            div [ Class "container" ] [
+                section [ Class "articles" ] mainContent
+            ]
+        ]
+
     Layout.layout
         ctx
         "Docs"
@@ -64,12 +81,6 @@ let generate' (ctx: SiteContents) (page: string) =
 
           menuLayout
 
-          main [] [
-              div [ Class "container" ] [
-                  section [ Class "articles" ] [
-                      div [ Class "column is-8 is-offset-2" ] psts
-                  ]
-              ]
-          ] ]
+          genMainContent ]
 
 let generate (ctx: SiteContents) (projectRoot: string) (page: string) = generate' ctx page |> Layout.render ctx

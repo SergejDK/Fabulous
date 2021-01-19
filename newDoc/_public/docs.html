@@ -96,18 +96,6 @@
     <aside class="menu">
       <div>
         <p class="menu-list accordion">
-          Fabulous.StaticView
-        </p>
-        <ul class="menu-list accordion-panel">
-          <li>
-            <a>
-              INDEX
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <p class="menu-list accordion">
           Fabulous.XamarinForms
         </p>
         <ul class="menu-list accordion-panel">
@@ -119,11 +107,6 @@
           <li>
             <a>
               TESTING
-            </a>
-          </li>
-          <li>
-            <a>
-              INDEX
             </a>
           </li>
           <li>
@@ -165,24 +148,7 @@
           </li>
           <li>
             <a>
-              INDEX
-            </a>
-          </li>
-          <li>
-            <a>
               CODEGEN-BINDINGS
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <p class="menu-list accordion">
-          Fabulous
-        </p>
-        <ul class="menu-list accordion-panel">
-          <li>
-            <a>
-              INDEX
             </a>
           </li>
         </ul>
@@ -191,51 +157,1878 @@
     <main>
       <div class="container">
         <section class="articles">
-          <div class="column is-8 is-offset-2">
-            <div class="card article">
-              <div class="card-content">
-                <div class="media-content has-text-centered">
-                  <p class="title article-title">
-                    <a href="/posts/post2.html">
-                      Some other post title
-                    </a>
-                  </p>
-                  <p class="subtitle is-6 article-subtitle">
-                    <a href="#">
-                      @k_cieslak
-                    </a>
-                    on 2020-02-20
-                  </p>
-                </div>
-                <div class="content article-body">
-                  <h1>Something else</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisi diam, vehicula quis blandit id, suscipit sed libero. Proin at diam dolor. In hac habitasse platea dictumst. Donec quis dui vitae quam eleifend dignissim non sed libero. In hac habitasse platea dictumst. In ullamcorper mollis risus, a vulputate quam accumsan at. Donec sed felis sodales, blandit orci id, vulputate orci.</p>
+          <div class="column is-8 is-offset-2 hide-content" id="Fabulous.XamarinForms">
+            <p><em>Write cross-platform apps with Xamarin.Forms, using MVU architecture and dynamic UI</em></p>
+<p>Never write a ViewModel class again!  Conquer the world with clean dynamic UIs!</p>
+<p><img src="https://user-images.githubusercontent.com/7204669/39318922-57c95174-4977-11e8-94a9-cc385101ce5d.png" width="100"> <img src="https://user-images.githubusercontent.com/7204669/39318926-59f844e6-4977-11e8-9834-325a6517ced6.png" width="100"> <img src="https://user-images.githubusercontent.com/7204669/39318929-5b66c776-4977-11e8-8317-ee1c121301d4.png" width="100"> <img src="https://user-images.githubusercontent.com/7204669/39318934-5cbe3c3a-4977-11e8-92aa-c3fdf644b01c.png" width="100"> <img src="https://user-images.githubusercontent.com/7204669/39318936-5e2380bc-4977-11e8-8912-f078744a2bde.png" width="100"> <img src="https://user-images.githubusercontent.com/7204669/39318938-5f6ec4f4-4977-11e8-97a9-779edd3594bc.png" width="100"> <img src="https://user-images.githubusercontent.com/7204669/39318941-60c1b0f0-4977-11e8-8a4a-57e17ef8c6ec.png" width="100"></p>
+<p>This library allows you to use the ultra-simple Model-View-Update architecture to build applications for iOS, Android, Mac, WPF and more using Xamarin.Forms. It is built on Fabulous.</p>
+<blockquote>
+<p>The amount of code I'm <em>not</em> writing is great!  <a href="https://github.com/jimbobbennett/">@jimbobbennett</a></p>
+</blockquote>
+<p>Note that this is just a &quot;Getting Started&quot; page for Fabulous. For detailed guides to different parts of the library, please visit the respective pages via the links below:</p>
+<p>{% include_relative contents.md %}</p>
+<h2>Getting started</h2>
+<ol>
+<li><p>Install Visual Studio or Visual Studio for Mac and enable both Xamarin and .NET Core support, these are listed as 'Mobile development with .NET' and '.NET Core Cross-platform development' respectively.</p>
+</li>
+<li><p>Open a command prompt window and install the template pack by entering:</p>
+<pre><code>dotnet new -i Fabulous.XamarinForms.Templates
+</code></pre>
+</li>
+<li><p>Navigate to a folder in the command prompt window where your new app can be created and enter:</p>
+<pre><code>dotnet new fabulous-xf-app -n SqueakyApp
+</code></pre>
+</li>
+<li><p>Open, edit and build in Visual Studio or Visual Studio for Mac</p>
+<pre><code>SqueakyApp/SqueakyApp.sln
+</code></pre>
+</li>
+<li><p>Before deploying and running, first connect and enable your device, choose between iOS (<a href="https://docs.microsoft.com/en-us/xamarin/ios/get-started/hello-ios/hello-ios-quickstart">Emulator</a>, <a href="https://docs.microsoft.com/en-us/xamarin/ios/get-started/installation/device-provisioning/">Device</a>) or Android (<a href="https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/android-emulator/">Emulator</a>, <a href="https://docs.microsoft.com/xamarin/android/get-started/installation/set-up-device-for-development">Device</a>).</p>
+</li>
+<li><p>To run, set either your Android or iOS project as the startup project, then use F5.</p>
+</li>
+</ol>
+<p>By default iOS and Android projects are created. But you can also target WPF with <code>--WPF</code>, UWP with <code>--UWP</code>, macOS with <code>--macOS</code> and/or GTK with <code>--GTK</code>. Here some common examples, but feel free to change the targets to the ones you require:</p>
+<p>Android only:</p>
+<pre><code>dotnet new fabulous-xf-app -n SqueakyApp --iOS=false
+</code></pre>
+<p>iOS only:</p>
+<pre><code>dotnet new fabulous-xf-app -n SqueakyApp --Android=false
+</code></pre>
+<p>WPF only:</p>
+<pre><code>dotnet new fabulous-xf-app -n SqueakyApp --WPF --Android=false --iOS=false
+</code></pre>
+<p>UWP only:</p>
+<pre><code>dotnet new fabulous-xf-app -n SqueakyApp --UWP --Android=false --iOS=false
+</code></pre>
+<p>macOS only:</p>
+<pre><code>dotnet new fabulous-xf-app -n SqueakyApp --macOS --Android=false --iOS=false
+</code></pre>
+<p>GTK only:</p>
+<pre><code>dotnet new fabulous-xf-app -n SqueakyApp --GTK --Android=false --iOS=false
+</code></pre>
+<p>All 6 platforms:</p>
+<pre><code>dotnet new fabulous-xf-app -n SqueakyApp --WPF --UWP --macOS --GTK
+</code></pre>
+<ol start="5">
+<li><p>If you are using Visual Studio for Mac and you want to start with <code>File -&gt; New</code>, make sure you target &quot;.NET Standard&quot; to add the references to Fabulous:</p>
+<pre><code>File -&gt; New Solution
+Multiplatform App -&gt; Blank Forms App (F#)
+Shared Code -&gt; Use .NET Standard
+</code></pre>
+</li>
+</ol>
+<img src="https://user-images.githubusercontent.com/1394644/45930814-97bfce80-bf32-11e8-8f7a-ebcbcb0247fa.png" width="500"> 
+<h2>A Basic Example</h2>
+<p>Here is a full example of an app:</p>
+<pre><code class="language-fsharp">open Fabulous
+open Fabulous.XamarinForms
+open Xamarin.Forms
+<p>/// The messages dispatched by the view
+type Msg =
+| Pressed</p>
+<p>/// The model from which the view is generated
+type Model =
+{ Pressed: bool }</p>
+<p>/// Returns the initial state
+let init() = { Pressed = false }</p>
+<p>/// The function to update the view
+let update (msg: Msg) (model: Model) =
+match msg with
+| Pressed -&gt; { model with Pressed = true }</p>
+<p>/// The view function giving updated content for the page
+let view (model: Model) dispatch =
+View.ContentPage(
+content=View.StackLayout(
+children=[
+if model.Pressed then
+yield View.Label(text=&quot;I was pressed!&quot;)
+else
+yield View.Button(text=&quot;Press Me!&quot;, command=(fun () -&gt; dispatch Pressed))
+]
+)
+)</p>
+<p>type App () as app =
+inherit Application ()</p>
+<pre><code>let runner =
+    Program.mkSimple init update view
+    |&amp;gt; Program.withConsoleTrace
+    |&amp;gt; XamarinFormsProgram.run app
+</code></pre>
+<p></code></pre></p>
+<p>The init function returns your initial state, and each model gets an update function for message processing. The <code>view</code> function computes an immutable Xaml-like description. In the above example, the choice between a label and button depends on the <code>model.Pressed</code> value.</p>
+<p>Some advantages of using an immutable model are:</p>
+<ul>
+<li>It is easy to unit test your <code>init</code>, <code>update</code> and <code>view</code> functions</li>
+<li>You can save/restore your model relatively easily</li>
+<li>It makes tracing causality usually very simple</li>
+</ul>
+<h2>Samples</h2>
+<p>The sample <a href="https://github.com/fsprojects/Fabulous/blob/master/Fabulous.XamarinForms/samples/CounterApp/CounterApp/CounterApp.fs">CounterApp</a> contains a slightly larger example of Button/Label/Slider elements.</p>
+<p>The sample <a href="https://github.com/fsprojects/Fabulous/blob/master/Fabulous.XamarinForms/samples/TicTacToe/TicTacToe/TicTacToe.fs">TicTacToe</a> contains examples of the Grid and Image elements.</p>
+<p>The sample <a href="https://github.com/fsprojects/Fabulous/tree/master/Fabulous.XamarinForms/samples/AllControls/AllControls/Samples">AllControls</a> contains examples of instantiating most elements in <code>Xamarin.Forms.Core</code>.</p>
+<p>The sample <a href="https://github.com/fsprojects/Fabulous/blob/master/Fabulous.XamarinForms/samples/Calculator/Calculator/Calculator.fs">Calculator</a> (<a href="https://github.com/nosami/Elmish.Calculator/">original external sample</a>) is a small calculator app.</p>
+<p>The external sample <a href="https://github.com/jimbobbennett/PocketPiggyBank">PocketPiggyBank</a> is a small client-server app with login authentication. (Note: because this is an external sample it may not be up-to-date with the latest version of this library.)</p>
+<p>The external sample <a href="https://github.com/TimLariviere/FabulousContacts">FabulousContacts</a> is a multi-page contacts app featuring maps, group-lists and cross-page messages. (Note: because this is an external sample it may not be up-to-date with the latest version of this library.)</p>
+<p>The external sample <a href="https://github.com/TimLariviere/FabulousPlanets">FabulousPlanets</a> is a multi-page app featuring facts on the planets in the Solar System. It uses Urho3D and Fabulous (Note: because this is an external sample it may not be up-to-date with the latest version of this library.)</p>
+<p>The external sample <a href="https://github.com/fsprojects/FSharp.Data.GraphQL/tree/dev/samples/star-wars-fabulous-client">Fabulous + GraphQL Type Provider</a> is a small app that demonstrates how to use the type provider for GraphQL <a href="https://github.com/fsprojects/FSharp.Data.GraphQL">FSharp.Data.GraphQL</a>.</p>
+<p>See also the curated list <a href="https://github.com/jimbobbennett/Awesome-Fabulous">Awesome Fabulous</a>.</p>
+<h2>Further Resources</h2>
+<p>Presentation: <a href="https://www.youtube.com/watch?v=bEO7bl79uAM">Making Mobile App Development Simple with F#</a></p>
+<p>Presentation: Building mobile apps with F# using Xamarin - Jim Bennett - Xamarin University Guest Lecture</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/si9YdWhbwSI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<p><strong>General Docs</strong></p>
+<ul>
+<li><a href="https://docs.microsoft.com/xamarin/">Xamarin</a></li>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/">Xamarin Forms</a>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/cross-platform/deploy-test/performance">Performance and Security</a></li>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/cross-platform/deploy-test/">Deployment and Debugging</a></li>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/cross-platform/desktop/">Cross-platform for Desktop Developers</a></li>
+</ul>
+</li>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/essentials/index?context=xamarin/xamarin-forms">Xamarin Essentials</a></li>
+</ul>
+<p><strong>Android Setup</strong></p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/android-sdk?tabs=vswin">SDK</a></li>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/android-emulator/">Emulator</a></li>
+<li><a href="https://docs.microsoft.com/xamarin/android/get-started/installation/set-up-device-for-development">Device</a></li>
+</ul>
+<p><strong>iOS Setup</strong></p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-gb/visualstudio/mac/installation">SDK</a></li>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/ios/get-started/hello-ios/hello-ios-quickstart">Emulator</a></li>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/ios/get-started/installation/windows/connecting-to-mac/">Pair to Mac</a></li>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/ios/get-started/installation/device-provisioning/">Device</a></li>
+</ul>
+<h2>Contributing</h2>
+<p>Please contribute to this library through issue reports, pull requests, code reviews and discussion.</p>
+<ul>
+<li><a href="https://github.com/fsprojects/Fabulous/tree/master/docs">Submit a fix to this guide</a></li>
+</ul>
 
-                </div>
-              </div>
-            </div>
-            <div class="card article">
-              <div class="card-content">
-                <div class="media-content has-text-centered">
-                  <p class="title article-title">
-                    <a href="/posts/post.html">
-                      Some nice post title
-                    </a>
-                  </p>
-                  <p class="subtitle is-6 article-subtitle">
-                    <a href="#">
-                      @k_cieslak
-                    </a>
-                    on 2020-02-19
-                  </p>
-                </div>
-                <div class="content article-body">
-                  <h1>Introduction</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisi diam, vehicula quis blandit id, suscipit sed libero. Proin at diam dolor. In hac habitasse platea dictumst. Donec quis dui vitae quam eleifend dignissim non sed libero. In hac habitasse platea dictumst. In ullamcorper mollis risus, a vulputate quam accumsan at. Donec sed felis sodales, blandit orci id, vulputate orci.</p>
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="PITFALLS">
+            <hr />
+<h2>title: Pitfalls</h2>
+<h2>Pitfalls and F# 5.0 support</h2>
+<p>Here are some common pitfalls you might encounter when using Fabulous.</p>
+<h3>Can Fabulous target .NET 5 / use .NET 5 libraries?</h3>
+<p>Microsoft announced .NET 5 along with F# 5.0 during .NET Conf 2020.</p>
+<p>Before .NET 5 came, there were 3 differents .NET frameworks: .NET Framework, .NET Core and Mono.<br />
+Historically, all Xamarin projects (Android, iOS, macOS and many other) run on Mono.<br />
+Since Fabulous.XamarinForms is built on top of Xamarin.Forms, it also shares the same framework.</p>
+<p>This new .NET 5 framework marks the deprecation of .NET Framework in favor of .NET Core, this replacement is done under a new name: .NET 5.<br />
+For the moment, Mono is still an independent framework and hence is not compatible with .NET 5.</p>
+<p>Microsoft is planning to retire Mono and use .NET 5 even for Xamarin applications when .NET 6 comes out (planned for the end of 2021).</p>
+<p>In the meantime, it is recommended you target either .NET Standard 2.0 or 2.1 so you can share code between .NET 5 apps and Fabulous apps.</p>
+<h3>Can Fabulous use F# 5.0?</h3>
+<p>Short answer: Yes!<br />
+You can use any of the new features of F# 5.0 with Fabulous.</p>
+<p>But the reality of the moment is that the support is largely dependent on your IDE.</p>
+<p>As of November 2020, here is the support level we noticed for the various IDEs:</p>
+<ul>
+<li><p>Visual Studio (Windows)</p>
+<p>You'll need to install Visual Studio 16.8 or newer.<br />
+The support of F# 5.0 is complete: can build, run, debug and support all new features (string interpolation, etc.).</p>
+<p><strong>Known issues</strong>:</p>
+<ul>
+<li>Android projects might fail to build because of <a href="https://github.com/xamarin/Xamarin.Android.FSharp.ResourceProvider/issues/9">an issue with <code>Xamarin.Android.FSharp.ResourceProvider</code></a>. A <a href="https://github.com/fsprojects/Fabulous/issues/813#issuecomment-726210183">known workaround</a> is to remove <code>System</code> and <code>System.Numerics</code> from the Android project references.<br />
+This issue only affects VS 16.8. So lower versions will require <code>System</code> and <code>System.Numerics</code> to build.</li>
+</ul>
+</li>
+<li><p>Visual Studio (macOS)</p>
+<p>The current stable release of Visual Studio for Mac 8.8 doesn't support F# 5.0.<br />
+If you want to use F# 5.0, you'll need to switch to the preview channel and install Visual Studio for Mac 8.9 Preview.</p>
+<p><strong>Known issues</strong>:</p>
+<ul>
+<li>Stable release doesn't support F# 5.0. The workaround is to switch to the preview channel for the moment. <a href="https://github.com/mono/mono/pull/20511#issuecomment-729170963">Support for F# 5.0 will be released for VS Mac 8.8 stable in the near future</a>.</li>
+<li>Syntax highlighting is broken when using new features like string interpolation. There is no workaround for it. We need to wait for Microsoft to fix that. <a href="https://github.com/mono/mono/pull/20511#issuecomment-729212506">Hopefully with VS Mac 8.9</a>.</li>
+</ul>
+</li>
+<li><p>JetBrains Rider (Windows &amp; macOS)</p>
+<p>It shares the same behavior than Visual Studio for Mac.<br />
+Depending on your OS, you'll either need Visual Studio 16.8 or Visual Studio 8.9 Preview installed next to it.</p>
+<p><strong>Known issues</strong>:</p>
+<ul>
+<li>Just like VS Mac, syntax highlighting is broken when using new features (string interpolation, <code>open type</code>). No workaround for it. We need to wait for a future update.</li>
+</ul>
+</li>
+</ul>
 
-                </div>
-              </div>
-            </div>
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="TESTING">
+            <hr />
+<h2>title: Testing</h2>
+<p>The Model-View-Update architecture used by Fabulous makes it simple to unit test every part of your application.<br />
+Apps are composed of 3 key pure F# functions: <code>init</code>, <code>update</code> and <code>view</code><br />
+They take some parameters and return a value. Ideal for unit testing.</p>
+<h3>Testing <code>init</code></h3>
+<p><code>init</code> is the easiest one to test.<br />
+It usually takes nothing and returns a value.</p>
+<p>Let's take this code for example:</p>
+<pre><code class="language-fsharp">type Model =
+    { Count: int
+      Step: int }
+
+let init () =
+    { Count = 0; Step = 1 }
+</code></pre>
+<p>Here we can make sure that the default state stays exact throughout the life of the project.<br />
+So using our favorite unit test framework (here we use <a href="https://fsprojects.github.io/FsUnit/">FsUnit</a> for this example), we can write a test that will check if the value returned by <code>init</code> is the one we expect.</p>
+<pre><code class="language-fsharp">[&lt;Test&gt;]
+let ``Init should return a valid initial state``() =
+    App.init () |&gt; should equal { Count = 0; Step = 1 }
+</code></pre>
+<h3>Testing <code>update</code></h3>
+<p><code>update</code> can be more complex but it remains a pure F# function.<br />
+Testing it is equivalent to what we just did with <code>init</code>.</p>
+<p>Let's take this code for example:</p>
+<pre><code class="language-fsharp">type Model =
+    { Count: int
+      Step: int }
+
+type Msg =
+    | Increment
+    | Decrement
+    | Reset 
+
+let update msg model =
+    match msg with
+    | Increment -&gt; { model with Count = model.Count + model.Step }
+    | Decrement -&gt; { model with Count = model.Count - model.Step }
+    | Reset -&gt; { model with Count = 0; Step = 1 }
+</code></pre>
+<p>We can write the following tests:</p>
+<pre><code class="language-fsharp">[&lt;Test&gt;]
+let ``Given the message Increment, Update should increment Count by Step``() =
+    let initialModel = { Count = 5; Step = 4 }
+    let expectedModel = { Count = 9; Step = 4 }
+    App.update Increment initialModel |&gt; should equal expectedModel
+
+[&lt;Test&gt;]
+let ``Given the message Decrement, Update should decrement Count by Step``() =
+    let initialModel = { Count = 5; Step = 4 }
+    let expectedModel = { Count = 1; Step = 4 }
+    App.update Decrement initialModel |&gt; should equal expectedModel
+
+[&lt;Test&gt;]
+let ``Given the message Reset, Update should reset the state``() =
+    let initialModel = { Count = 5; Step = 4 }
+    let expectedModel = { Count = 0; Step = 1 }
+    App.update Reset initialModel |&gt; should equal expectedModel
+</code></pre>
+<h3>Testing <code>init</code> and <code>update</code> when using commands</h3>
+<p>Testing <code>Cmd&lt;'msg&gt;</code> can be hard, because there's no way of knowing what the functions inside <code>Cmd</code> really are before executing them.</p>
+<p>The recommended way is to apply the <code>CmdMsg</code> pattern.<br />
+See <a href="https://fsprojects.github.io/Fabulous/Fabulous.XamarinForms/update.html#replacing-commands-with-command-messages-for-better-testability">Replacing commands with command messages for better testability</a></p>
+<h3>Testing view</h3>
+<p>Views in Fabulous are testable as well, which makes it a clear advantage over more classic OOP frameworks (like C#/MVVM).<br />
+The <code>view</code> function returns a <code>ViewElement</code> value (which is a dictionary of attribute-value pairs). So we can check against that dictionary if we find the property we want, with the value we want.</p>
+<p>Unfortunately when creating a control through <code>View.XXX</code>, we lose the control's type and access to its properties. Fabulous creates a <code>ViewElement</code> which encapsulates all those data.</p>
+<p>In order to test in a safe way, Fabulous provides type-safe helpers for every controls from <code>Xamarin.Forms.Core</code>.<br />
+You can find them in the <code>Fabulous.XamarinForms</code> namespace. They are each named after the control they represent.</p>
+<p>Example: <code>StackLayoutViewer</code> will let you access the properties of a <code>StackLayout</code>.</p>
+<p>The Viewer only takes a <code>ViewElement</code> as a parameter.<br />
+(If you pass a <code>ViewElement</code> that represents a different control than the Viewer expects, the Viewer will throw an exception)</p>
+<p>Let's take this code for example:</p>
+<pre><code class="language-fsharp">let view (model: Model) dispatch =  
+    View.ContentPage(
+        content=View.StackLayout(
+            automationId=&quot;stackLayoutId&quot;
+            children=[ 
+                View.Label(automationId=&quot;CountLabel&quot;, text=sprintf &quot;%d&quot; model.Count)
+                View.Button(text=&quot;Increment&quot;, command=(fun () -&gt; dispatch Increment))
+                View.Button(text=&quot;Decrement&quot;, command=(fun () -&gt; dispatch Decrement)) 
+                View.StackLayout(
+                    orientation=StackOrientation.Horizontal, 
+                    children=[
+                        View.Label(text=&quot;Timer&quot;)
+                        View.Switch(isToggled=model.TimerOn, toggled=(fun on -&gt; dispatch (TimerToggled on.Value)))
+                    ])
+                View.Slider(minimumMaximum=(0.0, 10.0), value=double model.Step, valueChanged=(fun args -&gt; dispatch (SetStep (int args.NewValue))))
+                View.Label(text=sprintf &quot;Step size: %d&quot; model.Step)
+            ]))   
+</code></pre>
+<p>We want to make sure that if the state changes, the view will update accordingly.</p>
+<p>The first step is to call <code>view</code> with a given state and retrieve the generated <code>ViewElement</code>.<br />
+<code>view</code> is expecting a <code>dispatch</code> function as well. In our case, we don't need to test the dispatching of messages, so we pass the function <code>ignore</code> instead.</p>
+<p>From there, we create the Viewers to help us read the properties of the controls we want to check.</p>
+<p>And finally, we assert that the properties have the expected values.</p>
+<h4>Viewer API</h4>
+<p>The following approach uses the Viewer API. This is a way but with this you have to know exactly at which position the child you need is.</p>
+<pre><code class="language-fsharp">[&lt;Test&gt;]
+let ``View should generate a label showing the count number of the model``() =
+    let model = { Count = 5; Step = 4; TimerOn = true }
+    let actualView = App.view model ignore
+    
+    let contentPage = ContentPageViewer(actualView)
+    let stackLayout = StackLayoutViewer(contentPage.Content)
+    let countLabel = LabelViewer(stackLayout.Children.[0])
+    
+    countLabel.Text |&gt; should equal &quot;5&quot;
+</code></pre>
+<h4>FindViewElement / TryFindViewElement</h4>
+<p>With <code>findViewElement</code> and <code>tryFindViewElement</code> you don't need to know where exactly the child is positioned. You have to set <code>automationId</code> on the ViewElements which will be used by those functions to find the element in the tree.
+This approach is the recommended way for testing and to get the ViewElements in a View.</p>
+<h5>findViewElement</h5>
+<pre><code class="language-fsharp">[&lt;Test&gt;]
+let ``View should generate a label showing the count number of the model``() =
+    let model = { Count = 5; Step = 4; TimerOn = true }
+    let actualView = App.view model ignore
+    
+    let countLabel = findViewElement &quot;CountLabel&quot; actualView |&gt; LabelViewer
+    
+    countLabel.Text |&gt; should equal &quot;5&quot;
+</code></pre>
+<h5>tryFindViewElement</h5>
+<p><code>tryFindViewElement</code> delivers a quickaccess to a ViewElement as findViewElement but here you get an Option Type. With this you can also check for the existence of a ViewElement.</p>
+<pre><code class="language-fsharp">[&lt;Test&gt;]
+let ``When user is authenticated, View should not include a connection button``() =
+    let model = { Count = 5; Step = 4; TimerOn = true }
+    let actualView = App.view model ignore
+    
+    tryFindViewElement &quot;ConnectionButton&quot; actualView |&gt; should equal None
+</code></pre>
+<h3>Testing if a control dispatches the correct message</h3>
+<p>If you want to test your event handlers, you can retrieve them in the same way than a regular property.<br />
+Then, you can execute the event handler like a normal function and check its result through a mocked dispatch.</p>
+<pre><code class="language-fsharp">[&lt;Test&gt;]
+let ``Clicking the button Increment should send the message Increment``() =
+    let mockedDispatch msg =
+        msg |&gt; should equal Increment
+
+    let model = { Count = 5; Step = 4; TimerOn = true }
+    let actualView = App.view model mockedDispatch
+
+    let contentPage = ContentPageViewer(actualView)
+    let stackLayout = StackLayoutViewer(contentPage.Content)
+    let incrementButton = ButtonViewer(stackLayout.Children.[1])
+
+    incrementButton.Command ()
+</code></pre>
+<h3>See also</h3>
+<ul>
+<li><a href="https://github.com/fsprojects/Fabulous/blob/master/Fabulous.XamarinForms/samples/CounterApp/CounterApp.Tests/Tests.fs">CounterApp.Tests sample</a></li>
+</ul>
+
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="MODELS">
+            <hr />
+<h2>title: Models</h2>
+<h3>Messages and Validation</h3>
+<p>Validation is generally done on updates to the model storing error messages from validation logic in the model so they can be correctly and simply displayed to the user. Here is a very basic example:</p>
+<pre><code class="language-fsharp">type Animal =
+    | ValidAnimal of string
+    | InvalidAnimal of string
+
+type Model = { AnimalName : Animal }
+
+type Msg = UpdateAnimal of string
+
+let validAnimalNames = [ &quot;Emu&quot;; &quot;Kangaroo&quot;; &quot;Platypus&quot;; &quot;Wombat&quot; ]
+
+let validateAnimal (animalName : string) =
+    if List.contains animalName validAnimalNames
+    then ValidAnimal animalName
+    else InvalidAnimal animalName
+
+let update msg model =
+    match msg with
+    | UpdateAnimal animalName -&gt; { model with AnimalName = validateAnimal animalName }
+
+let view (model: Model) dispatch : ViewElement =
+    let makeEntryCell text = View.Entry(text = text, textChanged = fun textArgs -&gt; UpdateAnimal textArgs.NewTextValue |&gt; dispatch)
+    View.ContentPage(
+        content =
+            View.StackLayout(
+                children =
+                    match model.AnimalName with
+                    | ValidAnimal validName -&gt; [ makeEntryCell validName ]
+                    | InvalidAnimal invalidName -&gt;
+                        [ makeEntryCell invalidName
+                          View.Label(text = sprintf &quot;%s is not a valid animal name. Try %A&quot; invalidName validAnimalNames) ]))
+
+let init () = { AnimalName = validateAnimal &quot;Emu&quot; }
+</code></pre>
+<p>A more advanced validation might use the <code>Result&lt;'T,'TError&gt;</code> type to wrap parts of the model that require validation: in the previous example the <code>Result</code> type has somewhat been reinvented. Using <code>Result</code> provides a consistent way of knowing which parts of the model are in a valid state, use of the standard <code>Result</code> functions like <code>map</code> and <code>bind</code> to perform branching logic, and more comprehensive error messaging. One thing to note is that <code>'TError</code> will usually need to carry the original input value so it can be displayed back to the user.</p>
+<pre><code class="language-fSharp">type Animal = Animal of string
+
+type ErrorMessage =
+    | InvalidName of InputString : string
+    | BlankName
+
+type Model = { AnimalName : Result&lt;Animal,ErrorMessage&gt; }
+
+type Msg = UpdateAnimal of string
+
+let validAnimalNames = [ &quot;Emu&quot;; &quot;Kangaroo&quot;; &quot;Platypus&quot;; &quot;Wombat&quot; ]
+
+let validateAnimal (animalName : string) =
+    if animalName = &quot;&quot;
+    then Error BlankName
+    else
+        if List.contains animalName validAnimalNames
+        then Ok (Animal animalName)
+        else Error (InvalidName animalName)
+
+let update msg model =
+    match msg with
+    | UpdateAnimal animalName -&gt; { model with AnimalName = validateAnimal animalName }
+
+let view (model: Model) dispatch : ViewElement =
+    let makeEntryCell text = View.Entry(text = text, textChanged = fun textArgs -&gt; UpdateAnimal textArgs.NewTextValue |&gt; dispatch)
+    let makeErrorMsg err =
+        match err with
+        | InvalidName invalidName -&gt;
+            [ makeEntryCell invalidName
+              View.Label(text = sprintf &quot;%s is not a valid animal name. Try %A&quot; invalidName validAnimalNames) ]
+        | BlankName -&gt;
+            [ makeEntryCell &quot;&quot;
+              View.Label(text = sprintf &quot;You must input a name&quot;) ]
+
+    View.ContentPage(
+        content =
+        View.StackLayout(
+            children =
+                match model.AnimalName with
+                | Ok (Animal validName) -&gt; [ makeEntryCell validName ]
+                | Error errorMsg -&gt; makeErrorMsg errorMsg))
+
+let init () = { AnimalName = validateAnimal &quot;Emu&quot; }
+</code></pre>
+<p>Note that the same validation logic can be used in both your app and a service back-end.</p>
+<h3>Saving Application State</h3>
+<p>Application state is very simple to save by serializing the model into <code>app.Properties</code>. For example, you can store as JSON as follows using <code>Json.NET</code>:</p>
+<pre><code class="language-fsharp">
+type Application() =
+    ....
+    let modelId = &quot;model&quot;
+    override __.OnSleep() =
+
+        let json = Newtonsoft.Json.JsonConvert.SerializeObject(runner.CurrentModel)
+        Debug.WriteLine(&quot;OnSleep: saving model into app.Properties, json = {0}&quot;, json)
+
+        app.Properties.[modelId] &lt;- json
+
+    override __.OnResume() =
+        Debug.WriteLine &quot;OnResume: checking for model in app.Properties&quot;
+        try
+            match app.Properties.TryGetValue modelId with
+            | true, (:? string as json) -&gt;
+
+                Debug.WriteLine(&quot;OnResume: restoring model from app.Properties, json = {0}&quot;, json)
+                let model = Newtonsoft.Json.JsonConvert.DeserializeObject&lt;App.Model&gt;(json)
+
+                Debug.WriteLine(&quot;OnResume: restoring model from app.Properties, model = {0}&quot;, (sprintf &quot;%0A&quot; model))
+                runner.SetCurrentModel (model, Cmd.none)
+
+            | _ -&gt; ()
+        with ex -&gt;
+            App.program.onError(&quot;Error while restoring model found in app.Properties&quot;, ex)
+
+    override this.OnStart() =
+        Debug.WriteLine &quot;OnStart: using same logic as OnResume()&quot;
+        this.OnResume()
+</code></pre>
+
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="GUIDE">
+            <p>This guide augments the primary <a href="https://docs.microsoft.com/xamarin/xamarin-forms/">Xamarin.Forms documentation</a> with information
+specific to the Fabulous programming model.</p>
+<blockquote>
+<p>NOTE: A comprehensive guide to Xamarin.Forms programming is available for free
+in the <a href="https://docs.microsoft.com/xamarin/xamarin-forms/creating-mobile-apps-xamarin-forms/">Creating Mobile Apps with Xamarin.Forms</a> ebook.
+The book deals with C# MVVM programming but many details are relevant here.</p>
+</blockquote>
+<h2>Structure of an App</h2>
+<p>Here is the typical structure for the main logic of an app:</p>
+<pre><code class="language-fsharp">type Msg =
+    | ...
+
+/// The model from which the view is generated
+type Model = 
+    { ... }
+
+/// Returns the initial state
+let init() = { ... }
+    
+/// The funtion to update the view
+let update (msg:Msg) (model:Model) = ...
+
+/// The view function giving updated content for the page
+let view (model: Model) dispatch = ...
+
+type App () as app = 
+    inherit Application ()
+
+    let runner = 
+        Program.mkSimple init update view
+        |&gt; Program.withConsoleTrace
+        |&gt; XamarinFormsProgram.run app
+</code></pre>
+<h3>The model</h3>
+<p>The model is the core data from which the whole state of the app can be resurrected.  When designing your model,
+ask yourself  &quot;what is the information I would need on restart to get the app back to the same essential state&quot;. The model is generally immutable but may also contain elements such as service connections.
+It is common for the desgin of the model to grow &quot;organically&quot; as you prototype your app.</p>
+<p>Some advantages of using an immutable model are:</p>
+<ul>
+<li>It is easy to unit test your <code>init</code>, <code>update</code> and <code>view</code> functions</li>
+<li>You can save/restore your model relatively easily</li>
+<li>It makes tracing causality usually very simple</li>
+</ul>
+<p>The init function returns your initial model.  The update function updates the model as messages are received.</p>
+<h3>The view function</h3>
+<p>The view function computes an immutable Xaml-like description.</p>
+<h3>The update function</h3>
+<p>Each model gets an <code>update</code> function for message processing. The messages are either messages from the <code>view</code> or from external events.
+If using <code>Program.mkProgram</code> your <code>update</code> function may also return new commands to trigger as a result of processing a message. (A command is simply a function that may dispatch one or more messages at some point, and is called by the Fabulous runtime.)</p>
+<h2>Structure of a Project</h2>
+<p>The majority of your app logic will be in your shared code project, normally a .NET Standard 2.0 project.</p>
+<p>Your project will also have <code>iOS</code> and <code>Droid</code> projects for actually running the core logic on these different platforms.</p>
+<h2>Running</h2>
+<p>To run, set your target to <code>Any CPU</code> (Android) or <code>iPhone</code> or <code>iPhone Simulator</code>, then choose your device and launch.</p>
+<p>You may need to install Android, iOS and/or other SDK tooling.</p>
+<p>If running on-device you may need to enable developer settings for your device,
+or, in the case of iOS, enable <a href="https://docs.microsoft.com/xamarin/ios/get-started/installation/device-provisioning/free-provisioning">free provisioning</a>.</p>
+
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="LOGGING">
+            <hr />
+<h2>title: Traces and Crashes</h2>
+<p>In Fabulous, everything happens in a centralized message loop that is responsible for calling your <code>init</code>, <code>update</code> and <code>view</code> functions.<br />
+Fabulous allows you to plug into this loop to run custom logic such as logging and error handling.</p>
+<p>There's a few built-in functions available already:</p>
+<table>
+<thead>
+<tr>
+<th>Functions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Program.withConsoleTrace</td>
+<td>Print every message, model and exception received and/or generated by the init, update and view functions. <br/>Really useful while debugging. Might slow down the app a bit.</td>
+</tr>
+<tr>
+<td>Program.withTrace (trace)</td>
+<td>Call custom tracing function everytime Fabulous needs to update the app. <br/>Signature: <code>trace: 'msg -&gt; 'model -&gt; unit</code></td>
+</tr>
+<tr>
+<td>Program.withErrorHandler (onError)</td>
+<td>Call custom error handling logic. <br/>Signature: <code>onError: string * exn -&gt; unit</code></td>
+</tr>
+</tbody>
+</table>
+<p>To use them, you will need to add them when declaring the runner, before calling <code>XamarinFormsProgram.run</code>.<br />
+You can add multiple trace functions, one after another.</p>
+<pre><code class="language-fsharp">type App () as app = 
+    inherit Application ()
+
+    let runner = 
+        Program.mkProgram App.init App.update App.view
+        |&gt; Program.withConsoleTrace
+        |&gt; Program.withErrorHandling (fun (message, exn) -&gt; writeToDisk exn)
+        |&gt; XamarinFormsProgram.run app
+</code></pre>
+<p>In this example, logs will be written to the console before the error handler can write the exceptions to the disk.</p>
+<h2>Writing a custom trace function</h2>
+<p>Writing a custom trace function is simple.<br />
+You need to make a function that accepts a <code>Program&lt;'model, 'msg, 'view&gt;</code> and that outputs another <code>Program&lt;'model, 'msg, 'view&gt;</code>.</p>
+<p>This <code>Program</code> defines the handlers that are responsibles for calling <code>init</code>, <code>update</code> and <code>views</code> as well as handle errors.
+You can define your own handlers instead to do additional logic.<br />
+<strong>Make sure to call the previous <code>Program</code> handlers in your owns, otherwise you will completely bypass Fabulous.</strong></p>
+<p>Here's a simple example that prints a message each time something happens</p>
+<pre><code class="language-fsharp">let withSimpleTrace (program: Program&lt;'model, 'msg, _&gt;) =
+    let traceInit () =
+        Console.WriteLine &quot;Init&quot;
+        program.init ()
+
+    let traceUpdate msg model =
+        Console.WriteLine &quot;Update&quot;
+        program.update msg model
+
+    let traceView model dispatch =
+        Console.WriteLine &quot;View&quot;
+        program.update msg model
+
+    let traceOnError (message, exn) =
+        Console.WriteLine &quot;Error&quot;
+        program.onError (message, exn)
+            
+    { program with
+        init = traceInit 
+        update = traceUpdate
+        view = traceView
+        onError = traceOnError }
+
+
+type App () as app = 
+    inherit Application ()
+
+    let runner = 
+        Program.mkProgram App.init App.update App.view
+        |&gt; Program.withSimpleTrace
+        |&gt; XamarinFormsProgram.run app
+</code></pre>
+<p>You're not required to implement all handlers, if you only need to override <code>update</code> then just override that one.</p>
+<pre><code class="language-fsharp">let withSimpleTrace (program: Program&lt;'model, 'msg, _&gt;) =
+    let traceUpdate msg model =
+        Console.WriteLine &quot;Update&quot;
+        program.update msg model
+
+    { program with update = traceUpdate }
+</code></pre>
+<h2>AppCenter</h2>
+<p>Here's a good example of implementing our own trace function.</p>
+<p><a href="https://appcenter.ms">Visual Studio App Center</a> is a DevOps portal tailored for mobile application development.<br />
+It handles everything from build, tests, distribution, analytics and crashes reporting, for Android, iOS and UWP.</p>
+<p>We can define our own trace functions to send analytics and crashes to AppCenter.</p>
+<p>AppCenter provides us with a really simple way to report to it.<br />
+We only need to install the following packages:</p>
+<ul>
+<li><a href="https://www.nuget.org/packages/Microsoft.AppCenter.Analytics/"><code>Microsoft.AppCenter.Analytics</code></a></li>
+<li><a href="https://www.nuget.org/packages/Microsoft.AppCenter.Crashes/"><code>Microsoft.AppCenter.Crashes</code></a></li>
+</ul>
+<p>Once the packages added, we can access 3 methods:</p>
+<ul>
+<li><code>Start</code>: Initialize AppCenter by providing our app secrets</li>
+<li><code>Analytics.TrackEvent</code>: Track a custom event with associated data</li>
+<li><code>Crashes.TrackError</code>: Track an exception.</li>
+</ul>
+<p>AppCenter will provide a dashboard of those events and exceptions along with stack traces</p>
+<p>Here we override <code>update</code> to call <code>Analytics.TrackEvent</code>, and <code>onError</code> to call <code>Crashes.TrackError</code>.</p>
+<pre><code class="language-fsharp">module AppCenter =
+    type AppCenterUpdateTracer&lt;'msg, 'model&gt; =
+        'msg -&gt; 'model -&gt; (string * (string * string) list) option
+
+    /// Trace all the updates to AppCenter
+    let withAppCenterTrace (shouldTraceUpdate: AppCenterUpdateTracer&lt;_, _&gt;) (program: Program&lt;_, _, _&gt;) =
+        let traceUpdate msg model =
+            match shouldTraceUpdate msg model with
+            | Some (key, value) -&gt; Analytics.TrackEvent (key, dict value)
+            | None -&gt; ()
+            program.update msg model
+
+        let traceError (message, exn) =
+            Crashes.TrackError(exn, dict [ (&quot;Message&quot;, message) ])
+
+        { program with
+            update = traceUpdate 
+            onError = traceError }
+</code></pre>
+<p>We could trace everything, but you should consider to trace the minimum to protect your users' privacy.<br />
+To do that, we have added a <code>AppCenterUpdateTracer</code> function that will filter the messages that interest us and what data we should extract from it.</p>
+<pre><code class="language-fsharp">module Tracing =
+    let hasValue = (not &lt;&lt; String.IsNullOrEmpty) &gt;&gt; string
+
+    let rules msg _ =
+        match msg with
+        | App.Msg.GoToAbout -&gt;
+            Some (&quot;Navigation&quot;, [ (&quot;Page&quot;, &quot;About&quot;) ])
+        | App.Msg.NavigationPopped -&gt;
+            Some (&quot;Back Navigation&quot;, [])
+        | App.Msg.UpdateWhenContactAdded c -&gt;
+            Some (&quot;Contact added&quot;, [
+                (&quot;Has Email&quot;, hasValue c.Email)
+                (&quot;Has Phone&quot;, hasValue c.Phone)
+                (&quot;Has Address&quot;, hasValue c.Address)
+            ])
+        | _ -&gt; None
+</code></pre>
+<p>In our <code>App</code> class, we need to call <code>AppCenter.Start(&quot;appsecrets&quot;, typeof&lt;Analytics&gt;, typeof&lt;Crashes&gt;)</code> to initialize it.</p>
+<pre><code class="language-fsharp">type App () as app = 
+    inherit Application ()
+
+    do AppCenter.Start(&quot;ios=(...);android=(...)&quot;, typeof&lt;Analytics&gt;, typeof&lt;Crashes&gt;)
+
+    let runner = 
+        Program.mkProgram App.init App.update App.view
+        |&gt; AppCenter.withAppCenterTrace Tracing.rules
+        |&gt; XamarinFormsProgram.run app
+</code></pre>
+
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="UPDATE">
+            <hr />
+<h2>title: The Init and Update Functions</h2>
+<p>The init function returns an initial model, and the update function processes a message and returns a new model:</p>
+<pre><code class="language-fsharp">type Model = { TimerOn: bool } 
+
+type Message = 
+    | TimerToggled of bool
+    
+let init () = { TimerOn = false }
+    
+let update msg model =
+    match msg with
+    | TimerToggled on -&gt; { model with TimerOn = on }
+</code></pre>
+<h2>Commands</h2>
+<p>A command (type <code>Cmd</code>) is a callback that can dispatch messages, i.e. gets access to <code>dispatch</code> when run.</p>
+<p>Commands can be used for event subscriptions to callback, implement timers and so on. They can also be returned
+with the model to queue up long running operations such as network calls.</p>
+<p>Commands are often asynchronous and nearly always dispatch messages. For example, the simplest way to make a command
+is <code>Cmd.ofAsyncMsg</code> which triggers a message dispatch when an async completes:</p>
+<pre><code class="language-fsharp">let timerCmd = 
+    async { do! Async.Sleep 200
+            return TimedTick }
+    |&gt; Cmd.ofAsyncMsg
+</code></pre>
+<h2>Triggering Commands on Initialization</h2>
+<p>The <code>init</code> function may trigger commands, e.g. initial database requests.  This is permitted when using <code>Program.mkProgram</code>.
+For example here is a pattern  to get an initial balance on startup:</p>
+<pre><code class="language-fsharp">let fetchInitialBalance = Cmd.ofAsyncMsg (async { ... })
+
+let init () = { ... }, fetchInitialBalance
+</code></pre>
+<h2>Triggering Commands as Messages are Processed</h2>
+<p>The <code>update</code> function may trigger commands such as timers.  This is permitted when using <code>Program.mkProgram</code>.
+For example, here is one pattern for a timer loop that can be turned on/off:</p>
+<pre><code class="language-fsharp">type Model = 
+    { TimerOn: bool
+      Count: int
+      Step: int }
+        
+type Message = 
+    | TimedTick
+    | TimerToggled of bool
+        
+let timerCmd = 
+    async { do! Async.Sleep 200
+            return TimedTick }
+    |&gt; Cmd.ofAsyncMsg
+
+let init () = { TimerOn = false; Count = 0; Step = 1 }, Cmd.none
+    
+let update msg model =
+    match msg with
+    | TimerToggled on -&gt; { model with TimerOn = on }, (if on then timerCmd else Cmd.none)
+    | TimedTick -&gt; if model.TimerOn then { model with Count = model.Count + model.Step }, timerCmd else model, Cmd.none
+</code></pre>
+<h2>Triggering Commands from External Events</h2>
+<p>You can also set up global subscriptions, which are events sent from outside the view or the dispatch loop. For example, dispatching <code>ClockMsg</code> messages on a global timer:</p>
+<pre><code class="language-fsharp">let timerTick dispatch =
+    let timer = new System.Timers.Timer(1.0)
+    timer.Elapsed.Subscribe (fun _ -&gt; dispatch (ClockMsg System.DateTime.Now)) |&gt; ignore
+    timer.Enabled &lt;- true
+    timer.Start()
+
+let runner = 
+    Program.mkSimple App.init App.update App.view
+    |&gt; Program.withSubscription (fun _ -&gt; Cmd.ofSub timerTick)
+    |&gt; Program.runWithDynamicView app
+        
+</code></pre>
+<p>Likewise, the general pattern to subscribe to external event sources is as follows:</p>
+<pre><code class="language-fsharp">let subscribeToPushEvent dispatch = 
+     ...
+     call dispatch in some closure
+     ...
+
+let runner = 
+    Program.mkSimple App.init App.update App.view
+    |&gt; Program.withSubscription (fun _ -&gt; Cmd.ofSub subscribeToPushEvent)
+    |&gt; Program.runWithDynamicView app
+        
+</code></pre>
+<p>Everything that wants access to <code>dispatch</code> must be mentioned in the composition of the overall app, or as part of a command produced as a result of processing a message, or in the view.</p>
+<h2>Replacing commands with command messages for better testability</h2>
+<p>Commands are a great way for executing a set of tasks (asynchronous or not) after receiving a message.</p>
+<p>But behind the scenes, <code>Cmd&lt;'msg&gt;</code> is really only an array of functions. This makes testing <code>Cmd&lt;'msg&gt;</code> really difficult (no way to know what the functions are) and the functions <code>init</code> and <code>update</code> as well.</p>
+<p>In the case you want to unit test your code, even if you're using <code>Cmd&lt;'msg&gt;</code> inside <code>init</code> and <code>update</code>, the best way is to use of the <code>CmdMsg</code> pattern.</p>
+<p>This is a general pattern, applicable when using an Elm-like programming model.<br />
+It is not linked to Fabulous specifically.</p>
+<p>Fabulous only provides some helpers to help you achieve this with less code.</p>
+<p>The principle is to replace any direct usage of <code>Cmd&lt;'msg&gt;</code> from <code>init</code> and <code>update</code>, and instead use a discriminated union called <code>CmdMsg</code>.</p>
+<pre><code class="language-fsharp">type Model = 
+    { TimerOn: bool
+      Count: int
+      Step: int }
+        
+type Msg = 
+    | TimedTick
+    | TimerToggled of bool
+
+type CmdMsg =
+    | TimerTick
+
+let init () =
+    { TimerOn = false; Count = 0; Step = 1 }, [] // An empty list means no action
+    
+let update msg model =
+    match msg with
+    | TimerToggled on -&gt;
+       { model with TimerOn = on }, [ if on then yield TimerTick ]
+    | TimedTick -&gt;
+       if model.TimerOn then
+          { model with Count = model.Count + model.Step }, [ TimerTick ]
+       else
+          model, []
+</code></pre>
+<p>Doing this transforms the output of both <code>init</code> and <code>update</code> to pure data output, which can then be easily unit tested</p>
+<pre><code class="language-fsharp">[&lt;Test&gt;]
+let togglingOnShouldTriggerTimerTick () =
+    let initialModel = { TimerOn = false; Count = 0; Step = 1 }
+    let expectedReturn = { TimerOn = true; Count = 0; Step = 1 }, [ TimerTick ]
+    App.update (TimerToggled true) initialModel |&gt; should equal expectedReturn
+</code></pre>
+<p>The actual commands are still executed as <code>Cmd&lt;'msg&gt;</code> though.<br />
+So in order to make this work with Fabulous, you need a function that will convert a <code>CmdMsg</code> to a <code>Cmd&lt;'msg&gt;</code></p>
+<p>Fabulous then helps you boot your application using <code>Program.mkProgramWithCmdMsg</code></p>
+<pre><code class="language-fsharp">let mapCommands cmdMsg =
+    match cmdMsg with
+    | TimerTick -&gt; timerCmd()
+
+type App() as app =
+    inherit Application()
+
+    let runner =
+        Program.mkProgramWithCmdMsg init update view mapCommands
+        |&gt; XamarinFormsProgram.run app
+</code></pre>
+<p>Note that <code>Program.mkProgramWithCmdMsg</code> doesn't do anything magic.<br />
+It only applies <code>mapCommands</code> to any <code>CmdMsg</code> returned by <code>init</code> and <code>update</code>.<br />
+You could achieve the exact same behavior by converting them yourself and using <code>Program.mkProgram</code>.</p>
+<h2>Threading and Long-running Operations</h2>
+<p>The rules:</p>
+<ol>
+<li><code>update</code> gets run on the UI thread.</li>
+<li><code>dispatch</code> can be called from any thread. The message will be processed by <code>update</code> on the UI thread.</li>
+<li><code>view</code> gets called on the UI thread. In the future an option may be added to offload the <code>view</code> function automatically.</li>
+</ol>
+<p>When handling any long running operation, the operation should initiate it's thing and dispatch a message when done.
+If necessary, explicitly off-load and then dispatch at the end, e.g.</p>
+<pre><code class="language-fsharp">let backgroundCmd =
+    Cmd.ofAsyncMsg (async { 
+        do! Async.SwitchToThreadPool()
+        let res = ...
+        return msg
+    })
+</code></pre>
+<h2>Optional commands</h2>
+<p>There might be cases where before a message is sent, you need to check if you want to send it (e.g. check user's preferences, ask user's permission, ...)</p>
+<p>Fabulous has 2 helper functions for this:</p>
+<ul>
+<li><code>Cmd.ofMsgOption</code></li>
+</ul>
+<pre><code class="language-fsharp">let autoSaveCmd =
+    match userPreference.IsAutoSaveEnabled with
+    | false -&gt; None
+    | true -&gt;
+        autoSave()
+        Some Msg.AutoSaveDone
+
+let update msg model =
+    match msg with
+    | TimedTick -&gt; model, (Cmd.ofMsgOption autoSaveCmd)
+    | AutoSaveDone -&gt; ...
+</code></pre>
+<ul>
+<li><code>Cmd.ofAsyncMsgOption</code></li>
+</ul>
+<pre><code class="language-fsharp">let takePictureCmd = async {
+    try
+        let! picture = takePictureAsync()
+        Some (Msg.PictureTaken picture)
+    with
+    | exn -&gt;
+        do! displayAlert(&quot;Exception: &quot; + exn.Message)
+        None
+}
+
+let update msg model =
+    match msg with
+    | TakePicture -&gt; model, (Cmd.ofAsyncMsgOption takePictureCmd)
+    | PictureTaken -&gt; ...
+</code></pre>
+<h2>Webrequests in a Command</h2>
+<p>Sometimes it is needed to make some web requests. Which tool you use here does not matter. For example you could use FSharp.Data to make HttpRequests.
+These are the steps that you have to do, to make it work:</p>
+<ol>
+<li>Create a case in the message type for a successful and failure webrequests</li>
+</ol>
+<pre><code class="language-fsharp">type Msg =
+    | LoginClicked
+    | LoginSuccess
+    | AuthError
+</code></pre>
+<ol start="2">
+<li>Implement the Command and return the correct message</li>
+</ol>
+<pre><code class="language-fsharp">let authUser (username : string) (password : string) =
+    async {
+        do! Async.SwitchToThreadPool()
+        // make your http call
+        // FSharp.Data.HTTPUtil is used here
+        let! response = Http.AsyncRequest
+                            (url = URL, body = TextRequest &quot;&quot;&quot; {&quot;username&quot;: &quot;test&quot;, &quot;password&quot;: &quot;testpassword&quot;} &quot;&quot;&quot;,
+                             httpMethod = &quot;POST&quot;, silentHttpErrors = true)
+        let r =
+            match response.StatusCode with
+            | 200 -&gt; LoginSuccess
+            | _ -&gt; AuthError
+        return r
+    }
+    |&gt; Cmd.ofAsyncMsg
+</code></pre>
+<ol start="3">
+<li>Call the Command from update e.g. when a button is clicked</li>
+</ol>
+<pre><code class="language-fsharp">let update msg model =
+    match msg with
+    | LoginClicked -&gt; { model with IsRunning = true }, authUser model.Username model.Password // Call the Command
+    | LoginSuccess -&gt;
+        { model with IsLoggedIn = true
+                     IsRunning = false }, Cmd.none
+    | AuthError -&gt;
+        { model with IsLoggedIn = false
+                     IsRunning = false }, Cmd.none
+</code></pre>
+<ol start="4">
+<li>Create your view as you need</li>
+</ol>
+<pre><code class="language-fsharp">match model.IsLoggedIn with
+| true -&gt; LoggedInSuccesful
+| false -&gt; LoginView
+</code></pre>
+<h2>Platform-specific dispatch</h2>
+<p>Some platform-specific features (like deep linking, memory warnings, ...) are not available in Xamarin.Forms, and need you to implement them in the corresponding app project.<br />
+In this case, you might want to dispatch a message from the app project to Fabulous to start a shared logic between platforms (to warn user, ...).</p>
+<p>To allow for this kind of use case, the <code>dispatch</code> function is exposed as a <code>Dispatch(msg)</code> method by the <code>ProgramRunner</code>. By default this runner is not accessible, but you can make a read-only property to let apps access it.</p>
+<pre><code class="language-fsharp">type App() as app =
+    inherit Application()
+
+    let runner =
+        Program.mkProgram init update view
+        |&gt; XamarinFormsProgram.run app
+
+    member __.Program = runner // Add this line
+</code></pre>
+<p>Once done, you can access it in the app project</p>
+<ul>
+<li>Android</li>
+</ul>
+<pre><code class="language-fsharp">[&lt;Activity&gt;]
+type MainActivity() =
+    inherit FormsApplicationActivity()
+
+    // Store the App instance
+    let mutable _app: App option = None
+
+    override this.OnCreate (bundle: Bundle) =
+        base.OnCreate (bundle)
+
+        Forms.Init (this, bundle)
+
+        // Initialize the app and store its reference
+        let app = new App()
+        this.LoadApplication(app)
+        _app &lt;- Some app
+
+    override this.OnTrimMemory(level) =
+        // If the app is initialized, dispatch the message
+        match _app with
+        | Some app -&gt; app.Program.Dispatch(Msg.ReceivedLowMemoryWarning)
+        | None -&gt; ()
+</code></pre>
+<ul>
+<li>iOS</li>
+</ul>
+<pre><code class="language-fsharp">[&lt;Register(&quot;AppDelegate&quot;)&gt;]
+type AppDelegate () =
+    inherit FormsApplicationDelegate ()
+
+    // Store the App instance
+    let mutable _app: App option = None
+
+    override this.FinishedLaunching (uiApp, options) =
+        Forms.Init()
+
+        // Initialize the app and store its reference
+        let app = new AllControls.App()
+        this.LoadApplication (app)
+        _app &lt;- Some app
+
+        base.FinishedLaunching(uiApp, options)
+
+    override this.ReceiveMemoryWarning(uiApp) =
+        // If the app is initialized, dispatch the message
+        match _app with
+        | Some app -&gt; app.Program.Dispatch(Msg.ReceivedLowMemoryWarning)
+        | None -&gt; ()
+</code></pre>
+
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="TOOLS">
+            <hr />
+<h2>title: fabulous-cli</h2>
+<p>With the <code>fabulous-cli</code> you can run LiveUpdate.</p>
+<p>Install <code>fabulous-cli</code>:</p>
+<pre><code>    // install latest
+    dotnet tool install -g fabulous-cli 
+    // install explicit version
+    dotnet tool install -g fabulous-cli --version {versionnumber}
+	
+</code></pre>
+<p>Update <code>fabulous-cli</code>:</p>
+<pre><code>    dotnet tool update -g fabulous-cli
+	
+</code></pre>
+<p>Uninstall <code>fabulous-cli</code>:</p>
+<pre><code>    dotnet tool uninstall -g fabulous-cli
+</code></pre>
+<h2>Live Update</h2>
+<p>There is an experimental LiveUpdate mechanism available.  The aim of this is primarily to enable modifying the <code>view</code> function in order
+to see the effect of adjusting of visual options.</p>
+<p>At the time of writing this has been trialled with</p>
+<ul>
+<li>Visual Studio + Android (USB Device or Emulator)</li>
+<li>Visual Studio for Mac + Android (USB Device or Emulator)</li>
+<li>Visual Studio for Mac + iOS (USB Device or Emulator)</li>
+<li>Visual Studio + WPF</li>
+</ul>
+<p>Some manual set-up is required.</p>
+<ol>
+<li><p>Install or update <code>fabulous-cli</code> as a global tool</p>
+<pre><code> dotnet tool install -g fabulous-cli
+ dotnet tool update -g fabulous-cli
+</code></pre>
+</li>
+<li><p>Install or update the NuGet package <code>Fabulous.XamarinForms.LiveUpdate</code> for all projects in your app.<br />
+This is the default for apps created with templates 0.13.10 and higher. Do a clean build.</p>
+</li>
+<li><p>Add the following reference to enable live update:</p>
+<pre><code>open Fabulous.XamarinForms.LiveUpdate
+</code></pre>
+</li>
+<li><p>Uncomment or add the code in the <code>#if</code> section below:</p>
+<pre><code>type App () =
+    inherit Application()
+    ....
+#if DEBUG
+    do runner.EnableLiveUpdate ()
+#endif
+</code></pre>
+</li>
+<li><p>If running on Android, forward requests from localhost to the Android Debug Bridge:</p>
+<pre><code>USB:
+    adb -d forward  tcp:9867 tcp:9867
+EMULATOR:
+    adb -e forward  tcp:9867 tcp:9867
+</code></pre>
+</li>
+<li><p>Launch your app in Debug mode (note: you can use Release mode but must set Linking options to <code>None</code> rather than <code>SDK Assemblies</code>)</p>
+</li>
+<li><p>Run the following from your core project directory (e.g. <code>SqueakyApp\SqueakyApp</code>)</p>
+<pre><code> cd SqueakyApp\SqueakyApp
+ dotnet fabulous --watch --send 
+</code></pre>
+</li>
+<li><p>It may be necessary to launch Visual Studio with elevated permissions (&quot;Run as administrator&quot;); otherwise, <code>runner.EnableLiveUpdate()</code> may fail to start the HttpListener, which will cause LiveUpdate to fail.</p>
+</li>
+</ol>
+<p>Now, whenever you save a file in your core project directory, the <code>fabulous</code> watcher will attempt to recompile your changed file and
+send a representation of its contents to your app via a PUT request to the given webhook.  The app then deserializes this representation and
+adds the declarations to an F# interpreter. This interpreter will make some reflective calls into the existing libraries on device.</p>
+<p><strong>To take effect as app changes, your code must have a single declaration in some module called <code>programLiveUpdate</code> or <code>program</code> taking no arguments.</strong>  For example:</p>
+<pre><code class="language-fsharp">module App =
+    ...
+    let init() = ...
+
+    let update model msg = ...
+
+    let view model dispatch = ...
+
+    let program = Program.mkProgram init update view
+</code></pre>
+<p>If a declaration like this is found the <code>program</code> object replaces the currently running Elmish program and the view is updated.
+The model state of the app is re-initialized.</p>
+<h3>Known limitations</h3>
+<ol>
+<li><p>The F# interpreter used on-device has incompletenesses and behavioural differences:</p>
+<ol>
+<li>Object expressions may not be interpreted</li>
+<li>Implementations of ToString() and other overrides will be ignored</li>
+<li>Some other F# constructs are not supported (e.g. address-of operations, new delegate)</li>
+<li>Some overloading of methods by type is not supported (overloading by argument count is ok)</li>
+</ol>
+<p>You can move generally move problematic constructs to a utility library, which will then be executed as compiled code.</p>
+</li>
+<li><p>Changes to the resources in a project (e.g. images) require a rebuild</p>
+</li>
+<li><p>Changes to Android and iOS projects require a rebuild</p>
+</li>
+<li><p>You can't debug interpreted code from the IDE using breakpoints, stack inspection etc.  Restart for that.</p>
+</li>
+<li><p>You may need to mock any platform-specific helpers you pass through, e.g.</p>
+<pre><code>module App =
+    ...
+    let init() = ...
+
+    let update (helper1, helper2) model msg = ...
+
+    let view model dispatch = ...
+
+#if DEBUG
+// The fake program, used when LiveUpdate is activated and a program change has been made
+module AppLiveUpdate =
+    open App
+
+    let mockHelper1 () = ...
+
+    let mockHelper2 () = ...
+
+    let programLiveUpdate = Program.mkProgram init (update (mockHelper1, mockHelper2)) view
+#endif
+
+type App (helper1, helper2) = 
+    inherit Application()
+    ....
+
+    // The real program, used when LiveUpdate is not activated or a program change has not been made
+    let program = Program.mkProgram App.init (App.update (helper1, helper2)) App.view
+</code></pre>
+</li>
+<li><p>There may be issues running on networks with network policy restrictions</p>
+</li>
+<li><p>In Visual Studio 2019, by default you cannot edit files whilst debugging. To enable file edits, turn <strong>OFF</strong> Edit and Continue by going to <em>Tools-&gt;Options</em>, selecting <em>Debug-&gt;General</em> and <strong>unchecking</strong> <em>Enable Edit and Continue</em>.</p>
+</li>
+</ol>
+<h3>Troubleshooting</h3>
+<p>The LiveUpdate mechanism is very experimental.</p>
+<ul>
+<li>Debug output is printed to console by <code>fabulous</code></li>
+<li>Debug output is printed to app-output by the on-device web server</li>
+</ul>
+<p><strong>ERROR SENDING TO WEBHOOK: &quot;System.Net.WebException: No connection could be made because the target machine actively refused it.&quot;</strong></p>
+<p>If the LiveUpdate console displays this error there are multiple possilbe causes:</p>
+<ul>
+<li>Visual Studio needs elevated permissions to execute &quot;EnableLiveUpdate()&quot;.
+<ul>
+<li><strong>Solution</strong>: launch Visual Studio using the &quot;Run as Administrator&quot; option</li>
+</ul>
+</li>
+<li>Connection to wrong webhook ip.
+<ul>
+<li><strong>Solution</strong>: check the output window in Visual Studio and explicitly specify the webhook url: <img src="images/live-update/output-window-webhooks.png" alt="output-window" /></li>
+</ul>
+</li>
+<li>Local firewall on Mac blocks connection.
+<ul>
+<li><strong>Solution</strong>: add a firewall exception for tcp port 9867</li>
+</ul>
+</li>
+<li>Firewall blocks traffic (if Windows PC and Mac/iPhone are on different networks).
+<ul>
+<li><strong>Solution</strong>: add a firewall exception for tcp port 9867</li>
+</ul>
+</li>
+</ul>
+<p><strong>Quacked: &quot;couldn't quack! the evaluation of the declarations in the code package failed: System.IO.FileNotFoundException: Could not load the file 'netstandard'...&quot;</strong></p>
+<p>If the console displays this error then <em>check your iOS Build settings</em> and set the option <em>Linker Behaviour</em> to <code>Don't Link</code>:</p>
+<p><img src="images/live-update/ios-build-link-behaviour.png" alt="ios-linker-options" /></p>
+<h3>Design</h3>
+<p>The fabulous watcher does this:</p>
+<ol>
+<li><p>Cracks project options, listens for changes, then uses FSharp.Compiler.Service to compile</p>
+</li>
+<li><p>converts code output to PortaCode code model</p>
+</li>
+<li><p>serializes PortaCode using Newtonsoft.Json</p>
+</li>
+<li><p>sends to device by http.</p>
+</li>
+</ol>
+<p>Device app does this:</p>
+<ol start="5">
+<li><p>starts httplistener, which gets http request</p>
+</li>
+<li><p>deserializes PortaCode</p>
+</li>
+<li><p>uses Interpreter.fs to run.</p>
+</li>
+<li><p>looks for a &quot;program&quot; declaration in interpreted code and hacks into the currently running Elmish app and replaces the Fabulous &quot;program&quot; ie view/update/init logic.</p>
+</li>
+</ol>
+<p>Device app continues to use whatever library dlls are on device via reflection.</p>
+<p>Please contribute documentation, updates and fixes to make the experience simpler.</p>
+
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="Fabulous.CodeGen">
+            <h1>Fabulous CodeGen</h1>
+<p><em>Automatically generate bindings to use your favorite UI framework with Fabulous</em></p>
+<p>Documentation for using Fabulous.CodeGen to generate your own bindings will come soon.</p>
+
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="CODEGEN">
+            <h1>Fabulous CodeGen</h1>
+<h2>CodeGen</h2>
+<ul>
+<li>What is it?
+<ul>
+<li>Generate wrappers for existing controls in OOP frameworks</li>
+</ul>
+</li>
+<li>What is the use case?</li>
+<li>Why no type provider?</li>
+<li>How does it work?
+<ul>
+<li>(Resolver -&gt; Extractor) -&gt; Binder -&gt; Optimizer -&gt; Expander -&gt; Preparator -&gt; CodeGenerator</li>
+</ul>
+</li>
+<li>How can I use it?</li>
+<li>How can I change the way it works?
+<ul>
+<li>Debug mode</li>
+<li>Converters</li>
+<li>Override</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="CODEGEN-BINDINGS">
+            <h1>Fabulous CodeGen</h1>
+<h2>CodeGen - Bindings file format</h2>
+<h3>Root</h3>
+<pre><code class="language-json">{
+    &quot;assemblies&quot;: [
+        &quot;path/to/A.dll&quot;,
+        &quot;path/to/B.dll&quot;
+    ],
+    &quot;outputNamespace&quot;: &quot;My.Namespace&quot;,
+    &quot;types&quot;: [
+        // See Type
+    ]
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Assemblies</td>
+<td>string array</td>
+<td>✅ Yes</td>
+<td>Paths to dlls containing controls (can be relative to working directory)</td>
+</tr>
+<tr>
+<td>OutputNamespace</td>
+<td>string</td>
+<td>✅ Yes</td>
+<td>Namespace under which all the generated code will be added</td>
+</tr>
+<tr>
+<td>Types</td>
+<td>Type array</td>
+<td>✅ Yes</td>
+<td>All types to bind</td>
+</tr>
+</tbody>
+</table>
+<h3>Type</h3>
+<pre><code class="language-json">{
+    &quot;type&quot;: &quot;Xamarin.Forms.ListView&quot;,
+    &quot;customType&quot;: &quot;Fabulous.XamarinForms.CustomListView&quot;,
+    &quot;canBeInstantiated&quot;: true,
+    &quot;name&quot;: &quot;ListView&quot;,
+    &quot;properties&quot;: [
+        // See Property
+    ],
+    &quot;events&quot;: [
+        // See Event
+    ],
+    &quot;attachedProperties&quot;: [
+        // See Attached Property
+    ]
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>string</td>
+<td>✅ Yes</td>
+<td>Full name of a control inside one of the dlls to bind</td>
+</tr>
+<tr>
+<td>CustomType</td>
+<td>string</td>
+<td>❌ No</td>
+<td>If specified, this type will be used when instantiating this control instead of the binded type. Not necessary that the control exists at generation time</td>
+</tr>
+<tr>
+<td>CanBeInstantiated</td>
+<td>boolean</td>
+<td>❌ No</td>
+<td>Indicates if the code generator should provide a public constructor for this type. If not specified, the value defaults to <code>true</code></td>
+</tr>
+<tr>
+<td>Name</td>
+<td>boolean</td>
+<td>❌ No</td>
+<td>The name that will be used when generating code (e.g. <code>View.MyCustomControl()</code>). If not specified, the name will be inferred from the <code>Type</code> field</td>
+</tr>
+<tr>
+<td>Properties</td>
+<td>Property array</td>
+<td>❌ No</td>
+<td>All properties of this control to include in the code generation</td>
+</tr>
+<tr>
+<td>Events</td>
+<td>Event array</td>
+<td>❌ No</td>
+<td>All events of this control to include in the code generation</td>
+</tr>
+<tr>
+<td>AttachedProperties</td>
+<td>AttachedProperty array</td>
+<td>❌ No</td>
+<td>All attached properties of this control to include in the code generation</td>
+</tr>
+</tbody>
+</table>
+<h3>Property</h3>
+<pre><code class="language-json">{
+    &quot;source&quot;: &quot;Source&quot;,
+    &quot;name&quot;: &quot;Name&quot;,
+    &quot;uniqueName&quot;: &quot;UniqueName&quot;,
+    &quot;shortName&quot;: &quot;shortName&quot;,
+    &quot;defaultValue&quot;: &quot;DefaultValue&quot;,
+    &quot;elementType&quot;: &quot;ElementType&quot;,
+    &quot;inputType&quot;: &quot;InputType&quot;,
+    &quot;modelType&quot;: &quot;ModelType&quot;,
+    &quot;convertInputToModel&quot;: &quot;(fun input: InputType -&gt; input :?&gt; ModelType)&quot;,
+    &quot;convertModelToValue&quot;: &quot;(fun model: ModelType-&gt; model :?&gt; ValueType)&quot;,
+    &quot;updateCode&quot;: &quot;(fun prev curr target -&gt; ())&quot;
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source</td>
+<td>string</td>
+<td>❓Depends</td>
+<td>Name of the property to include (and overwrite)</td>
+<td></td>
+</tr>
+<tr>
+<td>Name</td>
+<td>string</td>
+<td>❓Depends</td>
+<td>Name of the property used in the generated code (e.g. <code>buttonViewElement.MyProperty(value)</code>)</td>
+<td>If not specified, <code>Source</code> will be used instead</td>
+</tr>
+<tr>
+<td>UniqueName</td>
+<td>string</td>
+<td>❌ No</td>
+<td>Name to uniquely identify the property in the generated code</td>
+<td>Use with caution. If not specified, <code>Type</code> and <code>Name</code> will be concatenated to create a unique name. (e.g. <code>ButtonText</code>). Subject to optimization</td>
+</tr>
+<tr>
+<td>ShortName</td>
+<td>string</td>
+<td>❌ No</td>
+<td>Name (lower camel case) to use in ViewElement constructor (e.g. <code>View.Button(myProperty=value)</code>)</td>
+<td>If not specified, <code>Name</code> will be used in lower camel case</td>
+</tr>
+<tr>
+<td>DefaultValue</td>
+<td>string</td>
+<td>❓Depends</td>
+<td>Default value to apply to the property if none is given by the user (e.g. <code>0.0f</code>)</td>
+<td></td>
+</tr>
+<tr>
+<td>ElementType</td>
+<td>string</td>
+<td>❓Depends</td>
+<td>(Apply only if property is a collection) Full name of the item type of the collection</td>
+<td>If <code>null</code>, the property is not considered to be a collection</td>
+</tr>
+<tr>
+<td>InputType</td>
+<td>string</td>
+<td>❓Depends</td>
+<td>Type expected in the constructor (e.g. <code>string</code> =&gt; <code>View.Button(text = &quot;some string&quot;)</code>)</td>
+<td></td>
+</tr>
+<tr>
+<td>ModelType</td>
+<td>string</td>
+<td>❌ No</td>
+<td>Type as which the value will be stored in the ViewElement attributes dictionary</td>
+<td>Make sure this type is efficient</td>
+</tr>
+<tr>
+<td>ConvertInputToModel</td>
+<td>string</td>
+<td>❌ No</td>
+<td>Function to convert the input value to the model type</td>
+<td>Expects a signature of type <code>'Input -&gt; 'Model</code>. Function can be written directly inside the json, or make a reference to a function. If not specified, no conversion will be applied.</td>
+</tr>
+<tr>
+<td>ConvertModelToValue</td>
+<td>string</td>
+<td>❌ No</td>
+<td>Function to convert the model value to the expected type of the real property</td>
+<td>Expects a signature of type <code>'Model -&gt; 'Value</code>. Function can be written directly inside the json, or make a reference to a function. If not specified, no conversion will be applied.</td>
+</tr>
+<tr>
+<td>UpdateCode</td>
+<td>string</td>
+<td>❌ No</td>
+<td>Function to use instead of the generated view diffing for this property</td>
+<td>Expects a signature of type <code>prev: ViewElement -&gt; curr: ViewElement -&gt; target: ControlType -&gt; unit</code>. Function can be written directly inside the json, or make a reference to a function. If not specified, the default view diffing code will be used.</td>
+</tr>
+</tbody>
+</table>
+<p>There is 3 different categories of property:</p>
+<ul>
+<li>Existing scalar property: A property present in one of the dlls to include with a simple data type</li>
+<li>Existing collection property: A property present in one of the dlls to include which is a collection (e.g. <code>Xamarin.Forms.View list</code>)</li>
+<li>Dummy property: A non-existent property to include which can be either of type scalar or collection</li>
+</ul>
+<p>See examples for these categories below.</p>
+<h3>Event</h3>
+<pre><code class="language-json">{
+    &quot;source&quot;: &quot;TextChanged&quot;,
+    &quot;name&quot;: &quot;TextChanged&quot;,
+    &quot;uniqueName&quot;: &quot;EntryTextChanged&quot;,
+    &quot;shortName&quot;: &quot;textChanged&quot;,
+    &quot;inputType&quot;: &quot;Xamarin.Forms.TextChangedEventArgs -&gt; unit&quot;,
+    &quot;modelType&quot;: &quot;System.EventHandler&lt;Xamarin.Forms.TextChangedEventArgs&gt;&quot;,
+    &quot;convertInputToModel&quot;: &quot;(fun f -&gt; System.EventHandler&lt;Xamarin.Forms.TextChangedEventArgs&gt;(fun _sender _args -&gt; f args))&quot;
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source</td>
+<td>string</td>
+<td>❓Depends</td>
+<td>Name of the event to include (and overwrite)</td>
+<td></td>
+</tr>
+<tr>
+<td>Name</td>
+<td>string</td>
+<td>❓Depends</td>
+<td>Name of the event used in the generated code (e.g. <code>entryViewElement.TextChanged(value)</code>)</td>
+<td>If not specified, <code>Source</code> will be used instead</td>
+</tr>
+<tr>
+<td>UniqueName</td>
+<td>string</td>
+<td>❌ No</td>
+<td>Name to uniquely identify the event in the generated code</td>
+<td>Use with caution. If not specified, <code>Type</code> and <code>Name</code> will be concatenated to create a unique name. (e.g. <code>EntryTextChanged</code>). Subject to optimization</td>
+</tr>
+<tr>
+<td>ShortName</td>
+<td>string</td>
+<td>❌ No</td>
+<td>Name (lower camel case) to use in ViewElement constructor (e.g. <code>View.Button(myProperty=value)</code>)</td>
+<td>If not specified, <code>Name</code> will be used in lower camel case</td>
+</tr>
+<tr>
+<td>InputType</td>
+<td>string</td>
+<td>❓Depends</td>
+<td>Type expected in the constructor (e.g. <code>Xamarin.Forms.TextChangedEventArgs -&gt; unit</code> =&gt; <code>View.Button(textChanged = (fun args -&gt; ()))</code>)</td>
+<td>Expects a function</td>
+</tr>
+<tr>
+<td>ModelType</td>
+<td>string</td>
+<td>❓Depends</td>
+<td>Type as which the value will be stored in the ViewElement attributes dictionary</td>
+<td>Expects an EventHandler</td>
+</tr>
+<tr>
+<td>ConvertInputToModel</td>
+<td>string</td>
+<td>❓Depends</td>
+<td>Function to convert the input value to the model type</td>
+<td>Expects a signature of type <code>'Input -&gt; 'Model</code>. Function can be written directly inside the json, or make a reference to a function. If not specified, no conversion will be applied.</td>
+</tr>
+</tbody>
+</table>
+<h3>AttachedProperty</h3>
+<pre><code class="language-json">{
+    &quot;source&quot;: &quot;Source&quot;,
+    &quot;name&quot;: &quot;Name&quot;,
+    &quot;uniqueName&quot;: &quot;UniqueName&quot;,
+    &quot;defaultValue&quot;: &quot;DefaultValue&quot;,
+    &quot;elementType&quot;: &quot;ElementType&quot;,
+    &quot;inputType&quot;: &quot;InputType&quot;,
+    &quot;modelType&quot;: &quot;ModelType&quot;,
+    &quot;convertInputToModel&quot;: &quot;(fun input -&gt; input :?&gt; Model)&quot;,
+    &quot;convertModelToValue&quot;: &quot;(fun model -&gt; model :?&gt; Value)&quot;,
+    &quot;updateCode&quot;: &quot;(fun prev curr target -&gt; ())&quot;
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source</td>
+<td>string</td>
+<td>❓Depends</td>
+<td>Name of the attached property to include (and overwrite)</td>
+<td></td>
+</tr>
+<tr>
+<td>TargetType</td>
+<td>string</td>
+<td>❌ No</td>
+<td>Type to which this attached property will be applied to</td>
+<td>If not specified, a default base target type will be applied</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>string</td>
+<td>❓Depends</td>
+<td>Name of the property used in the generated code (e.g. <code>buttonViewElement.MyProperty(value)</code>)</td>
+<td>If not specified, <code>Source</code> will be used instead</td>
+</tr>
+<tr>
+<td>UniqueName</td>
+<td>string</td>
+<td>❌ No</td>
+<td>Name to uniquely identify the property in the generated code</td>
+<td>Use with caution. If not specified, <code>Type</code> and <code>Name</code> will be concatenated to create a unique name. (e.g. <code>ButtonText</code>). Subject to optimization</td>
+</tr>
+<tr>
+<td>DefaultValue</td>
+<td>string</td>
+<td>❓Depends</td>
+<td>Default value to apply to the property if none is given by the user (e.g. <code>0.0f</code>)</td>
+<td>If not specified, <code>Name</code> will be used in lower camel case</td>
+</tr>
+<tr>
+<td>ElementType</td>
+<td>string</td>
+<td>❓Depends</td>
+<td>(Apply only if attached property is a collection) Full name of the item type of the collection</td>
+<td>If <code>null</code>, the attached property is not considered to be a collection</td>
+</tr>
+<tr>
+<td>InputType</td>
+<td>string</td>
+<td>❓Depends</td>
+<td>Type expected in the constructor (e.g. <code>string</code> =&gt; <code>View.Button(text = &quot;some string&quot;)</code>)</td>
+<td></td>
+</tr>
+<tr>
+<td>ModelType</td>
+<td>string</td>
+<td>❌ No</td>
+<td>Type as which the value will be stored in the ViewElement attributes dictionary</td>
+<td>Make sure this type is efficient</td>
+</tr>
+<tr>
+<td>ConvertInputToModel</td>
+<td>string</td>
+<td>❌ No</td>
+<td>Function to convert the input value to the model type</td>
+<td>Expects a signature of type <code>'Input -&gt; 'Model</code>. Function can be written directly inside the json, or make a reference to a function. If not specified, no conversion will be applied.</td>
+</tr>
+<tr>
+<td>ConvertModelToValue</td>
+<td>string</td>
+<td>❌ No</td>
+<td>Function to convert the model value to the expected type of the real property</td>
+<td>Expects a signature of type <code>'Model -&gt; 'Value</code>. Function can be written directly inside the json, or make a reference to a function. If not specified, no conversion will be applied.</td>
+</tr>
+<tr>
+<td>UpdateCode</td>
+<td>string</td>
+<td>❌ No</td>
+<td>Function to use instead of the generated view diffing for this property</td>
+<td>Expects a signature of type <code>prev: ViewElement -&gt; curr: ViewElement -&gt; target: ControlType -&gt; unit</code>. Function can be written directly inside the json, or make a reference to a function. If not specified, the default view diffing code will be used.</td>
+</tr>
+</tbody>
+</table>
+<h2>Examples</h2>
+<h3>Example properties</h3>
+<h4>Existing scalar property</h4>
+<pre><code class="language-json">{
+    &quot;source&quot;: &quot;Margin&quot;,
+    &quot;name&quot;: &quot;Margin&quot;,
+    &quot;uniqueName&quot;: &quot;VisualElementMargin&quot;,
+    &quot;shortName&quot;: &quot;margin&quot;,
+    &quot;inputType&quot;: &quot;InputTypes.Thickness&quot;,
+    &quot;modelType&quot;: &quot;Thickness&quot;,
+    &quot;convertInputToModel&quot;: &quot;ViewConverters.convertThickness&quot;,
+    &quot;convertModelToValue&quot;: null
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source</td>
+<td>string</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>string</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>UniqueName</td>
+<td>string</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>ShortName</td>
+<td>string</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>InputType</td>
+<td>string</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>ModelType</td>
+<td>string</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>ConvertInputToModel</td>
+<td>string</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>ConvertModelToValue</td>
+<td>string</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>UpdateCode</td>
+<td>string</td>
+<td>❌ No</td>
+</tr>
+</tbody>
+</table>
+<h4>Existing collection property</h4>
+<pre><code class="language-json">{
+    &quot;source&quot;: &quot;ItemsSource&quot;,
+    &quot;name&quot;: &quot;Items&quot;,
+    &quot;uniqueName&quot;: &quot;GridItems&quot;,
+    &quot;shortName&quot;: &quot;items&quot;,
+    &quot;elementType&quot;: &quot;Xamarin.Forms.View&quot;,
+    &quot;inputType&quot;: &quot;ViewElement list&quot;,
+    &quot;modelType&quot;: &quot;ViewElement array&quot;,
+    &quot;convertInputToModel&quot;: &quot;Array.ofList&quot;
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source</td>
+<td>string</td>
+<td>✅ Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>Name</td>
+<td>string</td>
+<td>❌ No</td>
+<td></td>
+</tr>
+<tr>
+<td>UniqueName</td>
+<td>string</td>
+<td>❌ No</td>
+<td></td>
+</tr>
+<tr>
+<td>ShortName</td>
+<td>string</td>
+<td>❌ No</td>
+<td></td>
+</tr>
+<tr>
+<td>ElementType</td>
+<td>string</td>
+<td>❓Depends</td>
+<td>Usually automatically detected by the AssemblyReader step. If correct, no need to specify it.</td>
+</tr>
+<tr>
+<td>InputType</td>
+<td>string</td>
+<td>❌ No</td>
+<td></td>
+</tr>
+<tr>
+<td>ModelType</td>
+<td>string</td>
+<td>❌ No</td>
+<td></td>
+</tr>
+<tr>
+<td>ConvertInputToModel</td>
+<td>string</td>
+<td>❌ No</td>
+<td></td>
+</tr>
+<tr>
+<td>ConvertModelToValue</td>
+<td>string</td>
+<td>❌ No</td>
+<td></td>
+</tr>
+<tr>
+<td>UpdateCode</td>
+<td>string</td>
+<td>❌ No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4>Dummy property</h4>
+<pre><code class="language-json">{
+    &quot;source&quot;: null,
+    &quot;name&quot;: &quot;Name&quot;,
+    &quot;inputType&quot;: &quot;InputType&quot;
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source</td>
+<td>string</td>
+<td>❌ No</td>
+<td>Must be <code>null</code> or not declared</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>string</td>
+<td>✅ Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>UniqueName</td>
+<td>string</td>
+<td>❌ No</td>
+<td></td>
+</tr>
+<tr>
+<td>ShortName</td>
+<td>string</td>
+<td>❌ No</td>
+<td></td>
+</tr>
+<tr>
+<td>ElementType</td>
+<td>string</td>
+<td>❓Depends</td>
+<td>Must be declared if property is a collection</td>
+</tr>
+<tr>
+<td>InputType</td>
+<td>string</td>
+<td>✅ Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>ModelType</td>
+<td>string</td>
+<td>❌ No</td>
+<td></td>
+</tr>
+<tr>
+<td>ConvertInputToModel</td>
+<td>string</td>
+<td>❌ No</td>
+<td></td>
+</tr>
+<tr>
+<td>ConvertModelToValue</td>
+<td>string</td>
+<td>❌ No</td>
+<td></td>
+</tr>
+<tr>
+<td>UpdateCode</td>
+<td>string</td>
+<td>❌ No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
           </div>
         </section>
       </div>

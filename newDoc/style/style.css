@@ -169,3 +169,7 @@ main {
 footer {
   clear: both;
 }
+
+.hide-content {
+  display: none;
+}
