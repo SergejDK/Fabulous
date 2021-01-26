@@ -30,7 +30,8 @@ let injectWebsocketCode (webpage: string) =
 
     let head = "<head>"
     let index = webpage.IndexOf head
-    webpage.Insert((index + head.Length + 1), websocketScript)
+    //webpage.Insert((index + head.Length + 1), websocketScript)
+    ()
 
 let layout (ctx: SiteContents) active bodyCnt =
     let siteInfo = ctx.TryGetValue<Globalloader.SiteInfo>()
@@ -169,10 +170,9 @@ let layout (ctx: SiteContents) active bodyCnt =
 let render (ctx: SiteContents) cnt =
     let disableLiveRefresh = true
 
-    cnt
-    |> HtmlElement.ToString
-    |> fun n ->
-        if disableLiveRefresh then
-            n
-        else
-            injectWebsocketCode n
+    cnt |> HtmlElement.ToString
+// |> fun n ->
+//     if disableLiveRefresh then
+//         n
+//     else
+//         injectWebsocketCode n
