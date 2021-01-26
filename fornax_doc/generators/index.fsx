@@ -4,9 +4,9 @@
 open Html
 
 let generate' (ctx: SiteContents) (_: string) =
-    let posts =
-        ctx.TryGetValues<Postloader.Post>()
-        |> Option.defaultValue Seq.empty
+    // let posts =
+    //     ctx.TryGetValues<Postloader.Post>()
+    //     |> Option.defaultValue Seq.empty
 
     let siteInfo = ctx.TryGetValue<Globalloader.SiteInfo>()
 
@@ -20,11 +20,11 @@ let generate' (ctx: SiteContents) (_: string) =
         |> Option.map (fun si -> si.description)
         |> Option.defaultValue ""
 
-    let psts =
-        posts
-        |> Seq.sortByDescending Layout.published
-        |> Seq.toList
-        |> List.map (Layout.postLayout true)
+    // let psts =
+    //     posts
+    //     |> Seq.sortByDescending Layout.published
+    //     |> Seq.toList
+    //     |> List.map (Layout.postLayout true)
 
     Layout.layout
         ctx

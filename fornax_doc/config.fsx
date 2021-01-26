@@ -3,15 +3,15 @@
 open Config
 open System.IO
 
-let postPredicate (projectRoot: string, page: string) =
-    let fileName = Path.Combine(projectRoot, page)
-    let ext = Path.GetExtension page
+// let postPredicate (projectRoot: string, page: string) =
+//     let fileName = Path.Combine(projectRoot, page)
+//     let ext = Path.GetExtension page
 
-    if ext = ".md" then
-        let ctn = File.ReadAllText fileName
-        ctn.Contains("layout: post")
-    else
-        false
+//     if ext = ".md" then
+//         let ctn = File.ReadAllText fileName
+//         ctn.Contains("layout: post")
+//     else
+//         false
 
 let staticPredicate (projectRoot: string, page: string) =
     let ext = Path.GetExtension page
@@ -37,9 +37,6 @@ let config =
             { Script = "sass.fsx"
               Trigger = OnFileExt ".scss"
               OutputFile = ChangeExtension "css" }
-            { Script = "post.fsx"
-              Trigger = OnFilePredicate postPredicate
-              OutputFile = ChangeExtension "html" }
             { Script = "staticfile.fsx"
               Trigger = OnFilePredicate staticPredicate
               OutputFile = SameFileName }
