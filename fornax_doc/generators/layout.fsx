@@ -33,10 +33,6 @@ let injectWebsocketCode (webpage: string) =
     webpage.Insert((index + head.Length + 1), websocketScript)
 
 let layout (ctx: SiteContents) active bodyCnt =
-    let pages =
-        ctx.TryGetValues<Pageloader.Page>()
-        |> Option.defaultValue Seq.empty
-
     let siteInfo = ctx.TryGetValue<Globalloader.SiteInfo>()
 
     let ttl =
@@ -70,7 +66,7 @@ let layout (ctx: SiteContents) active bodyCnt =
             link [ Rel "icon"
                    Type "image/png"
                    Sizes "32x32"
-                   Href "/images/favicon.ico" ]
+                   Href "images/favicon.ico" ]
             link [ Rel "stylesheet"
                    Href "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" ]
             link [ Rel "stylesheet"
@@ -79,8 +75,8 @@ let layout (ctx: SiteContents) active bodyCnt =
                    Href "https://unpkg.com/bulma@0.8.0/css/bulma.min.css" ]
             link [ Rel "stylesheet"
                    Type "text/css"
-                   Href "/style/style.css" ]
-            script [ Src "/js/sampleJsFile.js" ] []
+                   Href "style/style.css" ]
+            script [ Src "js/sampleJsFile.js" ] []
         ]
         body [] [
             nav [ Class "navbar overlay-bar" ] [
