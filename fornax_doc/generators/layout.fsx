@@ -167,11 +167,7 @@ let layout (ctx: SiteContents) active bodyCnt =
     ]
 
 let render (ctx: SiteContents) cnt =
-    let disableLiveRefresh =
-        // ctx.TryGetValue<Postloader.PostConfig>()
-        // |> Option.map (fun n -> n.disableLiveRefresh)
-        // |> Option.defaultValue false
-        false
+    let disableLiveRefresh = true
 
     cnt
     |> HtmlElement.ToString
@@ -180,31 +176,3 @@ let render (ctx: SiteContents) cnt =
             n
         else
             injectWebsocketCode n
-
-// let published (post: Postloader.Post) =
-//     post.published
-//     |> Option.defaultValue System.DateTime.Now
-//     |> fun n -> n.ToString("yyyy-MM-dd")
-
-// let postLayout (useSummary: bool) (post: Postloader.Post) =
-//     div [ Class "card article" ] [
-//         div [ Class "card-content" ] [
-//             div [ Class "media-content has-text-centered" ] [
-//                 p [ Class "title article-title" ] [
-//                     a [ Href post.link ] [ !!post.title ]
-//                 ]
-//                 p [ Class "subtitle is-6 article-subtitle" ] [
-//                     a [ Href "#" ] [
-//                         !!(defaultArg post.author "")
-//                     ]
-//                     !!(sprintf "on %s" (published post))
-//                 ]
-//             ]
-//             div [ Class "content article-body" ] [
-//                 !!(if useSummary then
-//                        post.summary
-//                    else
-//                        post.content)
-//             ]
-//         ]
-//     ]
