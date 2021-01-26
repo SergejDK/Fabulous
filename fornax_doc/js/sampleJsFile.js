@@ -66,4 +66,19 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   }
+
+
 });
+
+// navigation
+let currentLocation = window.location;
+var hash = currentLocation.hash;
+if (hash !== "") {
+  let className = hash.slice(1);
+  let element = document.getElementsByClassName(className)[0];
+  element.click();
+} else {
+  if (currentLocation.pathname.indexOf("docs.html") !== -1) {
+    // need to include standard docs index file into html
+  }
+}

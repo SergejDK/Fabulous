@@ -23,8 +23,11 @@ let generate' (ctx: SiteContents) (page: string) =
         let listItems =
             doc.docFiles |> List.map simpleDocMenuLayout
 
+        let classNames =
+            sprintf "menu-list accordion %s" doc.name
+
         div [] [
-            p [ Class "menu-list accordion" ] [
+            p [ Class classNames ] [
                 string doc.name
             ]
             ul [ Class "menu-list accordion-panel" ] listItems
