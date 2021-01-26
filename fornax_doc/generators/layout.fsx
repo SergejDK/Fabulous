@@ -4,6 +4,7 @@
 #load "../loaders/pageloader.fsx"
 #load "../loaders/globalloader.fsx"
 #load "../loaders/docfolderloader.fsx"
+#load "../loaders/docloader.fsx"
 #endif
 
 open Html
@@ -30,8 +31,8 @@ let injectWebsocketCode (webpage: string) =
 
     let head = "<head>"
     let index = webpage.IndexOf head
-    //webpage.Insert((index + head.Length + 1), websocketScript)
-    ()
+    webpage.Insert((index + head.Length + 1), websocketScript)
+//()
 
 let layout (ctx: SiteContents) active bodyCnt =
     let siteInfo = ctx.TryGetValue<Globalloader.SiteInfo>()
@@ -42,18 +43,18 @@ let layout (ctx: SiteContents) active bodyCnt =
         |> Option.defaultValue ""
 
     let docPages =
-        ctx.TryGetValues<string>()
+        ctx.TryGetValues<Docloader.DocData>()
         |> Option.defaultValue Seq.empty
 
     let docs =
         docPages
         |> Seq.map
             (fun v ->
-                let dHref = sprintf "/docs.html#%s" v
+                let dHref = sprintf "/docs.html#%s" v.name
 
                 a [ Class "navbar-link is-arrowless"
                     Href dHref ] [
-                    string v
+                    string v.name
                 ])
         |> Seq.toList
 
@@ -154,8 +155,12 @@ let layout (ctx: SiteContents) active bodyCnt =
                                     div [ Class "footer-header" ] [
                                         h3 [] [ string "Follow Us" ]
                                         div [] [
-                                            a [] [ i [ Class "fab fa-github" ] [] ]
-                                            a [] [ i [ Class "fab fa-twitter" ] [] ]
+                                            a [ Href "https://github.com/fsprojects/Fabulous" ] [
+                                                i [ Class "fab fa-github" ] []
+                                            ]
+                                            a [ Href "https://twitter.com/tim_lariviere" ] [
+                                                i [ Class "fab fa-twitter" ] []
+                                            ]
                                         ]
                                     ]
                                 ]
@@ -170,6 +175,6 @@ let layout (ctx: SiteContents) active bodyCnt =
 let render (ctx: SiteContents) cnt =
     let disableLiveRefresh = true
 
-    cnt |> HtmlElement.ToString
+    cnt |> HtmlElement.ToString |> injectWebsocketCode
 //     else
 //         injectWebsocketCode n
