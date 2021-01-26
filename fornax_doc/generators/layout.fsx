@@ -102,13 +102,13 @@ let layout (ctx: SiteContents) active bodyCnt =
                         div [ Class "navbar-start " ] [
                             div [ Class "navbar-item has-dropdown is-hoverable" ] [
                                 a [ Class "navbar-link is-arrowless"
-                                    Href "/docs.html" ] [
+                                    Href "./docs.html" ] [
                                     string "Docs"
                                 ]
                                 div [ Class "navbar-dropdown is-boxed" ] docs
                             ]
                             a [ Class "navbar-item"
-                                Href "/showcase" ] [
+                                Href "./showcase" ] [
                                 string "Showcase"
                             ]
                             a [ Class "navbar-item"
@@ -171,8 +171,5 @@ let render (ctx: SiteContents) cnt =
     let disableLiveRefresh = true
 
     cnt |> HtmlElement.ToString
-// |> fun n ->
-//     if disableLiveRefresh then
-//         n
 //     else
 //         injectWebsocketCode n
