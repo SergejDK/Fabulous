@@ -67,18 +67,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-
-});
-
-// navigation
-let currentLocation = window.location;
-var hash = currentLocation.hash;
-if (hash !== "") {
-  let className = hash.slice(1);
-  let element = document.getElementsByClassName(className)[0];
-  element.click();
-} else {
-  if (currentLocation.pathname.indexOf("docs.html") !== -1) {
-    // need to include standard docs index file into html
+  // navigation
+  let currentLocation = window.location;
+  var hash = currentLocation.hash;
+  if (hash !== "") {
+    let className = hash.slice(1);
+    let element = document.getElementsByClassName(className)[0];
+    element.click();
+  } else {
+    if (currentLocation.pathname.indexOf("docs.html") !== -1) {
+      var mainContent = document.getElementsByClassName("articles")[0].children;
+      for (var k = 0; k < mainContent.length; k++) {
+        mainContent[k].style.display = 'none';
+      }
+      document.getElementById("Main").style.display = "block";
+    }
   }
-}
+});

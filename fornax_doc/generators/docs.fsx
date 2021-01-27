@@ -17,25 +17,28 @@ let generate' (ctx: SiteContents) (page: string) =
         ctx.TryGetValues<Docloader.DocData>()
         |> Option.defaultValue Seq.empty
 
-    let simpleDocMenuLayout (doc: Docloader.SimpleDoc) = li [] [ a [] [ string doc.name ] ]
+    let simpleDocMenuLayout (doc: Docloader.SimpleDoc) = li [] [ a [] [ string doc.Name ] ]
 
     let docMenuLayout (doc: Docloader.DocData) =
         let listItems =
-            doc.docFiles |> List.map simpleDocMenuLayout
+            doc.DocFiles |> List.map simpleDocMenuLayout
 
         let classNames =
-            sprintf "menu-list accordion %s" doc.name
+            sprintf "menu-list accordion %s" doc.Name
 
         div [] [
             p [ Class classNames ] [
-                string doc.name
+                string doc.Name
             ]
             ul [ Class "menu-list accordion-panel" ] listItems
         ]
 
     let menuLayout =
         let entries =
-            docData |> Seq.map docMenuLayout |> Seq.toList
+            docData
+            |> Seq.filter (fun v -> v.Name <> "Main")
+            |> Seq.map docMenuLayout
+            |> Seq.toList
 
         aside [ Class "menu" ] entries
 
@@ -47,11 +50,11 @@ let generate' (ctx: SiteContents) (page: string) =
 
     let genContent (doc: Docloader.DocData) =
         let index =
-            mainContentForEachMarkdown doc.name doc.index.content
+            mainContentForEachMarkdown doc.Name doc.Index.Content
 
         let items =
-            doc.docFiles
-            |> List.map (fun v -> mainContentForEachMarkdown v.name v.content)
+            doc.DocFiles
+            |> List.map (fun v -> mainContentForEachMarkdown v.Name v.Content)
 
         [ index ] @ items
 

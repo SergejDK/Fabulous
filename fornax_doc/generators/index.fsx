@@ -9,12 +9,12 @@ let generate' (ctx: SiteContents) (_: string) =
 
     let ttl =
         siteInfo
-        |> Option.map (fun si -> si.title)
+        |> Option.map (fun si -> si.Title)
         |> Option.defaultValue ""
 
     let desc =
         siteInfo
-        |> Option.map (fun si -> si.description)
+        |> Option.map (fun si -> si.Description)
         |> Option.defaultValue ""
 
     Layout.layout

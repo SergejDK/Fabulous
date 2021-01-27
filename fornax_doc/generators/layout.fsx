@@ -39,7 +39,7 @@ let layout (ctx: SiteContents) active bodyCnt =
 
     let ttl =
         siteInfo
-        |> Option.map (fun si -> si.title)
+        |> Option.map (fun si -> si.Title)
         |> Option.defaultValue ""
 
     let docPages =
@@ -50,11 +50,11 @@ let layout (ctx: SiteContents) active bodyCnt =
         docPages
         |> Seq.map
             (fun v ->
-                let dHref = sprintf "/docs.html#%s" v.name
+                let dHref = sprintf "/docs.html#%s" v.Name
 
                 a [ Class "navbar-link is-arrowless"
                     Href dHref ] [
-                    string v.name
+                    string v.Name
                 ])
         |> Seq.toList
 
