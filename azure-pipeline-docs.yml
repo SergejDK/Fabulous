@@ -1,0 +1,22 @@
+trigger:
+- fornax_doc/*
+
+jobs:
+- job: Windows
+  pool:
+    vmImage: 'windows-2019'
+  steps:
+  - task: UseDotNet@2
+    inputs:
+      version: 3.1.302
+  - script: choco install gtksharp
+  - task: CmdLine@2
+    inputs:
+      script: dotnet tool install fornax -g
+  - task: CmdLine@2
+    inputs:
+      script:  $(Build.SourcesDirectory)/fornax_docs/ fornax build 
+  - task: CopyFiles@2
+    inputs:
+      contents: $(Build.SourcesDirectory)/fornax_docs/_public/*
+      targetFolder: $(Build.SourcesDirectory)/docs/

@@ -1,4 +1,4 @@
-# <img src="assets/logo-title-fabulous.png" height="120px" alt="Fabulous" />
+# <img src="images/logo-title-fabulous.png" height="120px" alt="Fabulous" />
 
 *F# Functional App Development, using declarative dynamic UI*
 
