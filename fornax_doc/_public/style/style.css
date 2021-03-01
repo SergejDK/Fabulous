@@ -130,7 +130,6 @@ p + .subtitle {
 aside {
   width: 30%;
   padding-left: 15px;
-  margin-left: 15px;
   float: left;
   font-style: italic;
   background-color: lightgray;
@@ -172,4 +171,18 @@ footer {
 
 .hide-content {
   display: none;
+}
+
+.doc-menu {
+  margin-top: 3.2rem;
+  height: 100%;
+}
+
+.doc-main-content {
+  margin-top: 3.2rem;
+}
+
+.doc-main-content-section > div {
+  overflow: scroll;
+  height: 100%;
 }

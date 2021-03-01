@@ -1,7 +1,3 @@
------
-title: Testing
-------
-
 The Model-View-Update architecture used by Fabulous makes it simple to unit test every part of your application.  
 Apps are composed of 3 key pure F# functions: `init`, `update` and `view`  
 They take some parameters and return a value. Ideal for unit testing.

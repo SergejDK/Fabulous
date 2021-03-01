@@ -51,11 +51,14 @@
                 <a class="navbar-link is-arrowless" href="/docs.html#Fabulous.XamarinForms">
                   Fabulous.XamarinForms
                 </a>
+                <a class="navbar-link is-arrowless" href="/docs.html#migration-guides">
+                  migration-guides
+                </a>
+                <a class="navbar-link is-arrowless" href="/docs.html#views">
+                  views
+                </a>
                 <a class="navbar-link is-arrowless" href="/docs.html#Fabulous.CodeGen">
                   Fabulous.CodeGen
-                </a>
-                <a class="navbar-link is-arrowless" href="/docs.html#Main">
-                  Main
                 </a>
               </div>
             </div>
@@ -80,17 +83,7 @@
         </div>
       </div>
     </nav>
-    <section class="hero is-dark page-banner">
-      <div class="hero-body has-text-centered">
-        <h1 class="title is-1 is-spaced">
-          Fabulous
-        </h1>
-        <h2 class="subtitle is-2">
-          Documentation
-        </h2>
-      </div>
-    </section>
-    <aside class="menu">
+    <aside class="menu doc-menu">
       <div>
         <p class="menu-list accordion Fabulous.XamarinForms">
           Fabulous.XamarinForms
@@ -134,6 +127,125 @@
         </ul>
       </div>
       <div>
+        <p class="menu-list accordion migration-guides">
+          migration-guides
+        </p>
+        <ul class="menu-list accordion-panel">
+          <li>
+            <a>
+              MIGRATION-GUIDE-TO-0.40
+            </a>
+          </li>
+          <li>
+            <a>
+              MIGRATION-GUIDE-TO-0.50
+            </a>
+          </li>
+          <li>
+            <a>
+              MIGRATION-GUIDE-TO-0.57
+            </a>
+          </li>
+          <li>
+            <a>
+              MIGRATION-GUIDE-TO-0.53
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p class="menu-list accordion views">
+          views
+        </p>
+        <ul class="menu-list accordion-panel">
+          <li>
+            <a>
+              VIEWS-SKIASHARP
+            </a>
+          </li>
+          <li>
+            <a>
+              VIEWS-EFFECTS
+            </a>
+          </li>
+          <li>
+            <a>
+              VIEWS-VIDEOMANAGER
+            </a>
+          </li>
+          <li>
+            <a>
+              VIEWS
+            </a>
+          </li>
+          <li>
+            <a>
+              VIEWS-LISTS-TABLES
+            </a>
+          </li>
+          <li>
+            <a>
+              VIEWS-STYLING
+            </a>
+          </li>
+          <li>
+            <a>
+              VIEWS-POPUPS
+            </a>
+          </li>
+          <li>
+            <a>
+              VIEWS-NAVIGATION
+            </a>
+          </li>
+          <li>
+            <a>
+              VIEWS-EXTENDING
+            </a>
+          </li>
+          <li>
+            <a>
+              VIEWS-ELEMENTS
+            </a>
+          </li>
+          <li>
+            <a>
+              VIEWS-GESTURES
+            </a>
+          </li>
+          <li>
+            <a>
+              VIEWS-FFIMAGELOADING
+            </a>
+          </li>
+          <li>
+            <a>
+              VIEWS-MAPS
+            </a>
+          </li>
+          <li>
+            <a>
+              VIEWS-OXYPLOT
+            </a>
+          </li>
+          <li>
+            <a>
+              VIEWS-ANIMATIONS
+            </a>
+          </li>
+          <li>
+            <a>
+              VIEWS-PERF
+            </a>
+          </li>
+          <li>
+            <a>
+              VIEWS-BASIC-ELEMENTS
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
         <p class="menu-list accordion Fabulous.CodeGen">
           Fabulous.CodeGen
         </p>
@@ -151,9 +263,9 @@
         </ul>
       </div>
     </aside>
-    <main>
+    <main class="doc-main-content">
       <div class="container">
-        <section class="articles">
+        <section class="articles doc-main-content-section">
           <div class="column is-8 is-offset-2 hide-content" id="Fabulous.XamarinForms">
             <p><em>Write cross-platform apps with Xamarin.Forms, using MVU architecture and dynamic UI</em></p>
 <p>Never write a ViewModel class again!  Conquer the world with clean dynamic UIs!</p>
@@ -306,9 +418,7 @@ inherit Application ()</p>
 
           </div>
           <div class="column is-8 is-offset-2 hide-content" id="PITFALLS">
-            <hr />
-<h2>title: Pitfalls</h2>
-<h2>Pitfalls and F# 5.0 support</h2>
+            <h2>Pitfalls and F# 5.0 support</h2>
 <p>Here are some common pitfalls you might encounter when using Fabulous.</p>
 <h3>Can Fabulous target .NET 5 / use .NET 5 libraries?</h3>
 <p>Microsoft announced .NET 5 along with F# 5.0 during .NET Conf 2020.</p>
@@ -355,9 +465,7 @@ Depending on your OS, you'll either need Visual Studio 16.8 or Visual Studio 8.9
 
           </div>
           <div class="column is-8 is-offset-2 hide-content" id="TESTING">
-            <hr />
-<h2>title: Testing</h2>
-<p>The Model-View-Update architecture used by Fabulous makes it simple to unit test every part of your application.<br />
+            <p>The Model-View-Update architecture used by Fabulous makes it simple to unit test every part of your application.<br />
 Apps are composed of 3 key pure F# functions: <code>init</code>, <code>update</code> and <code>view</code><br />
 They take some parameters and return a value. Ideal for unit testing.</p>
 <h3>Testing <code>init</code></h3>
@@ -511,9 +619,7 @@ let ``Clicking the button Increment should send the message Increment``() =
 
           </div>
           <div class="column is-8 is-offset-2 hide-content" id="MODELS">
-            <hr />
-<h2>title: Models</h2>
-<h3>Messages and Validation</h3>
+            <h3>Messages and Validation</h3>
 <p>Validation is generally done on updates to the model storing error messages from validation logic in the model so they can be correctly and simply displayed to the user. Here is a very basic example:</p>
 <pre><code class="language-fsharp">type Animal =
     | ValidAnimal of string
@@ -691,9 +797,7 @@ or, in the case of iOS, enable <a href="https://docs.microsoft.com/xamarin/ios/g
 
           </div>
           <div class="column is-8 is-offset-2 hide-content" id="LOGGING">
-            <hr />
-<h2>title: Traces and Crashes</h2>
-<p>In Fabulous, everything happens in a centralized message loop that is responsible for calling your <code>init</code>, <code>update</code> and <code>view</code> functions.<br />
+            <p>In Fabulous, everything happens in a centralized message loop that is responsible for calling your <code>init</code>, <code>update</code> and <code>view</code> functions.<br />
 Fabulous allows you to plug into this loop to run custom logic such as logging and error handling.</p>
 <p>There's a few built-in functions available already:</p>
 <table>
@@ -848,9 +952,7 @@ To do that, we have added a <code>AppCenterUpdateTracer</code> function that wil
 
           </div>
           <div class="column is-8 is-offset-2 hide-content" id="UPDATE">
-            <hr />
-<h2>title: The Init and Update Functions</h2>
-<p>The init function returns an initial model, and the update function processes a message and returns a new model:</p>
+            <p>The init function returns an initial model, and the update function processes a message and returns a new model:</p>
 <pre><code class="language-fsharp">type Model = { TimerOn: bool } 
 
 type Message = 
@@ -1159,9 +1261,7 @@ type AppDelegate () =
 
           </div>
           <div class="column is-8 is-offset-2 hide-content" id="TOOLS">
-            <hr />
-<h2>title: fabulous-cli</h2>
-<p>With the <code>fabulous-cli</code> you can run LiveUpdate.</p>
+            <p>With the <code>fabulous-cli</code> you can run LiveUpdate.</p>
 <p>Install <code>fabulous-cli</code>:</p>
 <pre><code>    // install latest
     dotnet tool install -g fabulous-cli 
@@ -1351,6 +1451,2069 @@ type App (helper1, helper2) =
 </ol>
 <p>Device app continues to use whatever library dlls are on device via reflection.</p>
 <p>Please contribute documentation, updates and fixes to make the experience simpler.</p>
+
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="migration-guides">
+            
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="MIGRATION-GUIDE-TO-0.40">
+            <hr />
+<h2>title: Migrating from v0.36 to v0.40</h2>
+<p>With version 0.40.0, Fabulous has gone under a complete internal restructuring to enable future works (see <a href="https://github.com/fsprojects/Fabulous/pull/481">pull request #481</a> for more information).</p>
+<p>It has been splitted in 3 parts :</p>
+<ul>
+<li>Fabulous</li>
+<li>Fabulous.XamarinForms</li>
+<li>Fabulous.StaticView</li>
+</ul>
+<p>Fabulous is now a framework enabling library authors to build their own declarative UI frameworks on top of Fabulous.<br />
+It's not intended to be used directly to create applications.</p>
+<p>Current users of Fabulous should now use Fabulous.XamarinForms instead.</p>
+<p>Users writing apps with the StaticView constructs should target Fabulous.StaticView instead. Only the NuGet package has changed, code is still the same.<br />
+This migration guide does not address StaticView.</p>
+<p>An effort was made to minimize breaking changes to help users move from Fabulous v0.36 to Fabulous.XamarinForms.</p>
+<h3>Updating the NuGet packages</h3>
+<p>To reflect this restructuring, the NuGet packages has been changed.</p>
+<p>Here is the correspondance with the new ones:</p>
+<ul>
+<li>Fabulous.Core =&gt; Fabulous.XamarinForms</li>
+<li>Fabulous.LiveUpdate =&gt; Fabulous.XamarinForms.LiveUpdate</li>
+</ul>
+<p>If you had a reference to the NuGet package <code>Fabulous.CustomControls</code>, you can remove it.</p>
+<p>Extensions follow the same pattern:</p>
+<ul>
+<li>Fabulous.Maps =&gt; Fabulous.XamarinForms.Maps</li>
+<li>Fabulous.OxyPlot =&gt; Fabulous.XamarinForms.OxyPlot</li>
+<li>Fabulous.SkiaSharp =&gt; Fabulous.XamarinForms.SkiaSharp</li>
+<li>Fabulous.VideoManager =&gt; Fabulous.XamarinForms.VideoManager</li>
+</ul>
+<h3>Changing the namespaces</h3>
+<p>One of the breaking changes is namespaces. They have been changed to match their NuGet packages.</p>
+<p>Here is the correspondance:</p>
+<ul>
+<li><code>open Fabulous.Core</code> =&gt; <code>open Fabulous</code></li>
+<li><code>open Fabulous.DynamicView</code> =&gt; <code>open Fabulous.XamarinForms</code></li>
+<li><code>open Fabulous.LiveUpdate</code> =&gt; <code>open Fabulous.XamarinForms.LiveUpdate</code></li>
+</ul>
+<h3>Changing the runner</h3>
+<p>Last thing to change is the line:</p>
+<pre><code>Program.runWithDynamicView
+</code></pre>
+<p>It now becomes</p>
+<pre><code>XamarinFormsProgram.run
+</code></pre>
+<p>E.g.</p>
+<pre><code>let runner =
+    Program.mkProgram init update view
+    |&gt; Program.withConsoleTrace
+    |&gt; XamarinFormsProgram.run app
+</code></pre>
+<p>Your apps should now correctly build and run.</p>
+<h3>Using the new templates</h3>
+<p>Templates have also been changed to reflect this new structure.</p>
+<p>The quickest way to replace the old templates with the new ones is to execute the following commands:</p>
+<pre><code>dotnet new -u Fabulous.Templates
+dotnet new -i Fabulous.XamarinForms.Templates
+</code></pre>
+<p>Then, you can create your app with the classic command (note: <code>fabulous-app</code> has been changed to <code>fabulous-xf-app</code>)</p>
+<pre><code>dotnet new fabulous-xf-app --macOS --GTK --WPF --UWP -n SqueakyApp
+</code></pre>
+
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="MIGRATION-GUIDE-TO-0.50">
+            <hr />
+<h2>title: Migrating from v0.43 to v0.50</h2>
+<p>In Fabulous.XamarinForms v0.50, a few breaking changes have been introduced in order to provide support for missing controls, reduce unnecessary update calls (and fix a potential infinite loop on Android) as well as provide better type-safety for some properties.</p>
+<p>Below you can find how to migrate your v0.43 views to v0.50.</p>
+<p><strong>Changes to properties</strong></p>
+<ul>
+<li><a href="#heightrequest--widthrequest-renamed-to-height--width">HeightRequest / WidthRequest renamed to Height / Width</a></li>
+<li><a href="#margin--padding-properties-input-changed-from-obj-to-xamarinformsthickness">Margin / Padding properties input changed from <code>obj</code> to <code>Xamarin.Forms.Thickness</code></a></li>
+<li><a href="#image-properties-input-changed-from-obj-to-image">Image properties input changed from <code>obj</code> to <code>Image</code></a></li>
+<li><a href="#fontsize-properties-input-changed-from-obj-to-fontsize">FontSize properties input changed from <code>obj</code> to <code>FontSize</code></a></li>
+<li><a href="#rowdefs--columndefs-input-changed-from-obj-list-to-dimension-list">RowDefs / ColumnDefs input changed from <code>obj list</code> to <code>Dimension list</code></a></li>
+<li><a href="#styleclass-renamed-to-styleclasses-and-input-changed-from-obj-to-string-list">StyleClass renamed to StyleClasses and input changed from <code>obj</code> to <code>string list</code></a></li>
+<li><a href="#listview-and-listviewgrouped-now-require-items-and-group-headers-to-be-cells-adds-support-for-textcell--imagecell--switchcell--entrycell--viewcell">ListView and ListViewGrouped now require items (and group headers) to be Cells, adds support for TextCell / ImageCell / SwitchCell / EntryCell / ViewCell</a></li>
+<li><a href="#tableview-now-require-tableroot-and-tablesections">TableView now require TableRoot and TableSections</a></li>
+<li><a href="#attached-properties-dropped-the-class-name-prefix">Attached properties dropped the class name prefix</a></li>
+</ul>
+<p><strong>Changes to events</strong></p>
+<ul>
+<li><a href="#events-no-longer-triggered-by-changes-in-incremental-updates">Events no longer triggered by changes in incremental updates</a></li>
+</ul>
+<h3>HeightRequest / WidthRequest renamed to Height / Width</h3>
+<p>We simplified the View API a bit by renaming <code>heightRequest</code> and <code>widthRequest</code> to respectively <code>height</code> and <code>width</code>.</p>
+<p>The <code>Request</code> part was only meaningful for Xamarin.Forms to differentiate the actual height/width from the requested height/width.<br />
+In Fabulous.XamarinForms, this differentiation wasn't useful since you only provide a representation of the view you want.</p>
+<p><em>Old:</em></p>
+<pre><code class="language-fsharp">View.StackLayout(
+    heightRequest = 200.,
+    widthRequest = 200.
+)
+</code></pre>
+<p><em>New:</em></p>
+<pre><code class="language-fsharp">View.StackLayout(
+    height = 200.,
+    width = 200.
+)
+</code></pre>
+<h3>Margin / Padding properties input changed from <code>obj</code> to <code>Xamarin.Forms.Thickness</code></h3>
+<p>Thickness-based properties like <code>margin</code> and <code>padding</code> are now directly requesting a <code>Xamarin.Forms.Thickness</code> value instead of <code>obj</code>.</p>
+<p>Previously Fabulous.XamarinForms was able to implicitly convert <code>float</code> to <code>Thickness</code>, but it wasn't adding much value and was to the detriment of type-safety.</p>
+<p><em>Old:</em></p>
+<pre><code class="language-fsharp">View.StackLayout(
+    margin = 200.
+)
+</code></pre>
+<p><em>New:</em></p>
+<pre><code class="language-fsharp">open Xamarin.Forms
+
+View.StackLayout(
+    margin = Thickness 200. // or Thickness(10., 20.) or Thickness(10., 20., 30., 40.)
+)
+</code></pre>
+<h3>Image properties input changed from <code>obj</code> to <code>Image</code></h3>
+<p>Image properties are now requesting an <code>Image</code> value instead of <code>obj</code>.</p>
+<p>Previously Fabulous.XamarinForms was able to implicitly convert <code>string</code> / <code>byte array</code> to <code>ImageSource</code>, but the input type wasn't providing type-safety.</p>
+<p><code>Image</code> is a discriminated union with the following values:</p>
+<ul>
+<li><code>Path of string</code>: Represents a path to an image</li>
+<li><code>Bytes of byte array</code>: Represents a byte array representing an image</li>
+<li><code>Source of Xamarin.Forms.ImageSource</code>: Represents an already existing ImageSource</li>
+</ul>
+<p><em>Old:</em></p>
+<pre><code class="language-fsharp">View.Image(
+    source = &quot;image.png&quot; // or bytes[] or Xamarin.Forms.ImageSource
+)
+</code></pre>
+<p><em>New:</em></p>
+<pre><code class="language-fsharp">// With a path
+View.Image(
+    source = Path &quot;image.png&quot;
+)
+
+// or with a byte array
+let data : byte array = [| 0; 1 |]
+View.Image(source = Bytes data)
+
+// or with an already existing Xamarin.Forms.ImageSource
+let imageSource = Xamarin.Forms.FileImageSource()
+imageSource.File &lt;- &quot;image.png&quot;
+View.Image(source = Source imageSource)
+</code></pre>
+<h3>FontSize properties input changed from <code>obj</code> to <code>FontSize</code></h3>
+<p>FontSize properties are now requesting a <code>FontSize</code> value instead of <code>obj</code>.</p>
+<p>Previously Fabulous.XamarinForms was able to implicitly convert <code>string</code> / <code>int</code> to <code>float</code>, but the input type wasn't providing type-safety.</p>
+<p><code>FontSize</code> is a discriminated union with the following values:</p>
+<ul>
+<li><code>FontSize of float</code>: Represents an absolute size value</li>
+<li><code>Named of Xamarin.Forms.NamedSize</code>: Represents a predefined size</li>
+</ul>
+<p><em>Old:</em></p>
+<pre><code class="language-fsharp">View.Label(
+    fontSize = 20.
+)
+</code></pre>
+<p><em>New:</em></p>
+<pre><code class="language-fsharp">View.Label(
+    fontSize = FontSize 20.
+)
+
+// or with a named size
+View.Label(fontSize = Named NamedSize.Large)
+</code></pre>
+<h3>RowDefs / ColumnDefs input changed from <code>obj list</code> to <code>Dimension list</code></h3>
+<p>RowDefs and ColumnDefs properties are now requesting a <code>Dimension list</code> value instead of <code>obj list</code>.</p>
+<p>Previously Fabulous.XamarinForms was able to implicitly convert <code>string</code> / <code>int</code> to either <code>RowDefinition</code> or <code>ColumnDefinition</code>, but the string could be set to anything and was case-sensitive, resulting in the properties being ignored.</p>
+<p><code>Dimension</code> is a discriminated union with the following values:</p>
+<ul>
+<li><code>Auto</code>: Represents a size that fits the children of the row or column</li>
+<li><code>Star</code>: Represents a size using a proportional weight of 1</li>
+<li><code>Stars of float</code>: Represents a size using a given proportional weight</li>
+<li><code>Absolute of int</code>: Represents an absolute size using device-specific units</li>
+</ul>
+<p><em>Old:</em></p>
+<pre><code class="language-fsharp">View.Grid(
+    coldefs = [ &quot;auto&quot;; &quot;*&quot;;  &quot;2.5*&quot;; &quot;250&quot; ],
+    rowdefs = [ &quot;auto&quot;; &quot;*&quot;;  &quot;2.5*&quot;; &quot;250&quot; ]
+)
+</code></pre>
+<p><em>New:</em></p>
+<pre><code class="language-fsharp">open Fabulous.XamarinForms
+
+View.Grid(
+    coldefs = [ Auto; Star; Stars 2.5; Absolute 250 ],
+    rowdefs = [ Auto; Star; Stars 2.5; Absolute 250 ]
+)
+</code></pre>
+<h3>StyleClass renamed to StyleClasses and input changed from <code>obj</code> to <code>string list</code></h3>
+<p>The StyleClass property was accepting both a single class (<code>string</code>) and multiple (<code>string list</code>) requiring us to use <code>obj</code> as the input type.</p>
+<p>Since it wasn't adding much value and reducing type-safety, StyleClass has been renamed StyleClasses and only accepts <code>string list</code>.</p>
+<p><em>Old:</em></p>
+<pre><code class="language-fsharp">View.Label(
+    styleClass = &quot;class-label&quot; // or [ &quot;class-labelA&quot;; &quot;class-labelB&quot; ]
+)
+</code></pre>
+<p><em>New:</em></p>
+<pre><code class="language-fsharp">View.Label(
+    styleClasses = [ &quot;class-label&quot; ]
+)
+
+// or with multiple classes
+View.Label(styleClasses = [ &quot;class-labelA&quot;; &quot;class-labelB&quot; ])
+</code></pre>
+<h3>ListView and ListViewGrouped now require items (and group headers) to be Cells, adds support for TextCell / ImageCell / SwitchCell / EntryCell / ViewCell</h3>
+<p>ListView in Xamarin.Forms requires the items to inherit from Cell.<br />
+In v0.43 and before, Fabulous.XamarinForms was implicitly creating for you a ViewCell to let you create any kind of content easily.<br />
+While this was useful and required less code, it was preventing you from using premade cells like <code>TextCell</code>, <code>EntryCell</code>, etc. or even access the cell's properties like <code>ContextActions</code>.</p>
+<p>So to allow those missing features, the cell is no longer created implicitly for you.<br />
+<code>ListView</code> and <code>ListViewGrouped</code> will now only accept Cells as items.</p>
+<p><em>Old:</em></p>
+<pre><code class="language-fsharp">View.ListView(
+    items = [
+        View.Label(text = model.Text)
+    ]
+)
+</code></pre>
+<p><em>New:</em></p>
+<pre><code class="language-fsharp">View.ListView(
+    items = [
+        View.ViewCell(
+            view = View.Label(text = model.Text)
+        )
+    ]
+)
+</code></pre>
+<p>You can now use premade cells like this:</p>
+<pre><code class="language-fsharp">View.ListView(
+    items = [
+        // TextCell
+        View.TextCell(
+            text = model.Text,
+            details = model.Details
+        )
+
+        // ImageCell
+        View.ImageCell(
+            imageSource = Path &quot;image.png&quot;,
+            text = model.Text,
+            details = model.Details
+        )
+
+        // EntryCell
+        View.EntryCell(
+            text = model.Text,
+            textChanged = fun args -&gt; dispatch (SetText args.NewTextValue)
+        )
+
+        // SwitchCell
+        View.SwitchCell(
+            text = model.Text,
+            on = model.IsToggled
+            onChanged = fun args -&gt; dispatch (SetToggled args.Value)
+        )
+    ]
+)
+</code></pre>
+<p>And you can declare context actions like this</p>
+<pre><code class="language-fsharp">View.ListView(
+    items = [
+        View.ViewCell(
+            view = View.Label(text = model.Text),
+            contextActions = [
+                View.MenuItem(text = &quot;Delete&quot;, isDestructive = true, command = fun() -&gt; dispatch Delete)
+            ]
+        )
+    ]
+)
+</code></pre>
+<h3>TableView now require TableRoot and TableSections</h3>
+<p>Previously, Fabulous.XamarinForms was creating implicitly TableRoot and TableSections for you.<br />
+This was great since you only had to give a string and F.XF would do the rest, this was also preventing you from using TableRoot/TableSection properties like <code>TextColor</code> as well as creating your own custom TableRoot/TableView and use it instead.</p>
+<p><em>Old:</em></p>
+<pre><code class="language-fsharp">View.TableView(
+    items = [
+        &quot;Section 1&quot;, [
+            View.TextCell(text = &quot;Global settings&quot;)
+            View.SwitchCell(text = &quot;Dark mode&quot;, on = model.IsDarkModeEnabled)
+        ]
+        &quot;Section 2&quot;, [
+            View.TextCell(text = &quot;Email&quot;)
+            View.EntryCell(text = model.Email)
+        ]
+    ]
+)
+</code></pre>
+<p><em>New:</em></p>
+<pre><code class="language-fsharp">View.TableView(
+    root = View.TableRoot(
+        title = &quot;Settings&quot;,
+        items = [
+            View.TableSection(
+                title = &quot;Section 1&quot;,
+                items = [
+                    View.TextCell(text = &quot;Global settings&quot;)
+                    View.SwitchCell(text = &quot;Dark mode&quot;, on = model.IsDarkModeEnabled)
+                ]
+            )
+            View.TableSection(
+                title = &quot;Section 2&quot;,
+                items = [
+                    View.TextCell(text = &quot;Email&quot;)
+                    View.EntryCell(text = model.Email)
+                ]
+            )
+        ]
+    )
+)
+</code></pre>
+<h3>Attached properties dropped the class name prefix</h3>
+<p>We simplified the View API a bit by renaming all attached properties from ClassName+PropertyName (e.g. <code>GridRow</code>) to only the attached property name (e.g. <code>Row</code>).</p>
+<p><em>Old:</em></p>
+<pre><code class="language-fsharp">View.Label().GridColumn(1)
+</code></pre>
+<p><em>New:</em></p>
+<pre><code class="language-fsharp">View.Label().Column(1)
+</code></pre>
+<h3>Events no longer triggered by changes in incremental updates</h3>
+<p>Xamarin.Forms uses classic .NET events to let developers react to changes to properties.<br />
+Those events are triggered for both user and programmatical changes.</p>
+<p>But while programmatic changes triggering events is not an issue in Xamarin.Forms (due to usage of data-binding instead of event subscription), in Fabulous.XamarinForms it's the only way to react to a user interaction.</p>
+<p>Fabulous.XamarinForms was directly subscribing to those events to surface them in the View API.</p>
+<p>This led to unnecessary calls to <code>update =&gt; view</code> when a change came from the model.</p>
+<p>E.g.</p>
+<pre><code>User presses a button
+-&gt; update Model.Text = &quot;New value&quot;
+-&gt; view Entry.Text = &quot;New value&quot;
+-&gt; update EntryTextChanged &quot;New value&quot; (Model not changed)
+-&gt; view Entry.Text = &quot;New value&quot; (UI already updated)
+</code></pre>
+<p>which could be simplified to</p>
+<pre><code>User presses a button
+-&gt; update Model.Text = &quot;New value&quot;
+-&gt; view Entry.Text = &quot;New value&quot;
+</code></pre>
+<p>This was particularly an issue on Android where, under some circumstances, this could lead to an infinite loop (Fabulous trying to catch up with the UI, while the UI keeps sending updates to Fabulous in response to Fabulous catching up).</p>
+<p>Thus the handling of events has changed in v0.50.</p>
+<p>Now event handlers passed in ViewElement will only be called when a user interacts with a control.</p>
+<p>No change in code is required, except if you were relying on this behavior.</p>
+
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="MIGRATION-GUIDE-TO-0.57">
+            <hr />
+<h2>title: Migrating from v0.56 to v0.57</h2>
+<h2>Migrating from v0.56 to v0.57</h2>
+<p>Fabulous.XamarinForms 0.56 first introduced initial support for the new Path controls, followed by improved support in 0.57.</p>
+<p>The new Path controls make heavy use of implicit conversion. For example, to declare a polyline you could either pass it a list of points or a string of a specific format (better for complex paths).
+Fabulous handled those kind of multiple types with discriminated unions (e.g. <code>View.Image(source = ImageSrc imageSource)</code> vs <code>View.Image(source = ImagePath &quot;path/to/img.png&quot;)</code>).
+But it was not easily discoverable and not really scalable, among other issues.</p>
+<p>In Fabulous.XamarinForms 0.57, these discriminated unions have been replaced with functions inside properly-named modules.</p>
+<h3><code>Image.ImagePath</code>/<code>Image.ImageSrc</code>/etc become <code>Image.fromPath</code>/<code>Image.fromImageSource</code>/etc</h3>
+<p><em>Old:</em></p>
+<pre><code class="language-fsharp">View.Image(
+    source = ImagePath &quot;path/to/image.png&quot;
+)
+View.Image(
+    source = ImageBytes myByteArray
+)
+View.Image(
+    source = ImageStream myStream
+)
+View.Image(
+    source = ImageFont myFontImageSource
+)
+View.Image(
+    source = ImageSrc imageSource
+)
+</code></pre>
+<p><em>New:</em></p>
+<pre><code class="language-fsharp">View.Image(
+    source = Image.fromPath &quot;path/to/image.png&quot;
+)
+View.Image(
+    source = Image.fromBytes myByteArray
+)
+View.Image(
+    source = Image.fromStream myStream
+)
+View.Image(
+    source = Image.fromFont myFontImageSource
+)
+View.Image(
+    source = Image.fromImageSource imageSource
+)
+</code></pre>
+<h3><code>Media.MediaPath</code>/<code>Media.MediaSrc</code> become <code>Media.fromPath</code>/<code>Media.fromMediaSource</code></h3>
+<p><em>Old:</em></p>
+<pre><code class="language-fsharp">View.Media(
+    source = MediaPath &quot;path/to/video.mp4&quot;
+)
+View.Media(
+    source = MediaSrc mediaSource
+)
+</code></pre>
+<p><em>New:</em></p>
+<pre><code class="language-fsharp">View.Media(
+    source = Media.fromPath &quot;path/to/video.mp4&quot;
+)
+View.Media(
+    source = Media.fromMediaSource mediaSource
+)
+</code></pre>
+<h3><code>FontSize.FontSize</code>/<code>FontSize.Named</code> become <code>FontSize.fromValue</code>/<code>FontSize.fromNamedSize</code></h3>
+<p><em>Old:</em></p>
+<pre><code class="language-fsharp">View.Label(
+    fontSize = FontSize 14.
+)
+View.Label(
+    fontSize = Named NamedSize.Title
+)
+</code></pre>
+<p><em>New:</em></p>
+<pre><code class="language-fsharp">View.Label(
+    fontSize = FontSize.fromValue 14.
+)
+View.Label(
+    fontSize = FontSize.fromNamedSize NamedSize.Title
+)
+</code></pre>
+<h2>Xamarin.Forms.SelectableItemsView - SelectionChanged signature changed</h2>
+<p><em>Old:</em></p>
+<pre><code class="language-fsharp">SelectionChangedEventArgs -&gt;  unit.
+</code></pre>
+<p><em>New:</em></p>
+<pre><code class="language-fsharp">(ViewElement list option*ViewElement list option)  -&gt;  unit
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-fsharp">let  navigateToAfterSelectionChanged dispatch (_,  (currentItems:  ViewElement list option))  =
+    match currentItems |&gt; Option.bind (List.tryHead)  with
+        | None -&gt;  ()
+        | Some item -&gt;
+            let  animal  = item.TryGetTag&lt;Animal&gt;().Value
+            dispatch (SelectAnimal animal)
+
+View.CollectionView(
+	selectionMode=SelectionMode.Single,
+	selectionChanged=(navigateToAfterSelectionChanged dispatch),
+	items=(allAnimals |&gt; List.map Templates.animalTemplate)
+)
+</code></pre>
+<h2>Extension Changes</h2>
+<p>The update function for extensions changed because the attached properties are handled different internally now.
+<em>Old:</em></p>
+<pre><code class="language-fsharp">    let update (prev: ViewElement voption) (source: ViewElement) (target: ABC) =
+        ViewBuilders.UpdateBASE (prev, source, target)
+</code></pre>
+<p><em>New:</em></p>
+<pre><code class="language-fsharp">    let update registry (prev: ViewElement voption) (source: ViewElement) (target: ABC) =
+        ViewBuilders.UpdateBASE (registry, prev, source, target)
+</code></pre>
+
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="MIGRATION-GUIDE-TO-0.53">
+            <hr />
+<h2>title: Migrating from v0.52 to v0.53</h2>
+<p>Fabulous.XamarinForms 0.53 added the support for Xamarin.Forms 4.5, along with the new MediaElement control.<br />
+Take a look at <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/release-notes/4.5/4.5.0">Xamarin.Forms 4.5 release notes</a> to know what changed.</p>
+<p>This MediaElement control uses <code>MediaSource</code> to load videos.<br />
+Since <code>ImageSource</code> and <code>MediaSource</code> are very close in usage and yet different, we introduced some renaming in Fabulous.XamarinForms to avoid naming collision.</p>
+<h3><code>Image.Path</code> becomes <code>Image.ImagePath</code>, or just <code>ImagePath</code></h3>
+<p>Previously when loading an image from the file system, or from an URI, you would use <code>Image.Path</code> or just <code>Path</code> (this discriminated union name <code>Image</code> could be omitted).<br />
+To avoid collision with loading a video from a file system/URI, <code>Path</code> was renamed to <code>ImagePath</code>. Videos use <code>MediaPath</code>.</p>
+<p><em>Old:</em></p>
+<pre><code class="language-fsharp">View.Image(
+    Source = Path &quot;path/to/image.png&quot;
+)
+</code></pre>
+<p><em>New:</em></p>
+<pre><code class="language-fsharp">View.Image(
+    Source = ImagePath &quot;path/to/image.png&quot;
+)
+
+View.MediaElement(
+    Source = MediaPath &quot;path/to/video.mp4&quot;
+)
+</code></pre>
+<h3><code>Image.Byte</code> becomes <code>Image.ImageBytes</code></h3>
+<p>Previously when loading an image from a byte array, you would use <code>Image.Bytes</code> or just <code>Bytes</code> (this discriminated union name <code>Image</code> could be omitted).<br />
+To avoid future collision with loading a video and having consistent naming, <code>Bytes</code> was renamed to <code>ImageBytes</code>.</p>
+<p><em>Old:</em></p>
+<pre><code class="language-fsharp">View.Image(
+    Source = Bytes myByteArray
+)
+</code></pre>
+<p><em>New:</em></p>
+<pre><code class="language-fsharp">View.Image(
+    Source = ImageBytes myByteArray
+)
+</code></pre>
+<h3><code>Image.Source</code> becomes <code>Image.ImageSource</code>, or just <code>ImageSource</code></h3>
+<p>Previously when loading an image from a custom Xamarin.Forms.ImageSource, you would use <code>Image.Source</code> or just <code>Source</code> (this discriminated union name <code>Image</code> could be omitted).<br />
+To avoid collision with loading a video from a custom Xamarin.Forms.ImageSource, <code>Source</code> was renamed to <code>ImageSrc</code> (abbreviated to avoid collision with <code>Xamarin.Forms.ImageSource</code>). Videos use <code>MediaSrc</code>.</p>
+<p><em>Old:</em></p>
+<pre><code class="language-fsharp">let getImageSource() = ...
+
+View.Image(
+    Source = Source (getImageSource())
+)
+</code></pre>
+<p><em>New:</em></p>
+<pre><code class="language-fsharp">let getImageSource() = ...
+let getMediaSource() = ...
+
+View.Image(
+    Source = ImageSrc (getImageSource())
+)
+
+View.MediaElement(
+    Source = MediaSrc (getMediaSource())
+)
+</code></pre>
+
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="views">
+            
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="VIEWS-SKIASHARP">
+            <hr />
+<h2>title: Using SkiaSharp</h2>
+<p>SkiaSharp is a 2D graphics system for .NET powered by the open-source Skia graphics engine that is used extensively in Google products. You can use SkiaSharp in your Xamarin.Forms applications to draw 2D vector graphics, bitmaps, and text.</p>
+<p>The nuget <a href="https://www.nuget.org/packages/Fabulous.XamarinForms.SkiaSharp"><code>Fabulous.XamarinForms.SkiaSharp</code></a> implements a view component for the type <a href="https://developer.xamarin.com/api/type/SkiaSharp.Views.Forms.SKCanvasView/">SKCanvasView</a>.</p>
+<p><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs-images/anglearc-small.png"><img src="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs-images/anglearc-small.png" alt="SkiaSharp example from Microsoft" /></a></p>
+<p>To use <code>Fabulous.XamarinForms.SkiaSharp</code>, you must</p>
+<ol>
+<li>Add a reference to <code>SkiaSharp.Views.Forms</code> across your whole solution.  This will add appropriate references to your platform-specific Android and iOS projects too.</li>
+<li>Next add a reference to <code>Fabulous.XamarinForms.SkiaSharp</code> across your whole solution.</li>
+</ol>
+<p>After these steps you can use SkiaSharp in your view function. Here is a simple example of using SkiaSharp to
+draw a circle and respond to touch events:</p>
+<pre><code class="language-fsharp">open Fabulous.XamarinForms
+
+View.SKCanvasView(enableTouchEvents = true,
+    paintSurface = (fun args -&gt;
+        let info = args.Info
+        let surface = args.Surface
+        let canvas = surface.Canvas
+
+        canvas.Clear()
+        use paint = new SKPaint(Style = SKPaintStyle.Stroke, Color = Color.Red.ToSKColor(), StrokeWidth = 25.0f)
+        canvas.DrawCircle(float32 (info.Width / 2), float32 (info.Height / 2), 100.0f, paint)
+    ),
+    touch = (fun args -&gt;
+        printfn &quot;touch event at (%f, %f)&quot; args.Location.X args.Location.Y
+    )
+)
+</code></pre>
+<p>By default, the view will not be redrawn when the model changes. You should set <code>invalidate</code> to true when you know that a redraw is needed. Set it back to false when done, otherwise it will be redrawn at each update.</p>
+<pre><code class="language-fsharp">View.SKCanvasView(..., invalidate = true)
+</code></pre>
+<p>See also:</p>
+<ul>
+<li><a href="views-elements.md">Core Elements</a>.</li>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/graphics/skiasharp/">Using SkiaSharp in Xamarin.Forms</a>.</li>
+<li><a href="https://github.com/fsprojects/Fabulous/blob/master/Fabulous.XamarinForms/extensions/SkiaSharp/SkiaSharp.fs">Source for the SkiaSharp extension</a></li>
+<li><a href="views-extending.md">Defining Extensions</a></li>
+</ul>
+
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="VIEWS-EFFECTS">
+            <hr />
+<h2>title: Views: Effects</h2>
+<p>Xamarin.Forms user interfaces are rendered using the native controls of the target platform, allowing Xamarin.Forms applications to retain the appropriate look and feel for each platform. Effects allow the native controls on each platform to be customized without having to resort to a custom renderer implementation.</p>
+<h3>Using Effects in Fabulous.XamarinForms</h3>
+<p>The recommended way to use an effect in Fabulous is by using the dedicated <code>View.Effect</code>.<br />
+This control accepts the effect's exported full name (<code>&quot;SomeResolutionGroup.SomeEffectName&quot;</code>) and it can be attached to any control with the <code>effects</code> properties.</p>
+<pre><code class="language-fsharp">View.Button(effects = [
+    View.Effect(name = &quot;SomeResolutionGroup.SomeEffectName&quot;)
+])
+</code></pre>
+<p>This way is only suitable if your effect doesn't need any external values.</p>
+<h3>Create wrapper for custom effects with properties</h3>
+<p>If you want to use your own effects with properties in Fabulous.XamarinForms, you will need to write an extension.<br />
+For more information, please read about <a href="views-extending.md">View Extensions</a></p>
+<p>Let's take this ShadowEffect for example:</p>
+<pre><code class="language-fsharp">open Xamarin.Forms
+
+type ShadowEffect() =
+    inherit RoutingEffect(&quot;FabulousXamarinForms.ShadowEffect&quot;)
+
+    member val Radius = 0. with get, set
+    member val Color = Color.Default with get, set
+    member val DistanceX = 0. with get, set
+    member val DistanceY = 0. with get, set
+</code></pre>
+<p>If we want to use it in our views, we will need to write the following extension:</p>
+<pre><code class="language-fsharp">[&lt;AutoOpen&gt;]
+module ShadowEffectViewExtension =
+    open Fabulous
+    open Fabulous.XamarinForms
+    
+    let RadiusAttribKey = AttributeKey &quot;ShadowEffectRadius&quot;
+    let ColorAttribKey = AttributeKey &quot;ShadowEffectColor&quot;
+    let DistanceXAttribKey = AttributeKey &quot;ShadowEffectDistanceX&quot;
+    let DistanceYAttribKey = AttributeKey &quot;ShadowEffectDistanceY&quot;
+    
+    type Fabulous.XamarinForms.View with
+        static member inline ShadowEffect(?radius, ?color, ?distanceX, ?distanceY) =
+            let attribCount = 0
+            let attribCount = match radius with Some _ -&gt; attribCount + 1 | None -&gt; attribCount
+            let attribCount = match color with Some _ -&gt; attribCount + 1 | None -&gt; attribCount
+            let attribCount = match distanceX with Some _ -&gt; attribCount + 1 | None -&gt; attribCount
+            let attribCount = match distanceY with Some _ -&gt; attribCount + 1 | None -&gt; attribCount
+            
+            let attribs = AttributesBuilder(attribCount)
+                
+            match radius with None -&gt; () | Some v -&gt; attribs.Add(RadiusAttribKey, v)
+            match color with None -&gt; () | Some v -&gt; attribs.Add(ColorAttribKey, v)
+            match distanceX with None -&gt; () | Some v -&gt; attribs.Add(DistanceXAttribKey, v)
+            match distanceY with None -&gt; () | Some v -&gt; attribs.Add(DistanceYAttribKey, v)
+            
+            let create () = ShadowEffect()
+            
+            let update (prevOpt: ViewElement voption) (source: ViewElement) (target: ShadowEffect) =
+                source.UpdatePrimitive(prevOpt, target, RadiusAttribKey, (fun target v -&gt; target.Radius &lt;- v))
+                source.UpdatePrimitive(prevOpt, target, ColorAttribKey, (fun target v -&gt; target.Color &lt;- v))
+                source.UpdatePrimitive(prevOpt, target, DistanceXAttribKey, (fun target v -&gt; target.DistanceX &lt;- v))
+                source.UpdatePrimitive(prevOpt, target, DistanceYAttribKey, (fun target v -&gt; target.DistanceY &lt;- v))
+                
+            ViewElement.Create(create, update, attribs)
+</code></pre>
+<p>This then enables us to use it like this:</p>
+<pre><code class="language-fsharp">View.Label(effects = [
+    View.ShadowEffect(color = Color.Black, radius = 5.)
+])
+</code></pre>
+<p>Alternatively you can do it without an extension, and use both the <code>created</code> event and the <code>Effects</code> collection of the Xamarin.Forms control.</p>
+<pre><code class="language-fsharp">View.Label(created = fun e -&gt;
+    let effect = new ShadowEffect()
+    effect.Color &lt;- Color.Black
+    effect.Radius &lt;- 5.
+    e.Effects.Add effect
+)
+</code></pre>
+<p>This way is not recommended because it can't make use of the incremental update mecanism.</p>
+<p>See also:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/effects/">Xamarin.Forms - Effects</a></li>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/effects/creating">Xamarin.Forms - Creating an Effect</a></li>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/effects/introduction">Xamarin.Forms - Introduction to Effects</a></li>
+</ul>
+
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="VIEWS-VIDEOMANAGER">
+            <hr />
+<h2>title: Using VideoManager</h2>
+<p>The MediaManager plugin allow to play audio and video with Xamarin. Using this VideoManager, you can create a dedicated view to render a video in your fabulous application.</p>
+<p>MediaManager has been created by Martijn van Dijk and its original project can be found on <a href="https://github.com/martijn00/XamarinMediaManager">its github repository</a>.</p>
+<p>The nuget <a href="https://www.nuget.org/packages/Fabulous.VideoManager"><code>Fabulous.XamarinForms.VideoManager</code></a> implements a view component for the type <a href="https://github.com/martijn00/XamarinMediaManager">VideoView</a>.</p>
+<p><img src="https://devblogs.microsoft.com/wp-content/uploads/sites/44/2019/03/VideoPlayer.png" alt="VideoView example from Microsoft" /></p>
+<p>To use <code>Fabulous.XamarinForms.VideoView</code>, you must</p>
+<ol>
+<li>Add a reference to <code>Plugin.MediaManager</code> and <code>Plugin.MediaManager.Forms</code> across your whole solution.  This will add appropriate references to your platform-specific Android and iOS projects too.</li>
+<li>Next add a reference to <code>Fabulous.XamarinForms.VideoManager</code> across your whole solution.</li>
+</ol>
+<p>After these steps you can use VideoView in your view function. Here is a simple example of using VideoView to
+display a video player of Big Buck Bunny:</p>
+<pre><code class="language-fsharp">open Fabulous.XamarinForms
+
+View.VideoView(
+  source = &quot;https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4&quot;,
+  showControls = false,
+  heightRequest = 500.,
+  widthRequest = 200.)
+</code></pre>
+<p>See also:</p>
+<ul>
+<li><a href="views-elements.md">Core Elements</a>.</li>
+<li><a href="https://devblogs.microsoft.com/xamarin/play-audio-and-video-with-the-mediamanager-plugin-for-xamarin/">Using MediaManager for Xamarin</a>.</li>
+<li><a href="https://github.com/fsprojects/Fabulous/blob/master/Fabulous.XamarinForms/extensions/VideoManager/VideoManager.fs">Source for the VideoManager extension</a></li>
+<li><a href="https://github.com/martijn00/XamarinMediaManager">Source for the Xamarin MediaManager</a></li>
+<li><a href="views-extending.md">Defining Extensions</a></li>
+</ul>
+
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="VIEWS">
+            <hr />
+<h2>title: Views</h2>
+<p>The <code>view</code> function is a function returning your view elements based on the current model. For example:</p>
+<pre><code class="language-fsharp">let view model dispatch =
+    View.ContentPage(
+        title=&quot;Pocket Piggy Bank&quot;,
+        content=View.Label(text = sprintf &quot;Hello world!&quot;)
+    )
+</code></pre>
+<p>The view function is normal F# code that returns elements created using the <code>View.*</code> method calls.</p>
+<p>View functions are particularly useful when the existence, characteristics and layout of the view depends on information
+in the model. Differential update is used to efficiently update the Xamarin.Forms display based on the previous
+and current view descriptions.</p>
+<p>Here is a larger example:</p>
+<pre><code class="language-fsharp">type Model =
+    { Balance : decimal
+      CurrencySymbol : string
+      User: string option }
+
+type Msg =
+    | Spend of decimal
+    | Add of decimal
+    | Login of string option
+
+let update msg model =
+    match msg with
+    | Spend x -&gt; { model with Balance = model.Balance - x }, Cmd.none
+    | Add x -&gt; { model with Balance = model.Balance + x }, Cmd.none
+    | Login user -&gt; { model with User = user }, Cmd.none
+
+let view model dispatch =
+    View.ContentPage(
+        title=&quot;Pocket Piggy Bank&quot;,
+        content=View.StackLayout(padding=20.0,
+            horizontalOptions=LayoutOptions.Center,
+            verticalOptions=LayoutOptions.CenterAndExpand,
+            children = [
+                match model.User with
+                | Some user -&gt;
+                    yield View.Label(text=sprintf &quot;Logged in as : %s&quot; user)
+                    yield View.Label(text=sprintf &quot;Balance: %s%.2f&quot; model.CurrencySymbol model.Balance)
+                    yield View.Button(text=&quot;Withdraw&quot;, command=(fun () -&gt; dispatch (Spend 10.0m)), canExecute=(model.Balance &gt; 0.0m))
+                    yield View.Button(text=&quot;Deposit&quot;, command=(fun () -&gt; dispatch (Add 10.0m)))
+                    yield View.Button(text=&quot;Logout&quot;, command=(fun () -&gt; dispatch (Login None)))
+                | None -&gt;
+                    yield View.Button(text=&quot;Login&quot;, command=(fun () -&gt; dispatch (Login (Some &quot;user&quot;))))
+            ]))
+</code></pre>
+<p>See also:</p>
+<ul>
+<li><a href="views-elements.md">Core Elements</a>.</li>
+<li><a href="views-perf.md">Views and Performance</a>.</li>
+<li><a href="views-styling.md">Styling</a>.</li>
+<li><a href="views-navigation.md">Multi-page Applications and Navigation</a>.</li>
+</ul>
+
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="VIEWS-LISTS-TABLES">
+            <hr />
+<h2>title: Lists and Tables</h2>
+<h2>Lists and Tables</h2>
+<h3>ListView, ListGroupedView</h3>
+<p>A simple <code>ListView</code> is as follows:</p>
+<pre><code class="language-fsharp">View.ListView(
+    items = [
+        View.TextCell &quot;Ionide&quot;
+        View.TextCell &quot;Visual Studio&quot;
+        View.TextCell &quot;Emacs&quot;
+        View.TextCell &quot;Visual Studio Code&quot;
+        View.TextCell &quot;JetBrains Rider&quot;
+    ],
+    itemSelected = (fun idx -&gt; dispatch (ListViewSelectedItemChanged idx))
+)
+</code></pre>
+<p>The <code>itemSelected</code> callback uses integers indexes for keys to identify the elements.</p>
+<p>There is also a <code>ListViewGrouped</code> for grouped items of data. This uses the same Xamarin control under the hood but in a different mode of use.</p>
+<img src="https://user-images.githubusercontent.com/52166903/60180201-5dfc5b00-9817-11e9-9508-a0daa7b7a81d.png" width="400">
+<p>See also:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/listview/"><code>Xamarin.Forms.Core.ListView</code></a></li>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/cells">Xamarin.Forms Cells</a></li>
+</ul>
+<h3>TableView</h3>
+<p>An example <code>TableView</code> is as follows:</p>
+<pre><code class="language-fsharp">View.TableView(
+    items = [
+        (View.TextCell(&quot;Videos&quot;), [
+            View.SwitchCell(
+                on = true,
+                text = &quot;Luca 2008&quot;,
+                onChanged = (fun args -&gt; ())
+            )
+            View.SwitchCell(
+                on = true,
+                text = &quot;Don 2010&quot;,
+                onChanged = (fun args -&gt; ())
+            )
+        ])
+        (View.TextCell(&quot;Books&quot;), [
+            View.SwitchCell(
+                on = true,
+                text = &quot;Expert F#&quot;,
+                onChanged = (fun args -&gt; ())
+            )
+            View.SwitchCell(
+                on = false,
+                text = &quot;Programming F#&quot;,
+                onChanged = (fun args -&gt; ())
+            )
+        ])
+        (View.TextCell(&quot;Contact&quot;), [
+            View.EntryCell(
+                label = &quot;Email&quot;,
+                placeholder = &quot;foo@bar.com&quot;,
+                completed = (fun args -&gt; ())
+            )
+            View.EntryCell(
+                label = &quot;Phone&quot;,
+                text = &quot;+44 87654321&quot;,
+                completed = (fun args -&gt; ())
+            )
+        ])
+    ]
+)
+</code></pre>
+<img src="https://user-images.githubusercontent.com/52166903/60177365-9d737900-9810-11e9-92d5-88487316bbf6.png" width="400">
+<p>See also:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/Xamarin.Forms.TableView"><code>Xamarin.Forms.Core.TableView</code></a></li>
+</ul>
+<h4>&quot;Infinite&quot; or &quot;unbounded&quot; ListViews</h4>
+<p>&quot;Infinite&quot; (really &quot;unbounded&quot;) lists are created by using the <code>itemAppearing</code> event to prompt a message which nudges the
+underlying model in a direction that will then supply new items to the view.</p>
+<p>For example, consider this pattern:</p>
+<pre><code class="language-fsharp">type Model =
+    { ...
+      LatestItemAvailable: int
+    }
+
+type Message =
+    ...
+    | GetMoreItems of int
+
+let update msg model =
+    match msg with
+    | ...
+    | GetMoreItems n -&gt; { model with LatestItemAvailable = n }
+
+let view model dispatch =
+    ...
+    View.ListView(
+        items = [
+            for i in 1 .. model.LatestItemAvailable do
+                yield View.TextCell(&quot;Item &quot; + string i)
+        ],
+        itemAppearing = (fun idx -&gt; if idx &gt;= max - 2 then dispatch (GetMoreItems (idx + 10) ) )
+    )
+...
+</code></pre>
+<p>Note:</p>
+<ul>
+<li>The underlying data in the model is just an integer <code>LatestItemAvailable</code> (normally it would really be a list of actual entities drawn from a data source)</li>
+<li>On each update to the view we produce all the visual items from <code>Item 1</code> onwards</li>
+<li>The <code>itemAppearing</code> event is called for each item, e.g. when item <code>10</code> appears</li>
+<li>When the event triggers we grow the underlying data model by 10</li>
+<li>This will trigger an update of the view again, with more visual elements available (but not yet appearing)</li>
+</ul>
+<p>Surprisingly even this naive technique is fairly efficient. There are numerous ways to make this more efficient (we aim to document more of these over time too). One simple one is to memoize each individual visual item using <code>dependsOn</code>:</p>
+<pre><code class="language-fsharp">items = [
+    for i in 1 .. model.LatestItemAvailable do
+        yield dependsOn i (fun model i -&gt; View.Label(&quot;Item &quot; + string i))
+]
+</code></pre>
+<p>With that, this simple list views scale to &gt; 10,000 items on a modern phone, though your mileage may vary.
+There are many other techniques (e.g. save the latest collection of visual element descriptions in the model, or to use a <code>ConditionalWeakTable</code> to associate it with the latest model). We will document further techniques in due course.</p>
+<p>Thre is also an <code>itemDisappearing</code> event for <code>ListView</code> that can be used to discard data from the underlying model and restrict the
+range of visual items that need to be generated.</p>
+<h3>CollectionView</h3>
+<p>Please read the Xamarin.Forms documentation to check whether this control is available for the platforms you target.
+You can set the header and footer with a string or a ViewElement.</p>
+<p>Usage:</p>
+<pre><code class="language-fsharp">View.CollectionView(
+    header = (StructuredItems.fromString &quot;String Header&quot;),
+    items = [
+        View.Label(text = &quot;Person1&quot;)
+        View.Label(text = &quot;Person2&quot;)
+        View.Label(text = &quot;Person3&quot;)
+        View.Label(text = &quot;Person4&quot;)
+        View.Label(text = &quot;Person5&quot;)
+    ],
+    footer = (StructuredItems.fromElement (View.Label(&quot;Label Footer&quot;)))
+)
+</code></pre>
+<img src="https://user-images.githubusercontent.com/52166903/60262083-4683a780-98d5-11e9-8afc-cde4d594171b.png" width="400">
+<p>See also:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/collectionview/">Xamarin guide to CollectionView</a></li>
+</ul>
+
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="VIEWS-STYLING">
+            <hr />
+<h2>title: Views: Styling</h2>
+<h3>F#-coded styling</h3>
+<p>The easiest approach is to manually code up styling simply by using normal F# programming to abstract away commonality between
+various parts of your view logic.</p>
+<p>For example, if a set of Labels share the same margin and color you can write this:</p>
+<pre><code class="language-fsharp">let Label text = 
+	View.Label(text=text, margin=Thickness(0.0, 4.0), textColor=Color.Black)
+
+Label(text=&quot;This monkey is laid back and relaxed, and likes to watch the world go by.&quot;)
+Label(text=&quot;  - Often smiles mysteriously&quot;)
+Label(text=&quot;  - Sleeps sitting up&quot;)
+</code></pre>
+<p>We do not give a full guide here as it is routine application of F# coding.</p>
+<p>There are many upsides to this approach. The downsides are:</p>
+<ul>
+<li>styling is done using F# coding, and some UI designers may prefer to work with CSS or another styling technique</li>
+<li>there is no easy way to provide default styling base on selectors like &quot;All buttons&quot; (except of course to carefully code your F# to make sure all button creations go through a particular helper)</li>
+<li>you may end up hand-rolling certain selector queries and patterns from other styling languages.</li>
+</ul>
+<h3>CSS styling with Xamarin.Forms 3.0</h3>
+<ol>
+<li><p>create a CSS file with appropriate selectors and property specifications.</p>
+</li>
+<li><p>Add the style sheet to your app as an <code>EmbeddedResource</code> node.</p>
+</li>
+<li><p>Load it into your app.</p>
+</li>
+<li><p>Set <code>styleClass</code> for named elements.</p>
+</li>
+</ol>
+<p>For example, places the following CSS into &quot;MyProject.Assets.styles.css&quot;:</p>
+<pre><code>stacklayout {
+    margin: 20;
+}
+
+.mainPageTitle {
+    font-style: bold;
+    font-size: medium;
+}
+
+.detailPageTitle {
+    font-style: bold;
+    font-size: medium;
+    text-align: center;
+}
+</code></pre>
+<p>Here <code>stacklayout</code> referes to all elements of that type, and <code>.mainPageTitle</code> refers to a specific element style-class path.</p>
+<p>The CSS is added to the app in your main app code:</p>
+<pre><code class="language-fsharp">type App () as app = 
+    inherit Application ()
+    do app.Resources.Add(StyleSheet.FromAssemblyResource(Assembly.GetExecutingAssembly(),&quot;MyProject.Assets.styles.css&quot;))
+</code></pre>
+<p>Set the style classes as follows:</p>
+<pre><code class="language-fsharp">    View.Label(text=&quot;Hello&quot;, styleClass=&quot;detailPageTitle&quot;)
+    ...
+    View.Label(text=&quot;Main Page&quot;, styleClass=&quot;mainPageTitle&quot;)
+</code></pre>
+<p>You can also add style sheets for particular elements and their contents by using the <code>styleSheets</code> property for each visual element. For example:</p>
+<pre><code class="language-fsharp">// Always define your style sheets as static values, sine their object identity is signficant!
+let styleSheet = StyleSheet.FromAssemblyResource(Assembly.GetExecutingAssembly(),&quot;MyProject.Assets.styles.css&quot;)
+
+let view model disptch = 
+    View.ContentPage(styleSheets=[myStyleSheet], ...)
+</code></pre>
+<h3>&quot;Xaml&quot; coding via explicit <code>Style</code> objects</h3>
+<p>You can also use &quot;Xaml styling&quot; by creating specific <code>Style</code> objects using the <code>Xamarin.Forms</code> APIs directly
+and attaching them to your application.   We don't go into details here</p>
+<pre><code class="language-fsharp">// Always define your styles as static values, sine their object identity is signficant!
+let style = Style...
+let view model disptch = 
+    View.ContentPage(styles=[myStyle], ...)
+</code></pre>
+<h3>Resource Dictionaries</h3>
+<p>In Xamarin.Forms documentation you may see references to resource dictionaries.
+In Fabulous, resources dictionaries are replaced by &quot;simple F# programming&quot;, e.g.</p>
+<pre><code class="language-fsharp">let horzOptions = LayoutOptions.Center
+let vertOptions = LayoutOptions.CenterAndExpand
+</code></pre>
+<p>is basically the equivalent of Xaml:</p>
+<pre><code class="language-xml">&lt;ContentPage.Resources&gt;
+    &lt;ResourceDictionary&gt;
+        &lt;LayoutOptions x:Key=&quot;horzOptions&quot;
+                     Alignment=&quot;Center&quot; /&gt;
+
+        &lt;LayoutOptions x:Key=&quot;vertOptions&quot;
+                     Alignment=&quot;Center&quot;
+                     Expands=&quot;True&quot; /&gt;
+    &lt;/ResourceDictionary&gt;
+&lt;/ContentPage.Resources&gt;
+</code></pre>
+<p>In other words, you can normally forget about resource dictionaries and just program as you would normally in F#.</p>
+<p>Other kinds of resources like images need a little more attention and you may need to ship multiple versions of images etc. for Android and iOS.  TBD: write a guide on these, in the meantime see the samples.</p>
+<p>See also:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/styles/">Xamarin.Forms styling</a></li>
+</ul>
+
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="VIEWS-POPUPS">
+            <hr />
+<h2>title: Pop-ups</h2>
+<p>Pop-ups are a special case in Fabulous for Xamarin.Forms: they are part of the view, but don't follow the same lifecycle as the rest of the UI. In Xamarin.Forms pop-ups are exposed through 2 methods of the current page: <code>DisplayAlert</code> and <code>DisplayActionSheet</code>.</p>
+<p>In Fabulous for Xamarin.Forms we only describe what a page should look like and have no access to UI elements. As such, there is no direct implementation of those 2 methods in Fabulous but instead we can use the static property <code>Application.Current.MainPage</code> exposed by Xamarin.Forms.</p>
+<p>Here is an example of the use of a confirmation pop-up - note the requirement of <code>Cmd.AsyncMsg</code> so as not to block on the UI thread:</p>
+<pre><code class="language-fsharp">type Msg =
+    | DisplayAlert
+    | AlertResult of bool
+
+let update (msg : Msg) (model : Model) =
+    match msg with
+    | DisplayAlert -&gt;
+        let alertResult = async {
+            let! alert =
+                Application.Current.MainPage.DisplayAlert(&quot;Display Alert&quot;, &quot;Confirm&quot;, &quot;Ok&quot;, &quot;Cancel&quot;)
+                |&gt; Async.AwaitTask
+            return AlertResult alert }
+
+        model, Cmd.ofAsyncMsg alertResult
+
+    | AlertResult alertResult -&gt; ... // Do something with the result
+</code></pre>
+<img src="https://user-images.githubusercontent.com/52166903/60180195-5d63c480-9817-11e9-9c12-bab34b7fbb77.png" width="400">
+<p><em>Why don't we add a Fabulous wrapper for those?</em>
+Doing so would only end up duplicating the existing methods and compel us to maintain these in sync with Xamarin.Forms.
+See <a href="https://github.com/fsprojects/Fabulous/pull/147">Pull Request #147</a> for more information</p>
+<p>See also:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/navigation/pop-ups">Displaying Pop-ups</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.page.displayalert"><code>Xamarin.Forms.Core.Page.DisplayAlert</code></a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.page.displayactionsheet"><code>Xamarin.Forms.Core.Page.DisplayActionSheet</code></a></li>
+</ul>
+
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="VIEWS-NAVIGATION">
+            <hr />
+<h2>title: Multi-page Applications and Navigation</h2>
+<p>Multiple pages are generated as part of the overall view. Five multi-page navigation models are shown in the <code>AllControls</code> sample:</p>
+<ul>
+<li>NavigationPage using push/pop</li>
+<li>NavigationPage Toolbar</li>
+<li>TabbedPage</li>
+<li>CarouselPage</li>
+<li>MasterDetail</li>
+</ul>
+<h3>NavigationPage using push/pop</h3>
+<p>The basic principles of implementing push/pop navigation are as follows:</p>
+<ol>
+<li>Keep some information in your model indicating the page stack (e.g. a list of page identifiers or page models)</li>
+<li>Return the current visual page stack in the <code>pages</code> property of <code>NavigationPage</code>.</li>
+<li>Set <code>HasNavigationBar</code> and <code>HasBackButton</code> on each sub-page according to your desire</li>
+<li>Dispatch messages in order to navigate, where the corresponding <code>update</code> adjusts the page stack in the model</li>
+</ol>
+<pre><code class="language-fsharp">let view model dispatch =
+    View.NavigationPage(pages=
+        [ for page in model.PageStack do
+            match page with
+            | &quot;Home&quot; -&gt;
+                yield View.ContentPage(...).HasNavigationBar(true).HasBackButton(true)
+            | &quot;PageA&quot; -&gt;
+                yield View.ContentPage(...).HasNavigationBar(true).HasBackButton(true)
+            | &quot;PageB&quot; -&gt;
+                yield View.ContentPage(...).HasNavigationBar(true).HasBackButton(true)
+        ])
+</code></pre>
+<h3>NavigationPage Toolbar</h3>
+<p>A toolbar can be added to a navigation page using <code>.ToolbarItems([ ... ])</code> as follows:</p>
+<pre><code class="language-fsharp">let view model dispatch =
+    ...
+    View.NavigationPage(pages =
+        [ View.ContentPage(...)
+            .ToolbarItems([View.ToolbarItem(text = &quot;About&quot;, command = (fun () -&gt; dispatch (ShowAbout true))) ] )
+</code></pre>
+<h3>Example: Modal pages by pushing an extra page</h3>
+<p>A modal page can be achieved by yielding an additional page in the NavigationPage. For example, here is an &quot;About&quot; page example:</p>
+<pre><code class="language-fsharp">type Model =
+    { ShowAbout: bool
+      ...
+    }
+
+type Msg =
+    | ...
+    | ShowAbout of bool
+    
+let update msg model =
+    match msg with
+    | ...
+    | ShowAbout status -&gt;       
+        if status then 
+            { model with ShowAbout = true }, Cmd.none    
+        else 
+            { model with ShowAbout = false }, Cmd.none   
+
+let view model dispatch =
+    ...
+    let rootPage dispatch =
+        View.ContentPage(title = &quot;Root Page&quot;, content = View.Button(text = &quot;About&quot;, command = (fun () -&gt; dispatch (ShowAbout true))))
+
+    let modalPage dispatch =
+        View.ContentPage(title = &quot;About&quot;,
+            content= View.StackLayout(
+                children = [
+                    View.Label(text = &quot;Fabulous!&quot;)
+                    View.Button(text = &quot;Continue&quot;, command = (fun () -&gt; dispatch (ShowAbout false) ))
+                ]))
+
+    View.NavigationPage(pages=
+        [ yield rootPage dispatch
+          if model.ShowAbout then
+              yield modalPage dispatch
+        ], popped = fun args -&gt; dispatch (ShowAbout false))
+</code></pre>
+<h3>TabbedPage navigation</h3>
+<p>Return a <code>TabbedPage</code> from your view:</p>
+<pre><code class="language-fsharp">let view model dispatch =
+    View.TabbedPage(children = [ ... ])
+</code></pre>
+<h3>CarouselPage navigation</h3>
+<p>Return a <code>CarouselPage</code> from your view:</p>
+<pre><code class="language-fsharp">let view model dispatch =
+    View.CarouselPage(children = [ ... ])
+</code></pre>
+<h3>MasterDetail Page navigation</h3>
+<p>Return a <code>MasterDetailPage</code> from your view, choosing the appropriate <code>MasterBehavior</code>:</p>
+<pre><code class="language-fsharp">let view model dispatch =
+    View.MasterDetailPage(
+        masterBehavior=MasterBehavior.Popover,
+        master = View.ContentPage(...),
+        detail = View.ContentPage(...))
+</code></pre>
+<p>See also</p>
+<ul>
+<li><a href="https://github.com/fsprojects/Fabulous/blob/master/Fabulous.XamarinForms/samples/AllControls/AllControls/AllControls.fs">The <code>AllControls</code> sample</a></li>
+</ul>
+
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="VIEWS-EXTENDING">
+            <hr />
+<h2>title: View Extensions</h2>
+<p>Many open source and 3rd-party libraries of Xamarin.Forms controls exist. To use other controls, a small amount of wrapper code
+is typically needed to define a corresponding view element using the incremental-update model used by Fabulous.</p>
+<p>The following additional view elements are available as pre-built nuget libraries:</p>
+<ul>
+<li><a href="views-ffimageloading.md">FFImageLoading</a> for cached images, as opposed to the built-in Image view that wastes time and memory</li>
+<li><a href="views-maps.md">Maps</a> for platform maps</li>
+<li><a href="views-skiasharp.md">SkiaSharp</a> for drawing 2D graphics</li>
+<li><a href="views-oxyplot.md">OxyPlot</a> for charting</li>
+<li><a href="views-videomanager.md">VideoManager</a> for playing audio and video</li>
+</ul>
+<p>To use other Xamarin.Forms controls, a small amount of wrapper code must
+be written to convert the control to an Fabulous view element.</p>
+<blockquote>
+<p>Please consider contributing your extensions to <a href="https://github.com/fsprojects/Fabulous/tree/master/Fabulous.XamarinForms/extensions">this repository</a>.</p>
+</blockquote>
+<p>The basic shape of an extension view component is shown below. Here we assume the Xamarin.Forms control defines one extra element
+called ABC deriving from existing element kind BASE, and that ABC has one additional
+collection property <code>Prop1</code> and one primitive property <code>Prop2</code>.
+(A collection property is a one that may contain further sub-elements, e.g. <code>children</code> for StackLayout, <code>gestureRecognizers</code> for any <code>View</code>
+and <code>pins</code> in the Maps example further below.)</p>
+<p>An view element simply defines a static member that extends <code>View</code> and returns a <code>ViewElement</code>.
+The view element inherits attributes and update functionality from BASE via prototype inheritance.</p>
+<blockquote>
+<p><strong>NOTE</strong>: we are considering adding a code generator or type provider to automate this process, though the code is not complex to write.</p>
+<p><strong>NOTE</strong>: The API used to write these extensions is subject to change.</p>
+</blockquote>
+<pre><code class="language-fsharp">[&lt;AutoOpen&gt;]
+module MyViewExtensions =
+
+    open Fabulous
+    open Fabulous.XamarinForms
+
+    // Define keys for the possible attributes
+    let Prop1AttribKey = AttributeKey&lt;seq&lt;ViewElement&gt;&gt; &quot;ABC_Prop1&quot;
+    let Prop2AttribKey = AttributeKey&lt;bool&gt; &quot;ABC_Prop2&quot;
+
+    // Fully-qualified name to avoid extending by mistake
+    // another View class (like Xamarin.Forms.View)
+    type Fabulous.XamarinForms.View with
+        /// Describes a ABC in the view
+        /// The inline keyword is important for performance
+        static member inline ABC(?prop1: seq&lt;ViewElement&gt;, ?prop2: bool, ... inherited attributes ... ) =
+
+            // Count the number of additional attributes
+            let attribCount = 0
+            let attribCount = match prop1 with Some _ -&gt; attribCount + 1 | None -&gt; attribCount
+            let attribCount = match prop2 with Some _ -&gt; attribCount + 1 | None -&gt; attribCount
+            
+            // Unbox the ViewRef
+            let viewRef = match ref with None -&gt; None | Some (ref: ViewRef&lt;ABC&gt;) -&gt; Some ref.Unbox
+
+            // Populate the attributes of the base element
+            let attribs = ViewBuilders.BuildBASE(attribCount, ... inherited attributes (with ?ref=viewRef) ... )
+
+            // Add our own attributes.
+            match prop1 with None -&gt; () | Some v -&gt; attribs.Add (Prop1AttribKey, v)
+            match prop2 with None -&gt; () | Some v -&gt; attribs.Add (Prop2AttribKey, v)
+            ...
+
+            // The creation method
+            let create () = new ABC()
+
+            // The incremental update method
+            let update (prev: ViewElement voption) (source: ViewElement) (target: ABC) =
+                ViewBuilders.UpdateBASE (prev, source, target)
+                source.UpdateElementCollection (prev, rop1AttribKey, target.Prop1)
+                source.UpdatePrimitive (prev, target, Prop2AttribKey, (fun target -&gt; target.Prop2), (fun target v -&gt; target.Prop2 &lt;- v))
+                ...
+
+            let updateAttachedProperties (propertyKey: int) (prev: ViewElement voption) (curr: ViewElement) (targetChild: obj) =
+                ViewBuilders.UpdateBASEAttachedProperties(propertyKey, prev, curr, targetChild)
+                ...
+
+            ViewElement.Create&lt;ABC&gt;(create, update, updateAttachedProperties, attribs)
+</code></pre>
+<p>The control is then used as follows:</p>
+<pre><code class="language-fsharp">    View.ABC(Prop1 = [ View.Label(&quot;hello&quot;) ], prop2 = true, property3 = &quot;Yo!&quot;)
+</code></pre>
+<p>The <code>update</code> method of the extension is specified using:</p>
+<ul>
+<li><code>source.UpdatePrimitive(prev, target, attribKey, setter, ?defaultValue)</code> - incrementally update a primitive</li>
+<li><code>source.UpdateElement(prev, target, attribKey, getter, setter)</code> - incrementally update a nested element</li>
+<li><code>source.UpdateElementCollection(prev, attribKey, targetCollection)</code> - incrementally update a collection of nested elements</li>
+<li><code>source.UpdateEvent(prev, target, attribKey, setter, ?defaultValue)</code> - incrementally update a primitive event</li>
+</ul>
+<p>Sometimes it makes sense to &quot;massage&quot; the input values before storing them in attibutes, e.g. to apply a conversion from an F#-friendly value
+to a stored attribte value here:</p>
+<pre><code class="language-fsharp">match prop1 with None -&gt; () | Some v -&gt; attribs.Add(Prop1AttribKey, box (CONV v))
+</code></pre>
+<p>It is common to mark view extensions as <code>inline</code>. This allows the F# compiler to create more optimized
+element-creation code for each particular instantiation based on the small set of properties specified at a particular usage point.
+In particular the compiler can statically determine the count of attributes and remove all allocations related to
+optional arguments.</p>
+<h3>Example: Authoring the Xamarin.Forms.Maps Extension</h3>
+<p>The implementation of an extension for <code>Xamarin.Forms.Maps</code> is shown below - this is the same extension as that
+available in <code>Fabulous.XamarinForms.Maps.dll</code>. The sample implements the extension for the types <a href="https://docs.microsoft.com/dotnet/api/xamarin.forms.maps.map?view=xamarin-forms%5D">Map</a> and
+<a href="https://docs.microsoft.com/en-gb/dotnet/api/xamarin.forms.maps.pin?view=xamarin-forms">Pin</a>.</p>
+<pre><code class="language-fsharp">[&lt;AutoOpen&gt;]
+module MapsExtension =
+
+    open Fabulous.XamarinForms
+
+    open Xamarin.Forms
+    open Xamarin.Forms.Maps
+
+    let MapHasScrollEnabledAttribKey = AttributeKey &quot;Map_HasScrollEnabled&quot;
+    let MapIsShowingUserAttribKey = AttributeKey &quot;Map_IsShowingUser&quot;
+    let MapPinsAttribKey = AttributeKey &quot;Map_Pins&quot;
+    let MapTypeAttribKey = AttributeKey &quot;Map_MapType&quot;
+    let MapHasZoomEnabledAttribKey = AttributeKey &quot;Map_HasZoomEnabled&quot;
+    let MapRequestingRegionAttribKey = AttributeKey &quot;Map_RequestedRegion&quot;
+
+    let PinPositionAttribKey = AttributeKey &quot;Pin_Position&quot;
+    let PinLabelAttribKey = AttributeKey &quot;Pin_Label&quot;
+    let PinTypeAttribKey = AttributeKey &quot;Pin_PinType&quot;
+    let PinAddressAttribKey = AttributeKey &quot;Pin_Address&quot;
+
+    type Fabulous.XamarinForms.View with
+        /// Describes a Map in the view
+        static member inline Map(?pins: seq&lt;ViewElement&gt;, ?isShowingUser: bool, ?mapType: MapType,
+                                 ?hasScrollEnabled: bool, ?hasZoomEnabled: bool, ?requestedRegion: MapSpan,
+                                 // inherited attributes common to all views
+                                 ?horizontalOptions, ?verticalOptions, ?margin, ?gestureRecognizers, ?anchorX, ?anchorY, ?backgroundColor, 
+                                 ?heightRequest, ?inputTransparent, ?isEnabled, ?isVisible, ?minimumHeightRequest, ?minimumWidthRequest, ?opacity,
+                                 ?rotation, ?rotationX, ?rotationY, ?scale, ?style, ?translationX, ?translationY, ?widthRequest,
+                                 ?resources, ?styles, ?styleSheets, ?classId, ?styleId, ?automationId) =
+
+            // Count the number of additional attributes
+            let attribCount = 0
+            let attribCount = match pins with Some _ -&gt; attribCount + 1 | None -&gt; attribCount
+            let attribCount = match hasScrollEnabled with Some _ -&gt; attribCount + 1 | None -&gt; attribCount
+            let attribCount = match isShowingUser with Some _ -&gt; attribCount + 1 | None -&gt; attribCount
+            let attribCount = match mapType with Some _ -&gt; attribCount + 1 | None -&gt; attribCount
+            let attribCount = match hasZoomEnabled with Some _ -&gt; attribCount + 1 | None -&gt; attribCount
+            let attribCount = match requestedRegion with Some _ -&gt; attribCount + 1 | None -&gt; attribCount
+
+            // Count and populate the inherited attributes
+            let attribs =
+                ViewBuilders.BuildView(attribCount, ?horizontalOptions=horizontalOptions, ?verticalOptions=verticalOptions,
+                               ?margin=margin, ?gestureRecognizers=gestureRecognizers, ?anchorX=anchorX, ?anchorY=anchorY,
+                               ?backgroundColor=backgroundColor, ?heightRequest=heightRequest, ?inputTransparent=inputTransparent,
+                               ?isEnabled=isEnabled, ?isVisible=isVisible, ?minimumHeightRequest=minimumHeightRequest,
+                               ?minimumWidthRequest=minimumWidthRequest, ?opacity=opacity, ?rotation=rotation,
+                               ?rotationX=rotationX, ?rotationY=rotationY, ?scale=scale, ?style=style,
+                               ?translationX=translationX, ?translationY=translationY, ?widthRequest=widthRequest,
+                               ?resources=resources, ?styles=styles, ?styleSheets=styleSheets, ?classId=classId, ?styleId=styleId, ?automationId=automationId)
+
+            // Add our own attributes. They must have unique names which must match the names below.
+            match pins with None -&gt; () | Some v -&gt; attribs.Add(MapPinsAttribKey, v)
+            match hasScrollEnabled with None -&gt; () | Some v -&gt; attribs.Add(MapHasScrollEnabledAttribKey, v)
+            match isShowingUser with None -&gt; () | Some v -&gt; attribs.Add(MapIsShowingUserAttribKey, v)
+            match mapType with None -&gt; () | Some v -&gt; attribs.Add(MapTypeAttribKey, v)
+            match hasZoomEnabled with None -&gt; () | Some v -&gt; attribs.Add(MapHasZoomEnabledAttribKey, v)
+            match requestedRegion with None -&gt; () | Some v -&gt; attribs.Add(MapRequestingRegionAttribKey, v)
+
+            // The update method
+            let update (prevOpt: ViewElement voption) (source: ViewElement) (target: Map) =
+                ViewBuilders.UpdateView(prevOpt, source, target)
+                source.UpdatePrimitive(prevOpt, target, MapHasScrollEnabledAttribKey, (fun target v -&gt; target.HasScrollEnabled &lt;- v))
+                source.UpdatePrimitive(prevOpt, target, MapHasZoomEnabledAttribKey, (fun target v -&gt; target.HasZoomEnabled &lt;- v))
+                source.UpdatePrimitive(prevOpt, target, MapIsShowingUserAttribKey, (fun target v -&gt; target.IsShowingUser &lt;- v))
+                source.UpdatePrimitive(prevOpt, target, MapTypeAttribKey, (fun target v -&gt; target.MapType &lt;- v))
+                source.UpdateElementCollection(prevOpt, MapPinsAttribKey, target.Pins)
+                source.UpdatePrimitive(prevOpt, target, MapRequestingRegionAttribKey, (fun target v -&gt; target.MoveToRegion(v)))
+
+            let updateAttachedProperties (propertyKey: int) (prevOpt: ViewElement voption) (source: ViewElement) (targetChild: obj) =
+                ViewBuilders.UpdateViewAttachedProperties(propertyKey, prevOpt, source, target)
+
+            // The element
+            ViewElement.Create&lt;Xamarin.Forms.Maps.Map&gt;(Map, update, updateAttachedProperties, attribs)
+
+        /// Describes a Pin in the view
+        static member Pin(?position: Position, ?label: string, ?pinType: PinType, ?address: string) =
+
+            // Count the number of additional attributes
+            let attribCount = 0
+            let attribCount = match position with Some _ -&gt; attribCount + 1 | None -&gt; attribCount
+            let attribCount = match label with Some _ -&gt; attribCount + 1 | None -&gt; attribCount
+            let attribCount = match pinType with Some _ -&gt; attribCount + 1 | None -&gt; attribCount
+            let attribCount = match address with Some _ -&gt; attribCount + 1 | None -&gt; attribCount
+
+            let attribs = AttributesBuilder(attribCount)
+
+            // Add our own attributes. They must have unique names which must match the names below.
+            match position with None -&gt; () | Some v -&gt; attribs.Add(PinPositionAttribKey, v)
+            match label with None -&gt; () | Some v -&gt; attribs.Add(PinLabelAttribKey, v)
+            match pinType with None -&gt; () | Some v -&gt; attribs.Add(PinTypeAttribKey, v)
+            match address with None -&gt; () | Some v -&gt; attribs.Add(PinAddressAttribKey, v)
+
+            // The update method
+            let update (prevOpt: ViewElement voption) (source: ViewElement) (target: Pin) =
+                source.UpdatePrimitive(prevOpt, target, PinPositionAttribKey, (fun target v -&gt; target.Position &lt;- v))
+                source.UpdatePrimitive(prevOpt, target, PinLabelAttribKey, (fun target v -&gt; target.Label &lt;- v))
+                source.UpdatePrimitive(prevOpt, target, PinTypeAttribKey, (fun target v -&gt; target.Type &lt;- v))
+                source.UpdatePrimitive(prevOpt, target, PinAddressAttribKey, (fun target v -&gt; target.Address &lt;- v))
+
+            let updateAttachedProperties (propertyKey: int) (prevOpt: ViewElement voption) (source: ViewElement) (targetChild: obj) =
+                ()
+
+            // The element
+            ViewElement.Create&lt;Xamarin.Forms.Maps.Pin&gt;(Pin, update, updateAttachedProperties, attribs)
+</code></pre>
+<p>In the above example, inherited properties from <code>View</code> (such as <code>margin</code> or <code>horizontalOptions</code>) have been included in the facade for <code>Map</code>.  These properties
+need not be added, you can set them on elements using the helper <code>With</code>, usable for all <code>View</code> properties:</p>
+<pre><code class="language-fsharp">View.Map(hasZoomEnabled = true, hasScrollEnabled = true).With(horizontalOptions = LayoutOptions.FillAndExpand)
+</code></pre>
+<p>See also:</p>
+<ul>
+<li><a href="views-elements.md">Core Elements</a></li>
+<li><a href="views-maps.md">Maps</a></li>
+<li><a href="views-skiasharp.md">SkiaSharp</a></li>
+<li><a href="https://github.com/fsprojects/Fabulous/blob/master/Fabulous.XamarinForms/extensions/Maps/Xamarin.Forms.Maps.fs">Source for the Maps extension</a></li>
+<li><a href="https://github.com/fsprojects/Fabulous/blob/master/Fabulous.XamarinForms/extensions/SkiaSharp/SkiaSharp.fs">Source for the SkiaSharp extension</a></li>
+</ul>
+
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="VIEWS-ELEMENTS">
+            <hr />
+<h2>title: Pages</h2>
+<h3>ContentPage</h3>
+<p>A single page app typically returns a <code>ContentPage</code>. For example:</p>
+<pre><code class="language-fsharp">let view model dispatch =
+    View.ContentPage(
+        title = &quot;Pocket Piggy Bank&quot;,
+        content = View.Label(text = sprintf &quot;Hello world!&quot;)
+    )
+</code></pre>
+<p>For other kinds of pages, see <a href="views-navigation.md">Multi-page Applications and Navigation</a></p>
+<p>See also:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/Xamarin.Forms.ContentPage"><code>Xamarin.Forms.Core.ContentPage</code></a></li>
+</ul>
+<h2>Layouts</h2>
+<p>Xamarin.Forms has several layouts and features for organizing content on screen.
+For a comprehensive guide see the <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/layouts/">Xamarin Guide to Layouts</a></p>
+<p><a href="https://user-images.githubusercontent.com/7204669/41666541-aae7b246-74a2-11e8-891a-1c9194632d8b.png"><img src="https://user-images.githubusercontent.com/7204669/41666541-aae7b246-74a2-11e8-891a-1c9194632d8b.png" alt="Xamarin.Forms Layouts" title="Xamarin.Forms Layouts" /></a></p>
+<h3>StackLayout</h3>
+<p>StackLayout organizes views in a one-dimensional line (&quot;stack&quot;), either horizontally or vertically. Views in a StackLayout can be sized based on the space in the layout using layout options. Positioning is determined by the order views were added to the layout and the layout options of the views.</p>
+<pre><code class="language-fsharp">View.StackLayout(
+    padding=20.0,
+    children = [
+        View.Label(text = sprintf &quot;Welcome to the bank!&quot;)
+        View.Label(text = sprintf &quot;Balance: %s%.2f&quot; model.CurrencySymbol model.Balance)
+    ]
+)
+</code></pre>
+<img src="https://user-images.githubusercontent.com/52166903/60177364-9d737900-9810-11e9-8090-c3de01be59b0.png" width="400">
+<p>See also:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/layouts/stack-layout/">Xamarin guide to StackLayout</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/Xamarin.Forms.StackLayout">Xamarin API docs for <code>StackLayout</code></a></li>
+</ul>
+<h3>AbsoluteLayout</h3>
+<p>AbsoluteLayout positions and sizes child elements proportional to its own size and position or by absolute values.
+Child views may be positioned and sized using proportional values or static values, and proportional and static values can be mixed.</p>
+<pre><code class="language-fsharp">View.AbsoluteLayout(
+    backgroundColor = Color.Blue.WithLuminosity(0.9),
+    children = [
+       View.Label(text = &quot;Top Left&quot;, textColor = Color.Black)
+           .LayoutFlags(AbsoluteLayoutFlags.PositionProportional)
+           .LayoutBounds(Rectangle(0.0, 0.0, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize))
+       View.Label(text = &quot;Centered&quot;, textColor = Color.Black)
+           .LayoutFlags(AbsoluteLayoutFlags.PositionProportional)
+           .LayoutBounds(Rectangle(0.5, 0.5, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize))
+       View.Label(text = &quot;Bottom Right&quot;, textColor = Color.Black)
+           .LayoutFlags(AbsoluteLayoutFlags.PositionProportional)
+           .LayoutBounds(Rectangle(1.0, 1.0, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize))
+    ]
+)
+</code></pre>
+<img src="https://user-images.githubusercontent.com/52166903/60177353-9c424c00-9810-11e9-80ab-f5725c970143.png" width="400">
+<p>See also:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/layouts/absolute-layout/">Xamarin guide to AbsoluteLayout</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/Xamarin.Forms.AbsoluteLayout">Xamarin API docs for <code>AbsoluteLayout</code></a></li>
+</ul>
+<h3>RelativeLayout</h3>
+<p>RelativeLayout is used to position and size views relative to properties of the layout or sibling views. Unlike AbsoluteLayout, RelativeLayout does not have the concept of the moving anchor and does not have facilities for positioning elements relative to the bottom or right edges of the layout. RelativeLayout does support positioning elements outside of its own bounds.</p>
+<p>An example <code>RelativeLayout</code> is as follows:</p>
+<pre><code class="language-fsharp">View.RelativeLayout(
+    children =
+        [ View.Label(text = &quot;RelativeLayout Example&quot;, textColor = Color.Red)
+              .XConstraint(Constraint.RelativeToParent(fun parent -&gt; 0.0))
+          View.Label(text = &quot;Positioned relative to my parent&quot;, textColor = Color.Red)
+              .XConstraint(Constraint.RelativeToParent(fun parent -&gt; parent.Width / 3.0))
+              .YConstraint(Constraint.RelativeToParent(fun parent -&gt; parent.Height / 2.0))
+        ]
+)
+</code></pre>
+<p>See also:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/layouts/relative-layout/">Xamarin guide to RelativeLayout</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/Xamarin.Forms.RelativeLayout">Xamarin API docs for <code>RelativeLayout</code></a></li>
+</ul>
+<h3>FlexLayout</h3>
+<p>FlexLayout is similar to the Xamarin.Forms StackLayout in that it can arrange its children horizontally and vertically in a stack. However, the FlexLayout is also capable of wrapping its children if there are too many to fit in a single row or column, and also has many options for orientation, alignment, and adapting to various screen sizes.</p>
+<pre><code class="language-fsharp">View.FlexLayout(
+    direction=FlexDirection.Column,
+    children = [
+        View.Label(text = &quot;Seated Monkey&quot;, fontSize=&quot;Large&quot;, textColor=Color.Blue)
+        View.Label(text = &quot;This monkey is laid back and relaxed.&quot;)
+        View.Label(text = &quot;  - Often smiles mysteriously&quot;)
+        View.Label(text = &quot;  - Sleeps sitting up&quot;)
+
+        View.Image(widthRequest = 160.0, heightRequest = 240.0,
+            source = &quot;images/160px-Vervet_monkey_Krugersdorp_game_reserve_%285657678441%29.jpg&quot;
+        ).FlexOrder(-1).FlexAlignSelf(FlexAlignSelf.Center)
+
+        View.Label(margin = Thickness(0.0, 4.0)).FlexGrow(1.0)
+        View.Button(text = &quot;Learn More&quot;, fontSize = &quot;Large&quot;, cornerRadius = 20)
+    ]
+)
+</code></pre>
+<img src="https://user-images.githubusercontent.com/52166903/60180202-5dfc5b00-9817-11e9-974d-091a32fbda3f.png" width="400">
+<p>See also:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/layouts/flex-layout/">Xamarin guide to FlexLayout</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/Xamarin.Forms.FlexLayout">Xamarin API docs for <code>FlexLayout</code></a></li>
+</ul>
+<h3>Grid</h3>
+<p>Grid supports arranging views into rows and columns. Rows and columns can be set to have proportional sizes or absolute sizes. The Grid layout should not be confused with traditional tables and is not intended to present tabular data. Grid does not have the concept of row, column or cell formatting. Unlike HTML tables, Grid is purely intended for laying out content.</p>
+<p>An example <code>Grid</code> is as follows:</p>
+<pre><code class="language-fsharp">View.Grid(
+    rowdefs = [for i in 1 .. 6 -&gt; box &quot;auto&quot;],
+    coldefs = [for i in 1 .. 6 -&gt; box &quot;auto&quot;],
+    children = [
+        for i in 1 .. 6 do
+            for j in 1 .. 6 -&gt;
+                let color = Color((1.0/float i), (1.0/float j), (1.0/float (i+j)), 1.0)
+                View.BoxView(color).GridRow(i-1).GridColumn(j-1)
+    ]
+)
+</code></pre>
+<p>Notes:</p>
+<ul>
+<li>Row and column definitions can use <code>&quot;*&quot;</code>, <code>N*</code> where <code>N</code> is a number, <code>&quot;auto&quot;</code> or a thickness</li>
+<li>Fluent methods <code>.GridRow(..)</code> and <code>.GridColumn(..)</code> are used to place the items in locations on the grid.</li>
+</ul>
+<img src="https://user-images.githubusercontent.com/52166903/60177360-9cdae280-9810-11e9-98fd-fda569cd8836.png" width="400">
+<p>See also:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/Xamarin.Forms.Grid"><code>Xamarin.Forms.Core.Grid</code></a></li>
+</ul>
+<h3>ScrollView</h3>
+<p>ScrollView contains layouts and enables them to scroll offscreen. ScrollView is also used to allow views
+to automatically move to the visible portion of the screen when the keyboard is showing.</p>
+<pre><code class="language-fsharp">View.ScrollView(View.StackLayout(padding=20.0, children= ...) )
+</code></pre>
+<p>The scroll position can be setted programmatically through the attribute <code>scrollTo</code>. This attribute needs the X and Y coordinates to scroll to and an indication whether it should be animated or not. (<code>Animated</code>/<code>NotAnimated</code>)</p>
+<p>Note: Fabulous will try to scroll to these coordinates every time it needs to refresh the UI. Making use of the optional argument is recommended.</p>
+<p>You can also subscribe to the event <code>Scrolled</code> to be notified when the scrolling is over.</p>
+<pre><code class="language-fsharp">View.ScrollView(content=(...),
+    ?scrollTo=(if model.ShouldScroll then Some (500.0, 0.0, Animated) else None),
+    scrolled=(fun args -&gt; dispatch Scrolled))
+</code></pre>
+<p>For more complex scenarios, you can directly use the method from Xamarin.Forms <a href="https://docs.microsoft.com/dotnet/api/xamarin.forms.scrollview.scrolltoasync?view=xamarin-forms"><code>ScrollView.ScrollToAsync(x, y, animated)</code></a>
+This method offers the advantage of being awaitable until the end of the scrolling.
+To do this, a reference to the underlying ScrollView is needed.</p>
+<pre><code class="language-fsharp">let scrollViewRef = ViewRef&lt;ScrollView&gt;()
+
+View.ScrollView(ref=scrollViewRef, content=(...))
+
+// Some time later (usually in a Cmd)
+let scrollToCoordinates x y animated =
+    async {
+        match scrollViewRef.TryValue with
+        | None -&gt;
+            return None
+        | Some scrollView -&gt;
+            do! scrollView.ScrollToAsync(x, y, animated) |&gt; Async.AwaitTask
+            return (Some Scrolled)
+    } |&gt; Cmd.ofAsyncMsgOption
+</code></pre>
+<img src="https://user-images.githubusercontent.com/52166903/60177362-9d737900-9810-11e9-9529-81640e681186.png" width="400">
+<p>See also:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/layouts/scroll-view">Xamarin guide to ScrollView</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/Xamarin.Forms.ScrollView"><code>Xamarin.Forms.Core.ScrollView</code></a></li>
+</ul>
+<h3>CarouselView, Shell</h3>
+<p><code>CarouselView</code> and <code>Shell</code> are available in Xamarin.Forms 4.0.</p>
+<p>Usage:</p>
+<pre><code class="language-fsharp">View.Shell(title = &quot;TitleShell&quot;,
+           items = [
+               View.ShellItem(
+                   items = [
+                       View.ShellSection(items = [
+                           View.ShellContent(title = &quot;Section 1&quot;, content = View.ContentPage(content = View.Button(text = &quot;Button&quot;)))         
+                       ])
+                   ])
+           ])
+
+View.CarouselView(items = [
+            View.Label(text=&quot;Person1&quot;) 
+            View.Label(text=&quot;Person2&quot;)
+            View.Label(text=&quot;Person3&quot;)
+            View.Label(text=&quot;Person4&quot;)
+            View.Label(text=&quot;Person5&quot;)
+        ])
+
+</code></pre>
+<p>See also:</p>
+<ul>
+<li><a href="https://devblogs.microsoft.com/xamarin/xamarin-forms-4-0-preview/">Xamarin.Forms 4.0 Preview</a></li>
+</ul>
+
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="VIEWS-GESTURES">
+            <hr />
+<h2>title: Gestures</h2>
+<p>Gesture recognizers can be added to any visual element.</p>
+<h3>Tap Gestures</h3>
+<p>The tap gesture is used for tap detection.  For example, here is a <code>TapGestureRecognizer</code>:</p>
+<pre><code class="language-fsharp">View.Frame(
+    hasShadow = true,
+    gestureRecognizers = [ View.TapGestureRecognizer(command=(fun () -&gt; dispatch FrameTapped)) ]
+)
+</code></pre>
+<p>See also:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/gestures/tap">Adding a Tap Gesture Gesture Recognizer</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/Xamarin.Forms.TapGestureRecognizer"><code>Xamarin.Forms.Core.TapGestureRecognizer</code></a></li>
+</ul>
+<h3>Pan Gestures</h3>
+<p>The pan gesture is used for detecting dragging. A common scenario for the pan gesture is to horizontally and vertically drag an image, so that all of the image content can be viewed when it's being displayed in a viewport smaller than the image dimensions. This is accomplished by moving the image within the viewport, and is demonstrated in this article.</p>
+<p>Here is an example of a <code>PanGestureRecognizer</code> used to recognize panning touch movements:</p>
+<pre><code class="language-fsharp">View.Frame(
+    hasShadow = true,
+    gestureRecognizers = [
+        View.PanGestureRecognizer(touchPoints=1, panUpdated=(fun panArgs -&gt;
+                if panArgs.StatusType = GestureStatus.Running then
+                    dispatch (PanGesture panArgs)))
+    ]
+)
+</code></pre>
+<p>See also:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/gestures/pan">Adding a Pan Gesture Gesture Recognizer</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/Xamarin.Forms.PanGestureRecognizer"><code>Xamarin.Forms.Core.PanGestureRecognizer</code></a></li>
+</ul>
+<h3>Pinch Gestures</h3>
+<p>The pinch gesture is used for performing interactive zoom. A common scenario for the pinch gesture is to perform interactive zoom of an image at the pinch location. This is accomplished by scaling the content of the viewport, and is demonstrated in this article.</p>
+<p>Here is an example of a <code>PinchGestureRecognizer</code> used to recognize pinch-or-expand touch movements:</p>
+<pre><code class="language-fsharp">View.Frame(
+    hasShadow=true,
+    gestureRecognizers= [
+        View.PinchGestureRecognizer(pinchUpdated=(fun pinchArgs -&gt;
+            dispatch (UpdateSize (pinchArgs.Scale, pinchArgs.Status))))
+    ]
+)
+</code></pre>
+<p>See also:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/gestures/pinch">Adding a Pinch Gesture Gesture Recognizer</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/Xamarin.Forms.PinchGestureRecognizer"><code>Xamarin.Forms.Core.PinchGestureRecognizer</code></a></li>
+</ul>
+
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="VIEWS-FFIMAGELOADING">
+            <hr />
+<h2>title: Using FFImageLoading</h2>
+<p>The FFImageLoading plugin allows you to cache images as opposed to wasting time and memory with the built-in Image view. Using FFImageLoading, you have an easy way to cache images in your Fabulous.XamarinForms application.</p>
+<p>FFImageLoading was created by Daniel Luberda and Fabien Molinet. The original project can be found in <a href="https://github.com/luberda-molinet/FFImageLoading">this github repository</a>.</p>
+<p>The nuget <a href="https://www.nuget.org/packages/Fabulous.XamarinForms.FFImageLoading"><code>Fabulous.XamarinForms.FFImageLoading</code></a> implements a view component for the type <a href="https://github.com/luberda-molinet/FFImageLoading/wiki/Xamarin.Forms-API#basic-example">CachedImage</a>.</p>
+<p><img src="https://raw.githubusercontent.com/luberda-molinet/FFImageLoading/master/samples/Screenshots/ffimageloading_large.png" alt="How the view looks" /></p>
+<h6>Source: The FFImageLoading github project by Daniel Luberda and Fabien Molinet</h6>
+<h3>Installation</h3>
+<p>To use <code>Fabulous.XamarinForms.FFImageLoading</code>, you must:</p>
+<ol>
+<li><p>Add a reference to <a href="https://www.nuget.org/packages/Fabulous.XamarinForms.FFImageLoading">this NuGet package</a> across your whole solution.  This will add appropriate references to your platform-specific Android, iOS, UWP, WPF etc projects too.</p>
+</li>
+<li><p>Add this line to your platform specific projects (AppDelegate.fs, MainActivity.fs, MainPage.xaml.cs, etc) before you use FFImageLoading:</p>
+</li>
+</ol>
+<ul>
+<li>If you’re using Android:</li>
+</ul>
+<pre><code class="language-fs">FFImageLoading.Forms.Platform.CachedImageRenderer.Init(enableFastRenderer = Nullable [true]/[false])
+</code></pre>
+<ul>
+<li>If you’re using non-Android platforms:</li>
+</ul>
+<pre><code class="language-fs">FFImageLoading.Forms.Platform.CachedImageRenderer.Init()
+</code></pre>
+<ol start="3">
+<li>Use CachedImage in your view function. Here is a simple example of using CachedImage to display a scenic image:</li>
+</ol>
+<pre><code class="language-fsharp">View.CachedImage(
+  source = ImagePath &quot;http://loremflickr.com/600/600/nature?filename=simple.jpg&quot;,
+  height = 600.,
+  width = 600.
+)
+</code></pre>
+<h2>Performance considerations</h2>
+<p>Use <code>FileImageSource</code>, <code>UriImageSource</code> or FFImageLoading's <code>EmbeddedResourceImageSource</code> instead of <code>StreamImageSource</code> or <code>ImageSource.FromResource</code> to ensure the images are cached properly.
+<a href="https://github.com/luberda-molinet/FFImageLoading/wiki/Xamarin.Forms-Advanced">Read more here on the FFImageLoading wiki</a></p>
+<p>See also:</p>
+<ul>
+<li><a href="views-elements.md">Core Elements</a></li>
+<li><a href="https://github.com/luberda-molinet/FFImageLoading/wiki">The FFImageLoading wiki</a></li>
+<li><a href="https://github.com/fsprojects/Fabulous/blob/master/Fabulous.XamarinForms/extensions/FFImageLoading/CachedImage.fs">Source for the FFImageLoading extension</a></li>
+<li><a href="https://github.com/luberda-molinet/FFImageLoading">Source of FFImageLoading</a></li>
+<li><a href="views-extending.md">Defining Extensions</a></li>
+</ul>
+
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="VIEWS-MAPS">
+            <hr />
+<h2>title: Using Maps</h2>
+<p>The nuget <a href="https://www.nuget.org/packages/Fabulous.XamarinForms.Maps"><code>Fabulous.XamarinForms.Maps</code></a> implements an <a href="views-extending.md">extension</a> for the types <a href="https://docs.microsoft.com/dotnet/api/xamarin.forms.maps.map?view=xamarin-forms%5D">Map</a> and
+<a href="https://docs.microsoft.com/en-gb/dotnet/api/xamarin.forms.maps.pin?view=xamarin-forms">Pin</a>.</p>
+<p><a href="https://user-images.githubusercontent.com/7204669/42186154-60437d42-7e43-11e8-805b-7200282f3b98.png"><img src="https://user-images.githubusercontent.com/7204669/42186154-60437d42-7e43-11e8-805b-7200282f3b98.png" alt="Maps example from Microsoft" /></a></p>
+<p>To use <code>Fabulous.XamarinForms.Maps</code>, you must</p>
+<ol>
+<li>Add a reference to <code>Fabulous.XamarinForms.Maps</code> across your whole solution.</li>
+<li>Additionally <a href="https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/map#Maps_Initialization">follow the instructions to initialize Xamarin.Forms Maps</a>. For example, on Android you must enable Google Play servies, add a call to <code>Xamarin.FormsMaps.Init(this, bundle)</code> to <code>MainActivity.fs</code> and add both and API key and <code>uses-permission</code> to <code>AndroidManifest.xml</code>.</li>
+</ol>
+<p>After these steps you can use maps in your <code>view</code> function as follows:</p>
+<pre><code class="language-fsharp">open Xamarin.Forms.Maps
+open Fabulous.XamarinForms
+
+View.Map(hasZoomEnabled = true, hasScrollEnabled = true)
+</code></pre>
+<p>Next, a map with requested region around Timbuktu:</p>
+<pre><code class="language-fsharp">let timbuktu = Position(16.7666, -3.0026)
+View.Map(hasZoomEnabled = true, hasScrollEnabled = true,
+         requestedRegion = MapSpan.FromCenterAndRadius(timbuktu, Distance.FromKilometers(1.0)))
+</code></pre>
+<p>Next, a map with two pins for Paris and London:</p>
+<pre><code class="language-fsharp">let paris = Position(48.8566, 2.3522)
+let london = Position(51.5074, -0.1278)
+let calais = Position(50.9513, 1.8587)
+View.Map(hasZoomEnabled = true, hasScrollEnabled = true,
+         pins = [ View.Pin(paris, label=&quot;Paris&quot;, pinType = PinType.Place)
+                  View.Pin(london, label=&quot;London&quot;, pinType = PinType.Place) ],
+         requestedRegion = MapSpan.FromCenterAndRadius(calais, Distance.FromKilometers(300.0)))
+</code></pre>
+<p>See also:</p>
+<ul>
+<li><a href="views-elements.md">Core Elements</a>.</li>
+<li><a href="https://developer.xamarin.com/samples/xamarin-forms/WorkingWithMaps">Working with Maps</a>.</li>
+<li><a href="https://github.com/fsprojects/Fabulous/blob/master/Fabulous.XamarinForms/extensions/Maps/Xamarin.Forms.Maps.fs">Source for the Maps extension</a></li>
+<li><a href="views-extending.md">Defining Extensions</a></li>
+</ul>
+
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="VIEWS-OXYPLOT">
+            <hr />
+<h2>title: Using OxyPlot Charts</h2>
+<p>Below is an example of an extension for <a href="https://oxyplot.github.io/">OxyPlot</a>. To use the extension:</p>
+<ol>
+<li>Follow the instructions to <a href="https://oxyplot.readthedocs.io/en/latest/getting-started/hello-xamarin-forms.html">add references and initialize renderers</a></li>
+<li>Add a reference to the <a href="https://www.nuget.org/packages/Fabulous.XamarinForms.OxyPlot"><code>Fabulous.XamarinForms.OxyPlot</code></a> package across your solution.</li>
+</ol>
+<p><a href="https://user-images.githubusercontent.com/7204669/42291878-777cb47c-7fc6-11e8-9eaa-4dfd784bddf2.png"><img src="https://user-images.githubusercontent.com/7204669/42291878-777cb47c-7fc6-11e8-9eaa-4dfd784bddf2.png" alt="OxyPlot example" /></a></p>
+<p>Here is an example translated from <a href="https://oxyplot.readthedocs.io/en/latest/models/series/HeatMapSeries.html">the OxyPlot documentation</a>.</p>
+<pre><code class="language-fsharp">let plotModelCos =
+    let model = PlotModel(Title = &quot;Example 1&quot;)
+    model.Series.Add(new OxyPlot.Series.FunctionSeries(Math.Cos, 0.0, 10.0, 0.1, &quot;cos(x)&quot;))
+    model
+
+let plotModelHeatMap =
+    let model = PlotModel (Title = &quot;Heatmap&quot;)
+    model.Axes.Add(LinearColorAxis (Palette = OxyPalettes.Rainbow(100)))
+    let singleData = [ for x in 0 .. 99 -&gt; Math.Exp((-1.0 / 2.0) * Math.Pow(((double)x - 50.0) / 20.0, 2.0)) ]
+    let data = Array2D.init 100 100 (fun x y -&gt; singleData.[x] * singleData.[(y + 30) % 100] * 100.0)
+    let heatMapSeries =
+        HeatMapSeries(X0 = 0.0, X1 = 99.0, Y0 = 0.0, Y1 = 99.0, Interpolate = true,
+                        RenderMethod = HeatMapRenderMethod.Bitmap, Data = data)
+    model.Series.Add(heatMapSeries)
+    model
+
+let plotModels = [ plotModelCos; plotModelHeatMap ]
+
+let view (model: Model) dispatch =
+    View.CarouselPage(children=
+        [ for m in plotModels -&gt;
+                View.ContentPage(content =
+                View.PlotView(model=m,
+                                horizontalOptions=LayoutOptions.FillAndExpand,
+                                verticalOptions=LayoutOptions.FillAndExpand)) ])
+</code></pre>
+<p>See also:</p>
+<ul>
+<li><a href="views-elements.md">Core Elements</a></li>
+<li><a href="views-extending.md">View Extensions</a></li>
+</ul>
+
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="VIEWS-ANIMATIONS">
+            <hr />
+<h2>title: ViewRefs</h2>
+<p>Animations and focus are specified by accessing the underlying Xamarin.Forms control and using
+Xamarin.Forms animation specifications. The underlying control is usually accessed
+via a <code>ViewRef</code>, akin to a <code>ref</code> in HTML/JavaScript and React.</p>
+<ul>
+<li><p>A <code>ViewRef</code> must have a sufficient scope that it lives long enough, e.g. a global scope
+or the scope of the model.  The <code>ViewRef</code> can be held in the model itself if necessary.</p>
+</li>
+<li><p>Initially <code>ViewRef</code> are empty. They will only be populated after the <code>view</code> function
+has been called and its results applied to the visual display.</p>
+</li>
+</ul>
+<p>For example, the following shows the creation of a <code>ViewRef</code> and associating it
+with a particular element:</p>
+<pre><code class="language-fsharp">let animatedLabelRef = ViewRef&lt;Label&gt;()
+
+let view dispatch model = 
+    View.Label(text=&quot;Rotate&quot;, ref=animatedLabelRef) 
+</code></pre>
+<p>The underlying control can also be accessed by using the <code>created</code> handler:</p>
+<pre><code class="language-fsharp">let mutable label = None
+
+View.Label(text=&quot;hello&quot;, created=(fun l -&gt;  label &lt;- Some l))
+</code></pre>
+<blockquote>
+<p>NOTE: A <code>ViewRef</code> only holds a weak handle to the underlying control.<br />
+The <code>Value</code> property may thus fail if the underlying control has been collected.<br />
+As a result it is often sensible to use the <code>TryValue</code> property which returns an option.</p>
+</blockquote>
+<h2>Animations</h2>
+<p>Animations are specified by using a Xamarin.Forms animation specification on the underlying control, e.g.</p>
+<pre><code class="language-fsharp">let animatedLabelRef = ViewRef&lt;Label&gt;()
+
+let update msg model =
+    match msg with 
+    | Poked -&gt;
+        match animatedLabelRef.TryValue with 
+        | None -&gt; () 
+        | Some c -&gt; c.RotateTo (360.0, 2000u) |&gt; ignore
+
+let view dispatch model = 
+    View.StackLayout [
+        View.Label(text=&quot;Rotate&quot;, ref=animatedLabelRef) 
+        View.Button(text=&quot;Rotate&quot;, command=(fun () -&gt; dispatch Poked)) 
+    ]
+</code></pre>
+<p>Animations in Xamarin.Forms specify tasks.  These are ignorable if the animation is simple.
+Composite animations must compose tasks, either by using <code>async { ...}</code> and <code>Async.AwaitTask</code>
+and <code>Async.StartAsTask</code>, or by using <code>task { ... }</code> from the F# community <code>TaskBuilder</code> library.</p>
+<p>Examples of custom tasks are shown in C# syntax in <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/animation/">Animation in Xamarin.Forms</a>.</p>
+<p>See also</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/animation/">Animation in Xamarin.Forms</a></li>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/animation/simple">Simple Animations in Xamarin.Forms</a></li>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/animation/easing">Easing Functions in Xamarin.Forms</a></li>
+<li><a href="https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/animation/custom">Custom Animations in Xamarin.Forms</a></li>
+</ul>
+<h2>Focus</h2>
+<p>ViewRefs can be used to give focus to particular elements using <code>.Focus()</code>.</p>
+<p>See also</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.visualelement.focus?view=xamarin-forms">VisualElement.Focus Method</a></li>
+</ul>
+
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="VIEWS-PERF">
+            <hr />
+<h2>title: Views and Performance</h2>
+<p>The performance of your app may in some cases be dominated by your view function.<br />
+This is particularly the case if many  message updates are being generated and processed, though not if other operations dominate such as network latency.
+Improving the performance of your view function should be done with respect to your overall performance targets and needs.</p>
+<p>On each update to the model, the view function is executed. The resulting view is then compared item by item with the previous view
+and updates are made to the underlying controls.</p>
+<p>As a result, views functions that are frequently executed (because of many message updates) are generally only
+efficient for large UIs if the unchanging parts of a UI are &quot;memoized&quot;, returning identical
+objects on each invocation of the <code>view</code> function.
+This must be done explicitly. One way of doing this is to use <code>dependsOn</code>.
+Here is an example for a 6x6 Grid that depends on nothing, i.e. never changes:</p>
+<pre><code class="language-fsharp">let view model dispatch =
+    ...
+    dependsOn () (fun model () -&gt; 
+        View.StackLayout(
+          children=
+            [ View.Label(text=sprintf &quot;Grid (6x6, auto):&quot;)
+              View.Grid(rowdefs= [for i in 1 .. 6 -&gt; box &quot;auto&quot;],
+                coldefs=[for i in 1 .. 6 -&gt; box &quot;auto&quot;], 
+                children = [ for i in 1 .. 6 do for j in 1 .. 6 -&gt; 
+                                View.BoxView(Color((1.0/float i), (1.0/float j), (1.0/float (i+j)), 1.0) )
+                                        .GridRow(i-1).GridColumn(j-1) ] )
+            ])
+</code></pre>
+<p>Inside the function - the one passed to <code>dependsOn</code> - the <code>model</code> is rebound to be inaccessbile with a <code>DoNotUseMe</code> type so you can't use it. Here is an example where some of the model is extracted:</p>
+<pre><code class="language-fsharp">let view model dispatch =
+    ...
+    dependsOn (model.CountForSlider, model.StepForSlider) (fun model (count, step) -&gt; 
+        View.Slider(minimum=0.0, maximum=10.0, value= double step, 
+                    valueChanged=(fun args -&gt; dispatch (SliderValueChanged (int (args.NewValue + 0.5)))))) 
+    ...
+</code></pre>
+<p>In the example, we extract properties <code>CountForSlider</code> and <code>StepForSlider</code> from the model, and bind them to <code>count</code> and <code>step</code>.  If either of these change, the section of the view will be recomputed and no adjustments will be made to the UI.
+If not, this section of the view will be reused. This helps ensure that this part of the view description only depends on the parts of the model extracted.</p>
+<p>You can also use</p>
+<ul>
+<li>the <code>fix</code> function for portions of a view that have no dependencies at all (besides the &quot;dispatch&quot; function)</li>
+<li>the <code>fixf</code> function for command callbacks that have no dependencies at all (besides the &quot;dispatch&quot; function)</li>
+</ul>
+<h3>Optimizing view performance in advanced scenarios: the <code>key</code> property</h3>
+<p>Each time the <code>view</code> function is called, Fabulous will try to update the UI the most efficiently possible by reusing existing controls as much as possible (for exact details, see <a href="#views-differential-update-of-lists-of-things">Views: Differential Update of Lists of Things</a>).<br />
+This is fine in the majority of scenarios, but some times Fabulous might reuse controls that don't really match the expectations we can have from the code.</p>
+<p>This is especially true if the ordering of the elements are changed, or an element has been added/removed before other elements.<br />
+This can result in unnecessary creation of controls (lower performance) or losing state of a control (like a video playing).</p>
+<p>This is because Fabulous doesn't know about the intent of your code, and will try to reuse controls from first to last in the list.</p>
+<p>Say we have the following code:</p>
+<pre><code class="language-fsharp">View.StackLayout([
+    if model.ShowFirstVideo then
+        yield View.MediaElement(source = MediaPath &quot;path/to/video.mp4&quot;)
+
+    yield View.MediaElement(source = MediaPath &quot;path/to/other-video.mp4&quot;)
+    yield View.Button(text = &quot;Toggle first video&quot;, command = (fun () -&gt; dispatch ToggleFirstVideo))
+])
+</code></pre>
+<p>In this case, when <code>ShowFirstVideo</code> = <code>true</code>, the StackLayout will have 3 children, the 1st and 2nd video players + the button.<br />
+When <code>ShowFirstVideo</code> = <code>false</code>, there will be only 2 child left, the 2nd video player and the button.</p>
+<p>Due to how Fabulous reuses controls between updates, when switching <code>ShowFirstVideo</code> from <code>false</code> to <code>true</code>, Fabulous will remove the 2nd video player and reuse/update the 1st video player, which will lose the state of the 2nd video if it was playing.<br />
+That's because Fabulous has no way of knowing the real intent behind your code. For it, all MediaElements are interchangeable.</p>
+<p>To prevent that, the first thing you can do is to change ordering as little as possible.<br />
+If you really must change ordering, you can help Fabulous by providing a <code>key</code> value to let Fabulous know that a specific element should reuse the same control as previously.</p>
+<p>In our example, this would be:</p>
+<pre><code class="language-fsharp">View.StackLayout([
+    if model.ShowFirstVideo then
+        yield View.MediaElement(source = MediaPath &quot;path/to/video.mp4&quot;)
+
+    yield View.MediaElement(key = &quot;second-player&quot;, source = MediaPath &quot;path/to/other-video.mp4&quot;)
+    yield View.Button(text = &quot;Toggle first video&quot;, command = (fun () -&gt; dispatch ToggleFirstVideo))
+])
+</code></pre>
+<p>Now, Fabulous will be aware that <code>second-player</code> should remain the same between updates and that the first MediaElement should be added/removed given the value of <code>ShowFirstVideo</code>.</p>
+<p><code>key</code> must be unique among its sibling inside a collection (e.g. <code>items</code>, <code>children</code>).<br />
+Using the same key at different places is ok.</p>
+<h3>Views: Differential Update of Lists of Things</h3>
+<p>There are a few different kinds of list in view descriptions:</p>
+<ol>
+<li>lists of raw data (e.g. data for a chart control, though there are no samples like that yet in this library)</li>
+<li>long lists of UI elements that are used to produce cells (e.g. <code>ListView</code>, see above)</li>
+<li>short lists of UI elements (e.g. StackLayout <code>children</code>)</li>
+<li>short lists of pages (e.g. NavigationPages <code>pages</code>)</li>
+</ol>
+<p>The perf of incremental update to these is progressively less important as you go down that list above.</p>
+<p>For all of the above, the typical, naive implementation of the <code>view</code> function returns a new list
+instance on each invocation. The incremental update of dynamic views maintains a corresponding mutable target
+(e.g. the <code>Children</code> property of a <code>Xamarin.Forms.StackLayout</code>, or an <code>ObservableCollection</code> to use as an <code>ItemsSource</code> to a <code>ListView</code>) based on the previous (PREV) list and the new (NEW) list.</p>
+<p>Fabulous prioritizes reuse in the following order:</p>
+<ol>
+<li>Same ViewElement instance (when using dependsOn)</li>
+</ol>
+<pre><code class="language-fsharp">View.Grid([
+    dependsOn () (fun _ _ -&gt; View.Label(text = &quot;Hello, World!&quot;))
+])
+</code></pre>
+<ol start="2">
+<li>Same key and control type (aka. <code>canReuseView</code> returns true)</li>
+</ol>
+<pre><code class="language-fsharp">// Previous View
+View.Grid([
+    View.Label(key = &quot;header&quot;, text = &quot;Previous Header&quot;)
+    View.Label(key = &quot;body&quot;, text = &quot;Previous body&quot;)
+])
+
+// New View
+View.Grid([
+    View.Label(key = &quot;header&quot;, text = &quot;New Header&quot;) // Will reuse previous header
+    View.Button(key = &quot;body&quot;, text = &quot;New body&quot;) // Won't be able to reuse previous body since Label != Button
+])
+</code></pre>
+<ol start="3">
+<li><p>If none of the above, Fabulous will select the first element that returns <code>canReuseView = true</code> among the eligible remaining previous elements.</p>
+</li>
+<li><p>If no previous element can be reused, a new one is created</p>
+</li>
+</ol>
+<p>Note that old keyed elements that didn't had a matching key in the new list will be destroyed instead of being reused by new unkeyed elements to help developers avoid undesired animations, such as fade-in/fade-out on Button Text changes on iOS (<a href="https://github.com/fsprojects/Fabulous/issues/308">#308</a>) or ripple effects on Android Button.</p>
+<p>In the end, controls that weren't reused are destroyed.</p>
+<p>This means</p>
+<ol>
+<li>Incremental update costs minimally one transition of the whole list.</li>
+<li>Incremental update recycles controls as much as possible if you use the same instance or <code>key</code> property.<br />
+Otherwise, there is no guarantee that you get same control next time.</li>
+</ol>
+<p>NOTE: The list diffing will limit mutations to only Move, Remove, and Insert, even when more straightforward operations could be done.
+This is to support the limitations imposed by how Xamarin.Forms reacts to changes in <code>System.Collections.ObjectModel.ObservableCollection&lt;'T&gt;</code>.</p>
+<p>The above is sufficient for many purposes, but care must always be taken with large lists and data sources, see <code>ListView</code> above for example.  Care must also be taken whenever data updates very rapidly.</p>
+
+          </div>
+          <div class="column is-8 is-offset-2 hide-content" id="VIEWS-BASIC-ELEMENTS">
+            <hr />
+<h2>title: Basic Elements</h2>
+<p>The basic controls from <code>Xamarin.Forms.Core</code> are available.</p>
+<h3>Button</h3>
+<p>Buttons are created using <code>View.Button</code>. The <code>command</code> of a button will normally dispatch a messsage.  For example:</p>
+<pre><code class="language-fsharp">View.Button(text = &quot;Deposit&quot;, command = (fun () -&gt; dispatch (Add 10.0)))
+</code></pre>
+<img src="https://user-images.githubusercontent.com/52166903/60180200-5dfc5b00-9817-11e9-87d1-e3d254b1cf2b.png" width="400">
+<p>See also:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/button">Xamarin guide to Button</a></li>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/button/"><code>Xamarin.Forms.Core.Button</code></a></li>
+</ul>
+<h3>Slider</h3>
+<p>A simple <code>Slider</code> is as follows:</p>
+<pre><code class="language-fsharp">View.Slider(
+    minimum = 0.0,
+    maximum = 10.0,
+    value= double step,
+    valueChanged=(fun args -&gt; dispatch (SliderValueChanged (int (args.NewValue + 0.5))))
+)
+</code></pre>
+<img src="https://user-images.githubusercontent.com/52166903/60177363-9d737900-9810-11e9-8842-aeb904e7d739.png" width="400">
+<p>See also:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/slider">Xamarin guide to Slider</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/Xamarin.Forms.Slider"><code>Xamarin.Forms.Core.Slider</code></a></li>
+</ul>
+<h3>ActivityIndicator</h3>
+<p>A simple <code>ActivityIndicator</code> is as follows:</p>
+<pre><code class="language-fsharp">View.ActivityIndicator(isRunning = (count &gt; 0))
+</code></pre>
+<img src="https://user-images.githubusercontent.com/52166903/60177355-9c424c00-9810-11e9-8275-bd8c2ebcf3c8.png" width="400">
+<p>See also:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/Xamarin.Forms.ActivityIndicator"><code>Xamarin.Forms.Core.ActivityIndicator</code></a></li>
+</ul>
+<h3>DatePicker</h3>
+<p>A simple <code>DatePicker</code> is as follows:</p>
+<pre><code class="language-fsharp">View.DatePicker(minimumDate = DateTime.Today,
+    maximumDate = DateTime.Today + TimeSpan.FromDays(365.0),
+    date = startDate,
+    dateSelected=(fun args -&gt; dispatch (StartDateSelected args.NewDate)))
+</code></pre>
+<img src="https://user-images.githubusercontent.com/52166903/60177357-9cdae280-9810-11e9-9979-1e91cf8c5ea6.png" width="400">
+<p>See also:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/datepicker">Xamarin guide to DatePicker</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/Xamarin.Forms.DatePicker"><code>Xamarin.Forms.Core.DatePicker</code></a></li>
+</ul>
+<h3>Editor</h3>
+<p>An example <code>Editor</code> is as follows:</p>
+<pre><code class="language-fsharp">View.Editor(text = editorText,
+    textChanged = (fun args -&gt; dispatch (TextChanged(args.OldTextValue, args.NewTextValue))),
+    completed = (fun text -&gt; dispatch (EditorEditCompleted text)))
+</code></pre>
+<img src="https://user-images.githubusercontent.com/52166903/60175558-d2c99800-980b-11e9-9755-860cc9a60dcf.png" width="400">
+<p>See also:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/Xamarin.Forms.Editor"><code>Xamarin.Forms.Core.Editor</code></a></li>
+</ul>
+<h3>BoxView</h3>
+<p>An example <code>BoxView</code> is as follows:</p>
+<pre><code class="language-fsharp">View.BoxView(Color.CornflowerBlue, cornerRadius=10.)
+</code></pre>
+<img src="https://user-images.githubusercontent.com/6429007/60753625-c1377b80-9fd5-11e9-91cc-eaef04a372cf.png" width="400">
+<p>See also:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/Xamarin.Forms.BoxView"><code>Xamarin.Forms.Core.BoxView</code></a></li>
+</ul>
+<h3>Entry</h3>
+<p>An example <code>Entry</code> is as follows:</p>
+<pre><code class="language-fsharp">View.Entry(
+    text = entryText,
+    textChanged = (fun args -&gt; dispatch (TextChanged(args.OldTextValue, args.NewTextValue))),
+    completed = (fun text -&gt; dispatch (EntryEditCompleted text))
+)
+</code></pre>
+<p>An example <code>Entry</code> with password is as follows:</p>
+<pre><code class="language-fsharp">View.Entry(
+    text = password,
+    isPassword = true,
+    textChanged = (fun args -&gt; dispatch (TextChanged(args.OldTextValue, args.NewTextValue))),
+    completed = (fun text -&gt; dispatch (EntryEditCompleted text))
+)
+</code></pre>
+<p>An example <code>Entry</code> with a placeholder is as follows:</p>
+<pre><code class="language-fsharp">View.Entry(
+    placeholder = &quot;Enter text&quot;,
+    textChanged = (fun args -&gt; dispatch (TextChanged(args.OldTextValue, args.NewTextValue))),
+    completed = (fun text -&gt; dispatch (EntryEditCompleted text))
+)
+</code></pre>
+<img src="https://user-images.githubusercontent.com/52166903/60177359-9cdae280-9810-11e9-9d80-059a9a885b72.png" width="400">
+<p>See also:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/Xamarin.Forms.Entry"><code>Xamarin.Forms.Core.Entry</code></a></li>
+</ul>
+<h3>Frame</h3>
+<p>A frame contains other content. A simple <code>Frame</code> is as follows:</p>
+<pre><code class="language-fsharp">View.Frame(hasShadow = true, backgroundColor = Colors.Fuchsia)
+</code></pre>
+<img src="https://user-images.githubusercontent.com/52166903/60180199-5d63c480-9817-11e9-9a64-f306924eb25d.png" width="400">
+<p>See also:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/Xamarin.Forms.Frame"><code>Xamarin.Forms.Core.Frame</code></a></li>
+</ul>
+<h3>Image</h3>
+<p>A simple image drawn from a resource or URL is as follows:</p>
+<pre><code class="language-fsharp">let monkey = &quot;http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg&quot;
+
+View.Image(source = monkey)
+</code></pre>
+<img src="https://user-images.githubusercontent.com/52166903/60180198-5d63c480-9817-11e9-9458-379a848ccca4.png" width="400">
+<p>See also:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/images?tabs=vswin">Images in Xamarin Forms</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/Xamarin.Forms.Image"><code>Xamarin.Forms.Core.Image</code></a></li>
+</ul>
+<h3>Picker</h3>
+<p>A simple <code>Picker</code> is as follows:</p>
+<pre><code class="language-fsharp">let pickerItems =
+    [| (&quot;Aqua&quot;, Color.Aqua); (&quot;Black&quot;, Color.Black);
+       (&quot;Blue&quot;, Color.Blue); (&quot;Fucshia&quot;, Color.Fuchsia);
+       (&quot;Gray&quot;, Color.Gray); (&quot;Green&quot;, Color.Green);
+       (&quot;Lime&quot;, Color.Lime); (&quot;Maroon&quot;, Color.Maroon);
+       (&quot;Navy&quot;, Color.Navy); (&quot;Olive&quot;, Color.Olive);
+       (&quot;Purple&quot;, Color.Purple); (&quot;Red&quot;, Color.Red);
+       (&quot;Silver&quot;, Color.Silver); (&quot;Teal&quot;, Color.Teal);
+       (&quot;White&quot;, Color.White); (&quot;Yellow&quot;, Color.Yellow ) |]
+
+View.Picker(
+    title = &quot;Choose Color:&quot;,
+    textColor = snd pickerItems.[pickedColorIndex],
+    selectedIndex = pickedColorIndex,
+    itemsSource = Array.map fst pickerItems,
+    selectedIndexChanged = (fun (i, item) -&gt; dispatch (PickerItemChanged i))
+)
+</code></pre>
+<img src="https://user-images.githubusercontent.com/52166903/60177361-9d737900-9810-11e9-87a2-ade4880f7222.png" width="400">
+<p>See also:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/Xamarin.Forms.Picker"><code>Xamarin.Forms.Core.Picker</code></a></li>
+</ul>
+<h3>SearchBar</h3>
+<p>A simple <code>SearchBar</code> is as follows:</p>
+<pre><code class="language-fsharp">View.SearchBar(
+    placeholder = &quot;Enter search term&quot;,
+    searchCommand = (fun searchBarText -&gt; dispatch  (ExecuteSearch searchBarText)),
+    searchCommandCanExecute=true)
+</code></pre>
+<img src="https://user-images.githubusercontent.com/52166903/60180196-5d63c480-9817-11e9-9c21-e8b19dee8474.png" width="400">
+<p>See also:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.searchbar?view=xamarin-forms">Xamarin.Forms.Core.SearchBar</a></li>
+</ul>
 
           </div>
           <div class="column is-8 is-offset-2 hide-content" id="Fabulous.CodeGen">

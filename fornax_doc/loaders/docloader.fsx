@@ -40,39 +40,43 @@ let loader (projectRoot: string) (siteContent: SiteContents) =
                 let dirName (dirPath: string) =
                     dirPath.Substring(dirPath.LastIndexOf("/") + 1)
 
-                if (System.IO.Directory.GetDirectories dirPath)
-                    .Length > 0 then
-                    System.IO.Directory.GetDirectories dirPath
-                    |> Array.iter getAllDocsWithSubDirs
+                let subDirs =
+                    if (System.IO.Directory.GetDirectories dirPath)
+                        .Length > 0 then
+                        System.IO.Directory.GetDirectories dirPath
+                    else
+                        [||]
 
-                dirPath
-                |> System.IO.Directory.GetFiles
-                |> Array.filter (fun file -> file.EndsWith ".md")
-                |> Array.map
-                    (fun file ->
-                        { Name = fileName file
-                          Content = Markdown.ToHtml(content file, markdownPipeline) })
-                |> fun files ->
-                    let getIndexFile =
-                        let indexExists =
-                            files |> Array.exists (fun v -> v.Name = "INDEX")
+                Array.append [| dirPath |] subDirs
+                |> Array.iter
+                    (fun v ->
+                        System.IO.Directory.GetFiles v
+                        |> Array.filter (fun file -> file.EndsWith ".md")
+                        |> Array.map
+                            (fun file ->
+                                { Name = fileName file
+                                  Content = Markdown.ToHtml(content file, markdownPipeline) })
+                        |> fun files ->
+                            let getIndexFile =
+                                let indexExists =
+                                    files |> Array.exists (fun v -> v.Name = "INDEX")
 
-                        match indexExists with
-                        | true ->
-                            files
-                            |> Array.find (fun v -> v.Name = "INDEX")
-                            |> fun v -> Markdown.ToHtml(v.Content, markdownPipeline)
-                        | false -> ""
+                                match indexExists with
+                                | true ->
+                                    files
+                                    |> Array.find (fun v -> v.Name = "INDEX")
+                                    |> fun v -> Markdown.ToHtml(v.Content, markdownPipeline)
+                                | false -> ""
 
-                    let filterIndexFile =
-                        files |> Array.filter (fun v -> v.Name <> "INDEX")
+                            let filterIndexFile =
+                                files |> Array.filter (fun v -> v.Name <> "INDEX")
 
-                    { Name = dirName dirPath
-                      DocFiles = filterIndexFile |> Array.toList
-                      Index = { Content = getIndexFile } }
-                |> fun data ->
-                    if not data.DocFiles.IsEmpty then
-                        siteContent.Add data)
+                            { Name = dirName v
+                              DocFiles = filterIndexFile |> Array.toList
+                              Index = { Content = getIndexFile } }
+                        |> fun data ->
+                            if not data.DocFiles.IsEmpty then
+                                siteContent.Add data))
 
     getAllDocsWithSubDirs postsPath
 

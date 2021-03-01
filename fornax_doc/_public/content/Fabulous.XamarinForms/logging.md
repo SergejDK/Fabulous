@@ -1,7 +1,3 @@
------
-title: Traces and Crashes
-------
-
 In Fabulous, everything happens in a centralized message loop that is responsible for calling your `init`, `update` and `view` functions.  
 Fabulous allows you to plug into this loop to run custom logic such as logging and error handling.
 

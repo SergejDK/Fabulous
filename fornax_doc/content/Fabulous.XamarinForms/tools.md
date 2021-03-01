@@ -1,7 +1,3 @@
------
-title: fabulous-cli
------
-
 With the `fabulous-cli` you can run LiveUpdate. 
 
 Install `fabulous-cli`: 

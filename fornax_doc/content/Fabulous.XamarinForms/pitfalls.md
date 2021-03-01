@@ -1,7 +1,3 @@
------
-title: Pitfalls
------
-
 ## Pitfalls and F# 5.0 support
 
 Here are some common pitfalls you might encounter when using Fabulous.

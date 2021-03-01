@@ -48,6 +48,7 @@ let layout (ctx: SiteContents) active bodyCnt =
 
     let docs =
         docPages
+        |> Seq.filter (fun v -> v.Name <> "Main")
         |> Seq.map
             (fun v ->
                 let dHref = sprintf "/docs.html#%s" v.Name

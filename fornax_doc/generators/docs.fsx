@@ -40,7 +40,7 @@ let generate' (ctx: SiteContents) (page: string) =
             |> Seq.map docMenuLayout
             |> Seq.toList
 
-        aside [ Class "menu" ] entries
+        aside [ Class "menu doc-menu" ] entries
 
     let mainContentForEachMarkdown name content =
         div [ Class "column is-8 is-offset-2 hide-content"
@@ -63,9 +63,9 @@ let generate' (ctx: SiteContents) (page: string) =
         let mainContent =
             docData |> Seq.map genContent |> Seq.fold ((@)) []
 
-        main [] [
+        main [ Class "doc-main-content" ] [
             div [ Class "container" ] [
-                section [ Class "articles" ] mainContent
+                section [ Class "articles doc-main-content-section" ] mainContent
             ]
         ]
 
@@ -73,17 +73,6 @@ let generate' (ctx: SiteContents) (page: string) =
         ctx
         "Docs"
         [
-
-          section [ Class "hero is-dark page-banner" ] [
-              div [ Class "hero-body has-text-centered" ] [
-                  h1 [ Class "title is-1 is-spaced" ] [
-                      string "Fabulous"
-                  ]
-                  h2 [ Class "subtitle is-2" ] [
-                      string "Documentation"
-                  ]
-              ]
-          ]
 
           menuLayout
 

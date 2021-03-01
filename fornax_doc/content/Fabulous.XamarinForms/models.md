@@ -1,7 +1,3 @@
------
-title: Models
---------
-
 ### Messages and Validation
 
 Validation is generally done on updates to the model storing error messages from validation logic in the model so they can be correctly and simply displayed to the user. Here is a very basic example:
